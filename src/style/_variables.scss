@@ -1,5 +1,46 @@
-// fonts
+/////////////////////////////////////////////////////////////
+// Fonts & Text
+
 $font-path: "../fonts/";
-$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif: Georgia, "Times New Roman", Times, serif;
-$font-family-icon: 'icomoon';
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-icon: 'icomoon' !default;
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default;
+$font-size-h1: 2.5rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.5rem !default;
+$font-size-h5: 1.25rem !default;
+$font-size-h6: 1rem !default;
+$line-height-base: 1.5 !default;
+
+/////////////////////////////////////////////////////////////
+// Colors
+
+// base
+$primary: #274e75;
+$secondary: #1abc9c;
+$grey: #c9c9c9;
+$info: #3498db;
+$success: #1abc5b;
+$warning: #f0ad4e;
+$danger: #e74c3c;
+
+// variants
+$grey-light: lighten($grey, 15%);
+$grey-dark: darken($grey, 10%);
+
+$primary-light: lighten($primary, 20%);
+$primary-faded: mix($primary, lighten($grey-light, 50%), 8%);
+$primary-dark: darken($primary, 10%);
+
+$secondary-light: lighten($secondary, 20%);
+$secondary-faded: mix($secondary, lighten($grey-light, 50%), 8%);
+$secondary-dark: darken($secondary, 10%);
+
+// helpers
+$light-color: #fff;
+$dark-color: $primary-dark;
+$disabled: 20%;
+$btn-disabled: 0.5;

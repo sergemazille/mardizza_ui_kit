@@ -50,7 +50,7 @@ gulp.task('fonts', function () {
 // Watches
 gulp.task('watch', function () {
     gulp.watch('./src/script/**/*.*', ['babelify']);
-    gulp.watch('./src/style/**/*.*', ['style']);
+    gulp.watch('./src/style/*.scss', ['style']);
     gulp.watch('./src/fonts/**/*.*', ['fonts']);
 });
 

@@ -1,0 +1,23 @@
+// Used to style examples
+
+.colors {
+    div {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+
+        &.primary-faded {background-color: $primary-faded;}
+        &.primary-light {background-color: $primary-light;}
+        &.primary {background-color: $primary;}
+        &.primary-dark {background-color: $primary-dark;}
+
+        &.secondary-faded {background-color: $secondary-faded;}
+        &.secondary-light {background-color: $secondary-light;}
+        &.secondary {background-color: $secondary;}
+        &.secondary-dark {background-color: $secondary-dark;}
+
+        &.grey-light {background-color: $grey-light;}
+        &.grey {background-color: $grey;}
+        &.grey-dark {background-color: $grey-dark;}
+    }
+}
