@@ -34,8 +34,12 @@ gulp.task('style', function () {
     return gulp.src('./src/style/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(concat('app.css'))
+        .on('error', function (err) {
+            console.error(err);
+            this.emit('end');
+        })
         .pipe(postcss([ autoprefixer() ]))
+        .pipe(concat('app.css'))
         .pipe(cleanCSS())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/style'));
@@ -49,8 +53,8 @@ gulp.task('fonts', function () {
 
 // Watches
 gulp.task('watch', function () {
-    gulp.watch('./src/script/**/*.*', ['babelify']);
-    gulp.watch('./src/style/*.scss', ['style']);
+    gulp.watch('./src/script/**/*.js', ['babelify']);
+    gulp.watch('./src/style/**/*.scss', ['style']);
     gulp.watch('./src/fonts/**/*.*', ['fonts']);
 });
 

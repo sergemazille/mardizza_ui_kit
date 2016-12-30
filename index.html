@@ -10,21 +10,48 @@
 </head>
 <body>
 
-<h1>Colors</h1>
-<div class="colors">
-    <div class="primary-faded"></div>
-    <div class="primary-light"></div>
-    <div class="primary"></div>
-    <div class="primary-dark"></div>
+<div class="block">
+    <h1>Colors</h1>
+    <div class="colors">
+        <div class="primary-faded"></div>
+        <div class="primary-light"></div>
+        <div class="primary"></div>
+        <div class="primary-dark"></div>
 
-    <div class="secondary-faded"></div>
-    <div class="secondary-light"></div>
-    <div class="secondary"></div>
-    <div class="secondary-dark"></div>
+        <div class="secondary-faded"></div>
+        <div class="secondary-light"></div>
+        <div class="secondary"></div>
+        <div class="secondary-dark"></div>
 
-    <div class="grey-light"></div>
-    <div class="grey"></div>
-    <div class="grey-dark"></div>
+        <div class="grey-light"></div>
+        <div class="grey"></div>
+        <div class="grey-dark"></div>
+    </div>
+</div>
+
+<div class="block">
+    <h1>Buttons</h1>
+    <div class="buttons">
+        <div class="normal-states">
+            <button class="btn-grey">Grey</button>
+            <button class="btn-primary">Primary</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-info">Info</button>
+            <button class="btn-success">Success</button>
+            <button class="btn-warning">Warning</button>
+            <button class="btn-danger">Danger</button>
+        </div>
+
+        <div class="disabled-states">
+            <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
+            <button disabled class="btn-primary">Primary disabled</button>
+            <button disabled class="btn-secondary">Secondary disabled</button>
+            <button disabled class="btn-info">Info disabled</button>
+            <button disabled class="btn-success">Success disabled</button>
+            <button disabled class="btn-warning">Warning disabled</button>
+            <button disabled class="btn-danger">Danger disabled</button>
+        </div>
+    </div>
 </div>
 
 <script src="dist/script/app.js"></script>

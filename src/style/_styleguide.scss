@@ -1,5 +1,13 @@
 // Used to style examples
 
+body {
+    padding: 32px;
+}
+
+.block {
+    margin-bottom: 32px;
+}
+
 .colors {
     div {
         display: inline-block;
@@ -19,5 +27,15 @@
         &.grey-light {background-color: $grey-light;}
         &.grey {background-color: $grey;}
         &.grey-dark {background-color: $grey-dark;}
+    }
+}
+
+.buttons {
+    button {
+        margin-bottom: 4px;
+    }
+
+    .normal-states {
+        margin-bottom: 8px;
     }
 }

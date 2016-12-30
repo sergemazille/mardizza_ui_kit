@@ -1,0 +1,71 @@
+// mixins
+@mixin button-variant($color, $background) {
+    font-family: $font-family-primary;
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    user-select: none;
+    padding: $btn-padding-vertical $btn-padding-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    border-radius: $radius;
+    color: $color;
+    background-color: $background;
+    outline: 0;
+
+    &:hover, &:focus, &.focus {
+        text-decoration: none;
+        border: 1px solid transparent; // override bootstrap default hover border
+        outline: 0;
+    }
+
+    &:active, &.active {
+        outline: 0;
+        background-image: none;
+        border: 1px solid transparent; // override bootstrap default hover border
+        box-shadow: none; // override bootstrap default hover border
+        color: $color;
+        background-color: darken($background, 10%);
+
+        &:hover, &:focus, &.focus {
+            color: $color;
+            background-color: darken($background, 15%);
+            outline: 0;
+        }
+    }
+
+    &:focus, &:hover {
+        background-color: darken($background, 5%);
+    }
+
+    &:disabled, &.disabled {
+        cursor: not-allowed;
+        opacity: .5;
+
+        &:hover, &:focus {
+            background-color: $background;
+        }
+    }
+}
+
+// classes
+.btn-grey { @include button-variant($color: $primary-dark, $background: $grey); }
+
+.btn-primary { @include button-variant($color: #fff, $background: $primary); }
+
+.btn-secondary { @include button-variant($color: #fff, $background: $secondary); }
+
+.btn-info { @include button-variant($color: #fff, $background: $info); }
+
+.btn-success { @include button-variant($color: #fff, $background: $success); }
+
+.btn-warning { @include button-variant($color: #fff, $background: $warning); }
+
+.btn-danger { @include button-variant($color: #fff, $background: $danger); }
