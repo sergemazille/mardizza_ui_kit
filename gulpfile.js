@@ -29,6 +29,12 @@ gulp.task('babelify', function () {
         .pipe(gulp.dest('./dist/script'));
 });
 
+// Icons (move)
+gulp.task('icons', function () {
+    return gulp.src('./src/icons/**/*.svg')
+        .pipe(gulp.dest('./dist/icons'));
+});
+
 // Style (sass)
 gulp.task('style', function () {
     return gulp.src('./src/style/main.scss')
@@ -54,6 +60,7 @@ gulp.task('fonts', function () {
 // Watches
 gulp.task('watch', function () {
     gulp.watch('./src/script/**/*.js', ['babelify']);
+    gulp.watch('./src/icons/*.svg', ['icons']);
     gulp.watch('./src/style/**/*.scss', ['style']);
     gulp.watch('./src/fonts/**/*.*', ['fonts']);
 });
@@ -62,4 +69,4 @@ gulp.task('watch', function () {
 gulp.task('default', ['deploy', 'watch']);
 
 // Deploy only (without watch task)
-gulp.task('deploy', ['babelify', 'style', 'fonts']);
+gulp.task('deploy', ['babelify', 'icons', 'style', 'fonts']);

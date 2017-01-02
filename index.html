@@ -32,6 +32,7 @@
 <div class="block">
     <h1>Buttons</h1>
     <div class="buttons">
+        <h2>Normal buttons</h2>
         <div class="normal-states">
             <button class="btn-grey">Grey</button>
             <button class="btn-primary">Primary</button>
@@ -42,6 +43,7 @@
             <button class="btn-danger">Danger</button>
         </div>
 
+        <h2>Disabled buttons</h2>
         <div class="disabled-states">
             <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
             <button disabled class="btn-primary">Primary disabled</button>
@@ -51,6 +53,52 @@
             <button disabled class="btn-warning">Warning disabled</button>
             <button disabled class="btn-danger">Danger disabled</button>
         </div>
+    </div>
+</div>
+
+<div class="block">
+    <h1>Form</h1>
+    <h2>Input fields</h2>
+    <div class="input">
+        <div class="normal-states">
+            <form action="#">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="normal">Normal input</label>
+                        <input id="normal" type="text" class="form-control" placeholder="Placeholder">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group success-feedback">
+                        <label for="success-input">Success input</label>
+                        <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
+                        <span class="feedback">Vous avez réussi !!</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group warning-feedback">
+                        <label for="warning-input">Warning input</label>
+                        <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
+                        <span class="feedback">Quelque chose requiert votre attention.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group error-feedback">
+                        <label for="error-input">Error input</label>
+                        <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
+                        <span class="feedback">Une erreur s'est produite.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="disabled-input">Disabled input</label>
+                        <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>
 

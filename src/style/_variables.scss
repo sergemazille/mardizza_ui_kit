@@ -1,22 +1,4 @@
 /////////////////////////////////////////////////////////////
-// Measures
-
-$radius: 2px;
-
-/////////////////////////////////////////////////////////////
-// Fonts & Text
-
-$font-path: "../fonts/";
-$font-family-primary: 'Open Sans', Helvetica, Arial, sans-serif !default;
-$font-family-icon: 'icomoon' !default;
-$font-size-root: 16px !default;
-$font-size-base: 1rem !default;
-$line-height-base: 1.5 !default;
-$font-weight-normal: 400;
-$font-weight-semi-bold: 600;
-$font-weight-bold: 700;
-
-/////////////////////////////////////////////////////////////
 // Colors
 
 // base
@@ -27,6 +9,8 @@ $info: #3498db;
 $success: #1abc5b;
 $warning: #f0ad4e;
 $danger: #e74c3c;
+$error: $danger;
+$alert: $danger;
 $bg: #f0f0f0;
 
 // variants
@@ -42,9 +26,61 @@ $secondary-faded: mix($secondary, lighten($grey-light, 5%), 13%);
 $secondary-dark: darken($secondary, 10%);
 
 /////////////////////////////////////////////////////////////
+// Fonts & Text
+
+$font-path: "../fonts/";
+$font-family-primary: 'Open Sans', Helvetica, Arial, sans-serif !default;
+$font-family-icon: 'icomoon' !default;
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default;
+$font-color-base: $primary-dark;
+$line-height-base: 1.5 !default;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// icons content
+$icon-alert: "\e900";
+$icon-arrow-down: "\e901";
+$icon-checkbox: "\e902";
+$icon-checkbox-checked: "\e903";
+$icon-chevron-left: "\e904";
+$icon-chevron-right: "\e905";
+$icon-radio: "\e906";
+$icon-radio-checked: "\e907";
+$icon-success: "\e908";
+$icon-warning: "\e909";
+
+/////////////////////////////////////////////////////////////
 // Buttons
 
 // padding
-$btn-padding-horizontal: 1.75em;
+$btn-padding-horizontal: 2.25em;
 $btn-padding-vertical: .4em;
 $btn-font-weight: $font-weight-semi-bold;
+
+/////////////////////////////////////////////////////////////
+// Measures
+
+$radius: 2px;
+$padding-base-horizontal: .75em;
+$padding-base-vertical: .5em;
+
+/////////////////////////////////////////////////////////////
+// Forms
+
+// inputs
+$input-bg-disabled: lighten($grey-light, 2%);
+$input-border-disabled: $grey;
+$input-color-disabled: $grey-dark;
+
+$input-bg: #fff;
+$input-border: $primary-light;
+$input-color: $font-color-base;
+
+$input-border-size: 1px;
+$input-focus-spread: 3px;
+$input-color-placeholder: $primary-dark;
+
+$input-font-size: 1em;
+$input-feedback-padding: 2em;
