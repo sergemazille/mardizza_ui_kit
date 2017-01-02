@@ -24,18 +24,18 @@ $info: #3498db;
 $success: #1abc5b;
 $warning: #f0ad4e;
 $danger: #e74c3c;
-$bg: #fdfdfd;
+$bg: #f0f0f0;
 
 // variants
-$grey-light: lighten($grey, 15%);
+$grey-light: lighten($grey, 8%);
 $grey-dark: darken($grey, 10%);
 
 $primary-light: lighten($primary, 20%);
-$primary-faded: mix($primary, lighten($grey-light, 50%), 8%);
+$primary-faded: mix($primary, lighten($grey-light, 8%), 13%);
 $primary-dark: darken($primary, 10%);
 
 $secondary-light: lighten($secondary, 20%);
-$secondary-faded: mix($secondary, lighten($grey-light, 50%), 8%);
+$secondary-faded: mix($secondary, lighten($grey-light, 5%), 13%);
 $secondary-dark: darken($secondary, 10%);
 
 /////////////////////////////////////////////////////////////
