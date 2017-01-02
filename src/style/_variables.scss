@@ -7,11 +7,14 @@ $radius: 2px;
 // Fonts & Text
 
 $font-path: "../fonts/";
-$font-family-primary: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-primary: 'Open Sans', Helvetica, Arial, sans-serif !default;
 $font-family-icon: 'icomoon' !default;
 $font-size-root: 16px !default;
 $font-size-base: 1rem !default;
 $line-height-base: 1.5 !default;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
 
 /////////////////////////////////////////////////////////////
 // Colors
@@ -44,3 +47,4 @@ $secondary-dark: darken($secondary, 10%);
 // padding
 $btn-padding-horizontal: 1.75em;
 $btn-padding-vertical: .4em;
+$btn-font-weight: $font-weight-semi-bold;

@@ -3,7 +3,7 @@
     font-family: $font-family-primary;
     display: inline-block;
     margin-bottom: 0; // For input.btn
-    font-weight: 700;
+    font-weight: $btn-font-weight;
     text-align: center;
     vertical-align: middle;
     touch-action: manipulation;
