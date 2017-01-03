@@ -60,45 +60,57 @@
     <h1>Form</h1>
     <h2>Input fields</h2>
     <div class="input">
-        <div class="normal-states">
-            <form action="#">
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="normal">Normal input</label>
-                        <input id="normal" type="text" class="form-control" placeholder="Placeholder">
+        <form action="#">
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="normal">Normal input</label>
+                    <input id="normal" type="text" class="form-control" placeholder="Placeholder">
 
-                    </div>
                 </div>
-                <div class="form-group">
-                    <div class="input-group success-feedback">
-                        <label for="success-input">Success input</label>
-                        <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Vous avez réussi !!</span>
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group success-feedback">
+                    <label for="success-input">Success input</label>
+                    <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
+                    <span class="feedback">Vous avez réussi !!</span>
                 </div>
-                <div class="form-group">
-                    <div class="input-group warning-feedback">
-                        <label for="warning-input">Warning input</label>
-                        <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Quelque chose requiert votre attention.</span>
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group warning-feedback">
+                    <label for="warning-input">Warning input</label>
+                    <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
+                    <span class="feedback">Quelque chose requiert votre attention.</span>
                 </div>
-                <div class="form-group">
-                    <div class="input-group error-feedback">
-                        <label for="error-input">Error input</label>
-                        <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Une erreur s'est produite.</span>
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group error-feedback">
+                    <label for="error-input">Error input</label>
+                    <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
+                    <span class="feedback">Une erreur s'est produite.</span>
                 </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="disabled-input">Disabled input</label>
-                        <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="disabled-input">Disabled input</label>
+                    <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
                 </div>
-            </form>
-        </div>
+            </div>
 
+            <!-- Input states test -->
+            <div class="form-group states-input-test">
+                <div class="input-group">
+                    <label for="states-input">Test me</label>
+                    <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
+
+                    <div class="states-input-buttons">
+                        <button id="success-state-input-btn" data-action="success-feedback" data-text="C'est un succès !!" class="btn btn-success">Get a success</button>
+                        <button id="warning-state-input-btn" data-action="warning-feedback" data-text="Attention, ceci est un avertissement !" class="btn btn-warning">Display a warning</button>
+                        <button id="error-state-input-btn" data-action="error-feedback" data-text="Allo Houston, nous avons un problème" class="btn btn-danger">Trigger an error</button>
+                        <button id="disabled-state-input-btn" data-action="disabled" class="btn btn-grey">Disable me</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
