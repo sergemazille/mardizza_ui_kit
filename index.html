@@ -97,15 +97,17 @@
             </div>
 
             <!-- Input states test -->
+            <h3>Test d'un input avec feedback :</h3>
             <div class="form-group states-input-test">
                 <div class="input-group">
-                    <label for="states-input">Test me</label>
+                    <label for="states-input">Test input</label>
                     <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
+                    <!-- No feedback span here, it will be automatically generated -->
 
                     <div class="states-input-buttons">
                         <button id="success-state-input-btn" data-action="success-feedback" data-text="C'est un succès !!" class="btn btn-success">Get a success</button>
                         <button id="warning-state-input-btn" data-action="warning-feedback" data-text="Attention, ceci est un avertissement !" class="btn btn-warning">Display a warning</button>
-                        <button id="error-state-input-btn" data-action="error-feedback" data-text="Allo Houston, nous avons un problème" class="btn btn-danger">Trigger an error</button>
+                        <button id="error-state-input-btn" data-action="error-feedback" data-text="Allo Houston, nous avons un problème..." class="btn btn-danger">Trigger an error</button>
                         <button id="disabled-state-input-btn" data-action="disabled" class="btn btn-grey">Disable me</button>
                     </div>
                 </div>

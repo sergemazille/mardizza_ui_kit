@@ -14,24 +14,31 @@ function testInputsStates() {
 
             let feedbackText = this.dataset.text;
             let action = this.dataset.action;
+            let inputGroup = this.parentElement.parentElement;
+
             if (action != "disabled") {
+                // clean up in case the input has been disabled
+                inputGroup.querySelector('input').disabled = false;
 
                 // add new class to input-group
-                let inputGroup = this.parentElement.parentElement;
                 inputGroup.className = "input-group " + action;
 
-                // add a new element with feedback text
-                let newSpan = document.createElement('span');
-                newSpan.className = "feedback";
-                newSpan.textContent = feedbackText;
+                // replace the feedback span or create one
+                let feedbackSpan = inputGroup.querySelector('.feedback');
+                if(! feedbackSpan) {
+                    feedbackSpan = document.createElement('span');
+                    feedbackSpan.className = "feedback";
+                }
 
-                inputGroup.appendChild(newSpan);
+                feedbackSpan.textContent = feedbackText;
+                inputGroup.insertBefore(feedbackSpan, inputGroup.querySelector('.states-input-buttons'));
 
                 return true;
             }
 
             // disable
-
+            inputGroup.querySelector('input').disabled = !inputGroup.querySelector('input').disabled;
+            this.innerHTML = "yolo";
         });
     });
 }

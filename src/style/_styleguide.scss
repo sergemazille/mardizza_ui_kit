@@ -41,12 +41,16 @@ body {
 }
 
 .input {
-    .states-input-test {
+    h3 {
         margin-top: 32px;
+    }
+
+    .states-input-test {
+        border: 1px solid $primary;
+        padding: 12px;
 
         .states-input-buttons {
-            text-align: center;
-            margin-top: 9px;
+            margin-top: 20px;
         }
     }
 }
