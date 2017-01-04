@@ -95,3 +95,70 @@
 .form-group {
     margin-bottom: $font-size-base;
 }
+
+// dropdown
+.dropdown {
+    button {
+        position: relative;
+        padding: $btn-padding-vertical ($btn-padding-horizontal / 2);
+        text-align: left;
+        min-width: 300px;
+
+        &:after {
+            position: absolute;
+            right: $padding-base-horizontal;
+            font-family: 'icomoon';
+            content: $icon-arrow-down;
+        }
+    }
+
+    .dropdown-menu {
+        margin-top: $padding-base-horizontal;
+        padding: 0;
+        min-width: 300px;
+        background-color: $primary-faded;
+        font-size: $font-size-base;
+        border-width: 0;
+        border-radius: $radius;
+        box-shadow: 0 2px 12px rgba(0,0,0,.3);
+
+        li {
+            &:first-of-type {
+                a {
+                    border-top-left-radius: $radius;
+                    border-top-right-radius: $radius;
+                }
+            }
+
+            &:last-of-type {
+                a {
+                    border-bottom-left-radius: $radius;
+                    border-bottom-right-radius: $radius;
+                }
+            }
+
+            &.active {
+                a {
+                    color: #fff;
+                    background-color: $secondary;
+                }
+            }
+
+            a {
+                color: $font-color-base;
+                padding-top: 6px;
+                padding-bottom: 6px;
+
+                &:hover, &:focus {
+                    color: $font-color-base;
+                    background-color: lighten($grey, 8%);
+                }
+
+                &:active {
+                    color: #fff;
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+}
