@@ -13,19 +13,26 @@
 <div class="block">
     <h1>Colors</h1>
     <div class="colors">
-        <div class="primary-faded"></div>
-        <div class="primary-light"></div>
-        <div class="primary"></div>
-        <div class="primary-dark"></div>
+        <div class="grey-color">
+            <div class="color grey-faded"></div>
+            <div class="color grey-light"></div>
+            <div class="color grey"></div>
+            <div class="color grey-dark"></div>
+        </div>
 
-        <div class="secondary-faded"></div>
-        <div class="secondary-light"></div>
-        <div class="secondary"></div>
-        <div class="secondary-dark"></div>
+        <div class="primary-color">
+            <div class="color primary-faded"></div>
+            <div class="color primary-light"></div>
+            <div class="color primary"></div>
+            <div class="color primary-dark"></div>
+        </div>
 
-        <div class="grey-light"></div>
-        <div class="grey"></div>
-        <div class="grey-dark"></div>
+        <div class="secondary-color">
+            <div class="color secondary-faded"></div>
+            <div class="color secondary-light"></div>
+            <div class="color secondary"></div>
+            <div class="color secondary-dark"></div>
+        </div>
     </div>
 </div>
 
@@ -110,6 +117,27 @@
                         <button id="error-state-input-btn" data-action="error-feedback" data-text="Allo Houston, nous avons un problème..." class="btn btn-danger">Trigger an error</button>
                         <button id="disabled-state-input-btn" data-action="disabled" class="btn btn-grey">Disable me</button>
                     </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown-menu"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Orientale
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-menu">
+                        <li><a href="#" data-value="gorgonzola">Gorgonzola</a></li>
+                        <li><a href="#" data-value="fattrice">Fattrice</a></li>
+                        <li><a href="#" data-value="margherita">Margherita</a></li>
+                        <li><a href="#" data-value="napolitaine">Napolitaine</a></li>
+                        <li class="active" data-value="orientale"><a href="#">Orientale</a></li>
+                        <li><a href="#" data-value="quattro-stagione">Quattro Stagione</a></li>
+                        <li><a href="#" data-value="sucree-salee">Sucrée Salée</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" data-value="pizza-mois">Pizza du mois</a></li>
+                    </ul>
                 </div>
             </div>
         </form>
