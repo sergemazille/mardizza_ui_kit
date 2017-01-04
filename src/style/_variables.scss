@@ -2,7 +2,7 @@
 // Colors
 
 // base
-$grey: #c9c9c9;
+$grey: #aeaeae;
 $primary: #274e75;
 $secondary: #1abc9c;
 $info: #3498db;
@@ -14,8 +14,9 @@ $alert: $danger;
 $bg: #f0f0f0;
 
 // variants
-$grey-light: lighten($grey, 8%);
-$grey-dark: darken($grey, 10%);
+$grey-light: lighten($grey, 12%);
+$grey-faded: lighten($grey-light, 8%);
+$grey-dark: darken($grey, 35%);
 
 $primary-light: lighten($primary, 20%);
 $primary-faded: mix($primary, lighten($grey-light, 8%), 13%);

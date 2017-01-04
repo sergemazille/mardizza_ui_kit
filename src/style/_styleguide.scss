@@ -9,24 +9,27 @@ body {
 }
 
 .colors {
-    div {
-        display: inline-block;
-        width: 75px;
-        height: 75px;
+    [class*="-color"] {
+        .color {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
 
-        &.primary-faded {background-color: $primary-faded;}
-        &.primary-light {background-color: $primary-light;}
-        &.primary {background-color: $primary;}
-        &.primary-dark {background-color: $primary-dark;}
+            &.grey-faded {background-color: $grey-faded;}
+            &.grey-light {background-color: $grey-light;}
+            &.grey {background-color: $grey;}
+            &.grey-dark {background-color: $grey-dark;}
 
-        &.secondary-faded {background-color: $secondary-faded;}
-        &.secondary-light {background-color: $secondary-light;}
-        &.secondary {background-color: $secondary;}
-        &.secondary-dark {background-color: $secondary-dark;}
+            &.primary-faded {background-color: $primary-faded;}
+            &.primary-light {background-color: $primary-light;}
+            &.primary {background-color: $primary;}
+            &.primary-dark {background-color: $primary-dark;}
 
-        &.grey-light {background-color: $grey-light;}
-        &.grey {background-color: $grey;}
-        &.grey-dark {background-color: $grey-dark;}
+            &.secondary-faded {background-color: $secondary-faded;}
+            &.secondary-light {background-color: $secondary-light;}
+            &.secondary {background-color: $secondary;}
+            &.secondary-dark {background-color: $secondary-dark;}
+        }
     }
 }
 
