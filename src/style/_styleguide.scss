@@ -1,6 +1,6 @@
 // Used to style examples
 
-body {
+.content {
     padding: 32px;
 }
 
@@ -45,11 +45,12 @@ body {
 
 .input {
     h3 {
-        margin-top: 32px;
+        margin-top: 16px;
     }
 
     .states-input-test {
         border: 1px solid $primary;
+        border-radius: $radius;
         padding: 12px;
         background-color: $primary-faded;
 

@@ -1,0 +1,18 @@
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.backdrop {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10000px;
+    width: 10000px;
+}

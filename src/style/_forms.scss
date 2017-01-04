@@ -118,32 +118,21 @@
         margin-top: $padding-base-horizontal;
         padding: 0;
         min-width: 300px;
-        //background-color: $primary-faded;
+        background-color: $primary-faded;
         font-size: $font-size-base;
-        //border-width: 0;
-        //border-radius: $radius;
-        //box-shadow: 0 2px 12px rgba(0,0,0,.3);
-
+        border-radius: $radius;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 1000;
-        //display: none;
+        z-index: 1;
+        display: none;
         float: left;
         text-align: left;
         list-style: none;
-        background-color: #fff;
-        -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        border: 1px solid #ccc;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: 4px;
-        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-        box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
         li {
-            list-style: none;
-
             &:first-of-type {
                 a {
                     border-top-left-radius: $radius;
@@ -173,7 +162,7 @@
 
                 &:hover, &:focus {
                     color: $font-color-base;
-                    background-color: $grey-faded;
+                    background-color: $grey;
                 }
 
                 &:active {

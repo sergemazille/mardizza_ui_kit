@@ -8,141 +8,145 @@
     <title>Mardizza UI Kit</title>
     <link rel="stylesheet" href="dist/style/app.css">
 </head>
+
 <body>
+<div class="content">
 
-<div class="block">
-    <h1>Colors</h1>
-    <div class="colors">
-        <div class="grey-color">
-            <div class="color grey-faded"></div>
-            <div class="color grey-light"></div>
-            <div class="color grey"></div>
-            <div class="color grey-dark"></div>
-        </div>
+    <div class="block">
+        <h1>Colors</h1>
+        <div class="colors">
+            <div class="grey-color">
+                <div class="color grey-faded"></div>
+                <div class="color grey-light"></div>
+                <div class="color grey"></div>
+                <div class="color grey-dark"></div>
+            </div>
 
-        <div class="primary-color">
-            <div class="color primary-faded"></div>
-            <div class="color primary-light"></div>
-            <div class="color primary"></div>
-            <div class="color primary-dark"></div>
-        </div>
+            <div class="primary-color">
+                <div class="color primary-faded"></div>
+                <div class="color primary-light"></div>
+                <div class="color primary"></div>
+                <div class="color primary-dark"></div>
+            </div>
 
-        <div class="secondary-color">
-            <div class="color secondary-faded"></div>
-            <div class="color secondary-light"></div>
-            <div class="color secondary"></div>
-            <div class="color secondary-dark"></div>
-        </div>
-    </div>
-</div>
-
-<div class="block">
-    <h1>Buttons</h1>
-    <div class="buttons">
-        <h2>Normal buttons</h2>
-        <div class="normal-states">
-            <button class="btn-grey">Grey</button>
-            <button class="btn-primary">Primary</button>
-            <button class="btn-secondary">Secondary</button>
-            <button class="btn-info">Info</button>
-            <button class="btn-success">Success</button>
-            <button class="btn-warning">Warning</button>
-            <button class="btn-danger">Danger</button>
-        </div>
-
-        <h2>Disabled buttons</h2>
-        <div class="disabled-states">
-            <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
-            <button disabled class="btn-primary">Primary disabled</button>
-            <button disabled class="btn-secondary">Secondary disabled</button>
-            <button disabled class="btn-info">Info disabled</button>
-            <button disabled class="btn-success">Success disabled</button>
-            <button disabled class="btn-warning">Warning disabled</button>
-            <button disabled class="btn-danger">Danger disabled</button>
+            <div class="secondary-color">
+                <div class="color secondary-faded"></div>
+                <div class="color secondary-light"></div>
+                <div class="color secondary"></div>
+                <div class="color secondary-dark"></div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="block">
-    <h1>Form</h1>
-    <h2>Input fields</h2>
-    <div class="input">
-        <form action="#">
-            <div class="form-group">
-                <div class="input-group">
-                    <label for="normal">Normal input</label>
-                    <input id="normal" type="text" class="form-control" placeholder="Placeholder">
-
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="input-group success-feedback">
-                    <label for="success-input">Success input</label>
-                    <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
-                    <span class="feedback">Vous avez réussi !!</span>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="input-group warning-feedback">
-                    <label for="warning-input">Warning input</label>
-                    <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
-                    <span class="feedback">Quelque chose requiert votre attention.</span>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="input-group error-feedback">
-                    <label for="error-input">Error input</label>
-                    <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
-                    <span class="feedback">Une erreur s'est produite.</span>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="input-group">
-                    <label for="disabled-input">Disabled input</label>
-                    <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
-                </div>
+    <div class="block">
+        <h1>Buttons</h1>
+        <div class="buttons">
+            <h2>Normal buttons</h2>
+            <div class="normal-states">
+                <button class="btn-grey">Grey</button>
+                <button class="btn-primary">Primary</button>
+                <button class="btn-secondary">Secondary</button>
+                <button class="btn-info">Info</button>
+                <button class="btn-success">Success</button>
+                <button class="btn-warning">Warning</button>
+                <button class="btn-danger">Danger</button>
             </div>
 
-            <!-- Input states test -->
-            <h3>Test d'un input avec feedback :</h3>
-            <div class="form-group states-input-test">
-                <div class="input-group">
-                    <label for="states-input">Test input</label>
-                    <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
-                    <!-- No feedback span here, it will be automatically generated -->
+            <h2>Disabled buttons</h2>
+            <div class="disabled-states">
+                <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
+                <button disabled class="btn-primary">Primary disabled</button>
+                <button disabled class="btn-secondary">Secondary disabled</button>
+                <button disabled class="btn-info">Info disabled</button>
+                <button disabled class="btn-success">Success disabled</button>
+                <button disabled class="btn-warning">Warning disabled</button>
+                <button disabled class="btn-danger">Danger disabled</button>
+            </div>
+        </div>
+    </div>
 
-                    <div class="states-input-buttons">
-                        <button data-action="success-feedback" data-text="C'est un succès !!" class="btn-success">Get a success</button>
-                        <button data-action="warning-feedback" data-text="Attention, ceci est un avertissement !" class="btn-warning">Display a warning</button>
-                        <button data-action="error-feedback" data-text="Allo Houston, nous avons un problème..." class="btn-danger">Trigger an error</button>
-                        <button data-action="disabled" class="btn-grey">Disable me</button>
-                        <button data-action="reset" class="btn-primary">Reset</button>
+    <div class="block">
+        <h1>Form</h1>
+        <h2>Input fields</h2>
+        <div class="input">
+            <form action="#">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="normal">Normal input</label>
+                        <input id="normal" type="text" class="form-control" placeholder="Placeholder">
+
                     </div>
                 </div>
-            </div>
-
-            <h2>Dropdown</h2>
-            <div class="form-group">
-                <div class="dropdown">
-                    <button class="btn-primary dropdown-trigger" type="button" id="pizza-dropdown" aria-haspopup="true" aria-expanded="true">
-                        Orientale
-                    </button>
-                    <ul class="dropdown-list" aria-labelledby="pizza-dropdown">
-                        <li><a href="#" data-value="gorgonzola">Gorgonzola</a></li>
-                        <li><a href="#" data-value="fattrice">Fattrice</a></li>
-                        <li><a href="#" data-value="margherita">Margherita</a></li>
-                        <li><a href="#" data-value="napolitaine">Napolitaine</a></li>
-                        <li class="active" data-value="orientale"><a href="#">Orientale</a></li>
-                        <li><a href="#" data-value="quattro-stagione">Quattro Stagione</a></li>
-                        <li><a href="#" data-value="sucree-salee">Sucrée Salée</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#" data-value="pizza-mois">Pizza du mois</a></li>
-                    </ul>
+                <div class="form-group">
+                    <div class="input-group success-feedback">
+                        <label for="success-input">Success input</label>
+                        <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
+                        <span class="feedback">Vous avez réussi !!</span>
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <div class="input-group warning-feedback">
+                        <label for="warning-input">Warning input</label>
+                        <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
+                        <span class="feedback">Quelque chose requiert votre attention.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group error-feedback">
+                        <label for="error-input">Error input</label>
+                        <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
+                        <span class="feedback">Une erreur s'est produite.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="disabled-input">Disabled input</label>
+                        <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
+                    </div>
+                </div>
+
+                <!-- Input states test -->
+                <h3>Test d'un input avec feedback :</h3>
+                <div class="form-group states-input-test clearfix">
+                    <div class="input-group">
+                        <label for="states-input">Test input</label>
+                        <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
+                        <!-- No feedback span here, it will be automatically generated -->
+
+                        <div class="states-input-buttons">
+                            <button data-action="success-feedback" data-text="C'est un succès !!" class="btn-success">Get a success</button>
+                            <button data-action="warning-feedback" data-text="Attention, ceci est un avertissement !" class="btn-warning">Display a warning</button>
+                            <button data-action="error-feedback" data-text="Allo Houston, nous avons un problème..." class="btn-danger">Trigger an error</button>
+                            <button data-action="disabled" class="btn-grey">Disable me</button>
+                            <button data-action="reset" class="btn-primary">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Dropdown</h2>
+                <div class="form-group">
+                    <div class="dropdown">
+                        <button class="btn-primary dropdown-trigger" type="button" id="pizza-dropdown" aria-haspopup="true" aria-expanded="true">
+                            Orientale
+                        </button>
+                        <ul class="dropdown-list" aria-labelledby="pizza-dropdown">
+                            <li><a href="#" data-value="gorgonzola">Gorgonzola</a></li>
+                            <li><a href="#" data-value="fattrice">Fattrice</a></li>
+                            <li><a href="#" data-value="margherita">Margherita</a></li>
+                            <li><a href="#" data-value="napolitaine">Napolitaine</a></li>
+                            <li class="active"><a href="#" data-value="orientale">Orientale</a></li>
+                            <li><a href="#" data-value="quattro-stagione">Quattro Stagione</a></li>
+                            <li><a href="#" data-value="sucree-salee">Sucrée Salée</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" data-value="pizza-mois">Pizza du mois</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+
+</div> <!-- content-->
 
 <script src="dist/script/app.js"></script>
 </body>
