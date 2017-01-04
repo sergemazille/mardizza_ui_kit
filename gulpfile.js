@@ -59,9 +59,9 @@ gulp.task('fonts', function () {
 
 // Watches
 gulp.task('watch', function () {
-    gulp.watch('./src/script/**/*.js', ['babelify']);
+    gulp.watch('./src/script/*.js', ['babelify']);
     gulp.watch('./src/icons/*.svg', ['icons']);
-    gulp.watch('./src/style/**/*.scss', ['style']);
+    gulp.watch('./src/style/*.scss', ['style']);
     gulp.watch('./src/fonts/**/*.*', ['fonts']);
 });
 

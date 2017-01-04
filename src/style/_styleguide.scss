@@ -51,9 +51,14 @@ body {
     .states-input-test {
         border: 1px solid $primary;
         padding: 12px;
+        background-color: $primary-faded;
 
         .states-input-buttons {
             margin-top: 20px;
+
+            .btn-primary {
+                float: right;
+            }
         }
     }
 }

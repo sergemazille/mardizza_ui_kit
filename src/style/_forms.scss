@@ -4,7 +4,7 @@
 @mixin input-group-feedback($color, $icon) {
     position: relative; // in order to position absolute icon
     $color-rgba: rgba(red($color), green($color), blue($color), .6); // box shadow custom color
-    $color-dark: darken($color, 10%);
+    $color-dark: darken($color, 15%);
 
     // override input element default state
     .form-control {
@@ -96,33 +96,54 @@
     margin-bottom: $font-size-base;
 }
 
-// dropdown
+// dropdown (select elements are way too complicated to be styled)
 .dropdown {
-    button {
+    position: relative;
+
+    .dropdown-trigger {
         position: relative;
-        padding: $btn-padding-vertical ($btn-padding-horizontal / 2);
         text-align: left;
         min-width: 300px;
+        padding: $btn-padding-vertical $btn-padding-horizontal/2;
 
         &:after {
-            position: absolute;
-            right: $padding-base-horizontal;
             font-family: 'icomoon';
             content: $icon-arrow-down;
+            position: absolute;
+            right: $padding-base-horizontal;
         }
     }
 
-    .dropdown-menu {
+    .dropdown-list {
         margin-top: $padding-base-horizontal;
         padding: 0;
         min-width: 300px;
-        background-color: $primary-faded;
+        //background-color: $primary-faded;
         font-size: $font-size-base;
-        border-width: 0;
-        border-radius: $radius;
-        box-shadow: 0 2px 12px rgba(0,0,0,.3);
+        //border-width: 0;
+        //border-radius: $radius;
+        //box-shadow: 0 2px 12px rgba(0,0,0,.3);
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        //display: none;
+        float: left;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
         li {
+            list-style: none;
+
             &:first-of-type {
                 a {
                     border-top-left-radius: $radius;
@@ -146,12 +167,13 @@
 
             a {
                 color: $font-color-base;
-                padding-top: 6px;
-                padding-bottom: 6px;
+                padding: 6px 20px;
+                display: block;
+                text-decoration: none;
 
                 &:hover, &:focus {
                     color: $font-color-base;
-                    background-color: lighten($grey, 8%);
+                    background-color: $grey-faded;
                 }
 
                 &:active {
