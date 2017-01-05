@@ -14,6 +14,7 @@
             display: inline-block;
             width: 75px;
             height: 75px;
+            border-radius: $radius;
 
             &.grey-faded {background-color: $grey-faded;}
             &.grey-light {background-color: $grey-light;}
