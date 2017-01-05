@@ -34,7 +34,7 @@ $font-family-primary: 'Open Sans', Helvetica, Arial, sans-serif !default;
 $font-family-icon: 'icomoon' !default;
 $font-size-root: 16px !default;
 $font-size-base: 1rem !default;
-$font-color-base: $primary-dark;
+$font-color-base: mix($primary-dark, $grey, 78%);
 $line-height-base: 1.5 !default;
 $font-weight-normal: 400;
 $font-weight-semi-bold: 600;
