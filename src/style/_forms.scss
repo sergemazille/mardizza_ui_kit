@@ -176,33 +176,6 @@
         background-clip: padding-box;
 
         li {
-            &:first-of-type {
-                a {
-                    border-top-left-radius: $radius;
-                    border-top-right-radius: $radius;
-                }
-            }
-
-            &:last-of-type {
-                a {
-                    border-bottom-left-radius: $radius;
-                    border-bottom-right-radius: $radius;
-                }
-            }
-
-            &.active {
-                a {
-                    color: #fff;
-                    background-color: $secondary;
-                }
-            }
-
-            &.divider {
-                height: 1px;
-                border-top: 1px solid #fff;
-                margin: 5px 0;
-            }
-
             a {
                 color: $font-color-base;
                 padding: 6px 20px;
@@ -218,6 +191,33 @@
                     color: #fff;
                     background-color: $secondary;
                 }
+            }
+
+            // top list item rounded border
+            &:first-of-type {
+                a {
+                    border-top-left-radius: $radius;
+                    border-top-right-radius: $radius;
+                }
+            }
+
+            // bottom list item rounded border
+            &:last-of-type {
+                a {
+                    border-bottom-left-radius: $radius;
+                    border-bottom-right-radius: $radius;
+                }
+            }
+
+            &.active a {
+                color: #fff;
+                background-color: $secondary;
+            }
+
+            &.divider {
+                height: 1px;
+                border-top: 1px solid #fff;
+                margin: 0 $padding-base-horizontal;
             }
         }
     }

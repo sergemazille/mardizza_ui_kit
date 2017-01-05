@@ -63,3 +63,13 @@
         }
     }
 }
+
+.check-buttons {
+    display: flex;
+    @media screen and (max-width: 900px) { display: inherit; }
+
+    [class*="check-"]:not(:first-of-type) {
+        margin-left: 6em;
+        @media screen and (max-width: 900px) { margin-left: 0; }
+    }
+}
