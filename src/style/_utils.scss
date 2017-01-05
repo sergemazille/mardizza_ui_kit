@@ -8,6 +8,7 @@
         clear: both;
     }
 }
+
 .backdrop {
     background-color: transparent;
     position: fixed;
@@ -15,4 +16,8 @@
     left: 0;
     height: 10000px;
     width: 10000px;
+}
+
+.hidden {
+    display: none !important;
 }

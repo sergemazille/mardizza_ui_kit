@@ -1,0 +1,74 @@
+/////////////////////////////////////////////////////////////
+// Mixins
+
+@mixin pagination-icon($icon) {
+    position: relative;
+
+    &:after {
+        font-family: icomoon;
+        content: $icon;
+        position: absolute;
+        left: 30%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    &.disabled:after {
+        color: $grey;
+    }
+}
+
+/////////////////////////////////////////////////////////////
+// Classes
+
+.pagination {
+    li {
+        display: inline-block;
+        background-color: $primary-faded;
+        border: 2px solid #fff;
+        padding: .7em .4em;
+        border-radius: $radius;
+        text-align: center;
+        font-size: .9em;
+        margin: 3px;
+
+        a {
+            padding: $padding-base-vertical $padding-base-horizontal;
+            text-decoration: none;
+            color: $primary;
+        }
+
+        &:hover, &:focus, &:active:hover, &.active:hover, &:focus:hover {
+            background-color: $grey;
+            a { color: $primary; }
+        }
+
+        &:active, &.active {
+            pointer-events: none;
+            background-color: $secondary;
+            border: 1px solid $secondary-dark;
+            a {
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+
+        &.disabled {
+            pointer-events: none;
+            background-color: $grey-faded;
+            a { color: $grey; }
+        }
+
+        &.ellipsis {
+            background-color: inherit;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            pointer-events: none;
+            font-weight: bold;
+        }
+
+        &.prev { @include pagination-icon($icon-chevron-left) }
+        &.next { @include pagination-icon($icon-chevron-right) }
+    }
+}
