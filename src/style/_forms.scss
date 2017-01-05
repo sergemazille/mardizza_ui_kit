@@ -251,7 +251,6 @@
 
         &:checked ~ .toggle-button {
             background-color: $secondary;
-
             &:before, & + .label { color: $secondary; }
 
             // round button when checked
