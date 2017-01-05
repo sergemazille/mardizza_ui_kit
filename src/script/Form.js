@@ -36,7 +36,27 @@ export class Form {
             });
 
             // choice event
+            $dropdownList.querySelectorAll('a').forEach(function(anchor) {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    let selectionOption = anchor.text;
 
+                    // cleanup previously selected list item (remove active class)
+                    let $currentActiveListItem = $dropdownList.querySelector('li.active');
+                    $currentActiveListItem.classList.remove('active');
+
+                    // select clicked list item by giving it `active` class and changing button label text
+                    anchor.parentElement.classList.add('active');
+                    button.innerHTML = selectionOption;
+
+                    // close the dropdown-list
+                    $dropdownList.style.display = "";
+
+                    // cleanup : remove opened backdrop
+                    let $backdrop = document.querySelector('.backdrop');
+                    $backdrop.remove();
+                });
+            });
         });
     }
 }
