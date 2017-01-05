@@ -38,6 +38,49 @@
     }
 }
 
+@mixin reset-input() {
+    position: absolute;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+}
+
+// checkbox and radio scaffolding
+@mixin checkbox-radio($unchecked-icon, $checked-icon) {
+    .label:hover { cursor: pointer; }
+
+    .label:before {
+        font-family: $font-family-icon;
+        padding-right: .5em;
+        vertical-align: -13%; // optically better than 'middle'
+        font-size: 1.5em;
+        color: $primary-faded;
+        content: $unchecked-icon;
+        transition: all .3s ease;
+    }
+
+    &:hover .label:before { content: $checked-icon; cursor: pointer;}
+
+    [type="checkbox"], [type="radio"] {
+        @include reset-input();
+
+        &:checked {
+            & ~ .label, & ~ .label:before { color: $secondary; }
+            & ~ .label:before { content: $checked-icon; }
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+
+        .label {
+            color: $primary-faded;
+            &:before { color: $grey-faded; }
+        }
+    }
+}
+
 /////////////////////////////////////////////////////////////
 // Classes
 
@@ -154,6 +197,12 @@
                 }
             }
 
+            &.divider {
+                height: 1px;
+                border-top: 1px solid #fff;
+                margin: 5px 0;
+            }
+
             a {
                 color: $font-color-base;
                 padding: 6px 20px;
@@ -170,6 +219,74 @@
                     background-color: $secondary;
                 }
             }
+        }
+    }
+}
+
+// checkbox & radio
+.checkbox { @include checkbox-radio($icon-checkbox, $icon-checkbox-checked); }
+.radio { @include checkbox-radio($icon-radio, $icon-radio-checked); }
+
+// toggle
+.toggle {
+    .label {
+        font-weight: $font-weight-normal;
+        cursor: pointer;
+    }
+
+    &.disabled {
+        pointer-events: none;
+
+        // button 'rail'
+        .toggle-button { background-color: $grey-faded; }
+
+        // round button
+        .toggle-button:before { background-color: $primary-faded; }
+
+        .label { color: $primary-faded; }
+    }
+
+    [type="checkbox"] {
+        @include reset-input();
+
+        &:checked ~ .toggle-button {
+            background-color: $secondary;
+
+            &:before, & + .label { color: $secondary; }
+
+            // round button when checked
+            &:before {
+                background-color: $secondary-dark;
+                left: 1em;
+            }
+        }
+    }
+
+    // button 'rail'
+    .toggle-button {
+        position: relative;
+        vertical-align: middle; // optically better than 'middle'
+        display: inline-block;
+        height: 1em;
+        width: 2em;
+        margin: 12px;
+        background-color: $primary-faded;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: all .3s ease .1s;
+
+        // round button
+        &:before {
+            position: absolute;
+            left: -10px;
+            top: -.25em;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 100px;
+            background-color: $primary-light;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+            content: '';
+            transition: all .3s ease;
         }
     }
 }
