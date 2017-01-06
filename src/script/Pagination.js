@@ -2,37 +2,24 @@ export class Pagination {
 
     // launch class methods
     static init() {
-        this.pagination();
+        Pagination.pagination();
     }
 
     static pagination() {
         let pagination = document.querySelector('.pagination');
         let prevItem = pagination.querySelector('.prev');
         let nextItem = pagination.querySelector('.next');
+        let activeItem = pagination.querySelector('.active');
         let items = pagination.querySelectorAll('li');
-        let itemsToKeep = new Map();
-        let activeItemIndex;
 
-        // tests to get activeItemIndex right away
-
-
-
-        // store in a Map the items to display
-        items.forEach(function(item, i) {
-            // first and last two items are always displayed
-            if(0 == i || 1 == i || (items.length - 2) == i || (items.length - 1) == i) {
-                itemsToKeep.set(i, item);
-            }
-
-            // active items, its previous and next items, are displayed as well
-            if(item.classList.contains('active')) {
-                itemsToKeep.set(i-1, items[i-1]);
-                itemsToKeep.set(i, item);
-                itemsToKeep.set(i+1, items[i+1]);
-
-                activeItemIndex = i; // store the information for later use
-            }
+        // set / reset items
+        [...items].forEach(function(item, i) {
+            if(item.classList.contains('ellipsis')) { item.firstElementChild.textContent = i; }
+            item.classList.remove('hidden', 'show', 'ellipsis', 'disabled');
+            item.dataset.page = i;
         });
+
+        let activeItemIndex = parseInt(activeItem.dataset.page);
 
         /* add appropriate classes : */
 
@@ -66,7 +53,7 @@ export class Pagination {
         items[(items.length - 2)].classList.add('show');
 
         // hide every other items
-        items.forEach(function(item) {
+        [...items].forEach(function(item) { // spread operator so IE accepts to loop through querySelectorAll result
             if(! item.classList.contains('show')) {
                 item.classList.add('hidden');
             }
@@ -74,7 +61,7 @@ export class Pagination {
 
         // replace 'ellipsis' class list item content with 3 dots
         let ellipsisItems = document.querySelectorAll('li.ellipsis');
-        ellipsisItems.forEach(function(item) {
+        [...ellipsisItems].forEach(function(item) { // spread operator so IE accepts to loop through querySelectorAll result
             item.querySelector('a').textContent = "...";
         });
     }

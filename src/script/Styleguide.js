@@ -1,10 +1,17 @@
+import { Pagination } from './Pagination';
+
 export class Styleguide {
     static init() {
+        Styleguide.inputFeedback();
+        Styleguide.pagination();
+    }
+
+    static inputFeedback() {
         let testButtons = document.querySelectorAll('.states-input-buttons button');
-        testButtons.forEach(function(button) {
+        [...testButtons].forEach(function(button) { // spread operator so IE accepts to loop through querySelectorAll result
 
             button.addEventListener('click', function(e) {
-                e.preventDefault();
+                // e.preventDefault();
 
                 let feedbackText = this.dataset.text;
                 let action = this.dataset.action;
@@ -67,6 +74,35 @@ export class Styleguide {
                     feedbackSpan.textContent = feedbackText;
                     inputGroup.insertBefore(feedbackSpan, inputGroup.querySelector('.states-input-buttons'));
                 }
+            });
+        });
+    }
+
+    static pagination() {
+        let pagination = document.querySelector('.pagination');
+        let items = pagination.querySelectorAll('li');
+
+        [...items].forEach(function(item) {
+            item.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                let activeItemIndex = parseInt(pagination.querySelector('.active').dataset.page);
+
+                // remove active class from old active item
+                items[activeItemIndex].classList.remove('active');
+
+                // prev & next cases
+                if(item.classList.contains('prev')) {
+                    items[activeItemIndex - 1].classList.add('active');
+                } else if(item.classList.contains('next')) {
+                    items[activeItemIndex + 1].classList.add('active');
+                } else {
+                    // selected new active page
+                    item.classList.add('active');
+                }
+
+                // relaunch function for demo purpose
+                Pagination.pagination();
             });
         });
     }

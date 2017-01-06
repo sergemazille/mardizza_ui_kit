@@ -13,15 +13,16 @@
         z-index: 1;
     }
 
-    &.disabled:after {
-        color: $grey;
-    }
+    &.disabled:after { color: $grey; }
+    &:active, &:focus &.active { &:after { color: #fff; } }
 }
 
 /////////////////////////////////////////////////////////////
 // Classes
 
 .pagination {
+    user-select: none;
+
     li {
         display: inline-block;
         background-color: $primary-faded;
@@ -38,13 +39,12 @@
             color: $primary;
         }
 
-        &:hover, &:focus, &:active:hover, &.active:hover, &:focus:hover {
+        &:hover, &:focus, &:focus:hover {
             background-color: $grey;
             a { color: $primary; }
         }
 
         &:active, &.active {
-            pointer-events: none;
             background-color: $secondary;
             border: 1px solid $secondary-dark;
             padding: .7em calc(.4em + 1px); // keep layout from moving on click
@@ -54,6 +54,8 @@
                 font-weight: bold;
             }
         }
+
+        &.active { pointer-events: none; }
 
         &.disabled {
             pointer-events: none;

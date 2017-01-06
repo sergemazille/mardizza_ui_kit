@@ -7,7 +7,7 @@ export class Form {
 
     static dropdown() {
         let dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
-        dropdownTriggers.forEach(function(button) {
+        [...dropdownTriggers].forEach(function(button) { // spread operator so IE accepts to loop through querySelectorAll result
 
             // trigger event
             let $dropdownList = button.parentElement.querySelector('.dropdown-list');
@@ -36,7 +36,8 @@ export class Form {
             });
 
             // choice event
-            $dropdownList.querySelectorAll('a').forEach(function(anchor) {
+            let $anchorTags = $dropdownList.querySelectorAll('a');
+            [...$anchorTags].forEach(function(anchor) { // spread operator so IE accepts to loop through querySelectorAll result
                 anchor.addEventListener("click", function(e) {
                     e.preventDefault();
                     let selectionOption = anchor.text;
