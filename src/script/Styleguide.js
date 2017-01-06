@@ -11,7 +11,7 @@ export class Styleguide {
         [...testButtons].forEach(function(button) { // spread operator so IE accepts to loop through querySelectorAll result
 
             button.addEventListener('click', function(e) {
-                // e.preventDefault();
+                e.preventDefault();
 
                 let feedbackText = this.dataset.text;
                 let action = this.dataset.action;
