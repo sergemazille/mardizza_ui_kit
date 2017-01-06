@@ -19,11 +19,11 @@ $grey-faded: lighten($grey-light, 8%);
 $grey-dark: darken($grey, 35%);
 
 $primary-light: lighten($primary, 20%);
-$primary-faded: mix($primary, lighten($grey-light, 10%), 10%);
+$primary-faded: mix($primary, lighten($grey-light, 8%), 10%);
 $primary-dark: darken($primary, 10%);
 
 $secondary-light: lighten($secondary, 20%);
-$secondary-faded: mix($secondary, lighten($grey-light, 10%), 10%);
+$secondary-faded: mix($secondary, lighten($grey-light, 8%), 10%);
 $secondary-dark: darken($secondary, 10%);
 
 /////////////////////////////////////////////////////////////
