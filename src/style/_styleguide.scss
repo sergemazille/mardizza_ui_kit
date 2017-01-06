@@ -4,7 +4,7 @@
     padding: 32px;
 }
 
-.block {
+.group {
     margin-bottom: 32px;
 }
 
@@ -50,11 +50,6 @@
     }
 
     .states-input-test {
-        border: 1px solid $primary;
-        border-radius: $radius;
-        padding: 12px;
-        background-color: $primary-faded;
-
         .states-input-buttons {
             margin-top: 20px;
 
