@@ -58,6 +58,7 @@
         &.disabled {
             pointer-events: none;
             background-color: $grey-faded;
+            border: 2px solid $grey-light;
             a { color: $grey; }
         }
 
