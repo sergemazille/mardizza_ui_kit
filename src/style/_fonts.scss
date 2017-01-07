@@ -19,6 +19,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-down:before { content: "\e900"; }
+.icon-checkbox:before { content: "\e901"; }
+.icon-checkbox-checked:before { content: "\e902"; }
+.icon-chevron-left:before { content: "\e903"; }
+.icon-chevron-right:before { content: "\e904"; }
+.icon-radio:before { content: "\e905"; }
+.icon-radio-checked:before { content: "\e906"; }
+.icon-sheriff:before { content: "\e907"; }
+
 // lato
 @font-face {
     font-family: 'Open sans';

@@ -19,8 +19,17 @@ a {
 textarea {
     width: 100%;
     height: 6em;
-    border: 1px solid $grey;
+    border: 1px solid $input-border;
     border-radius: $radius;
     padding: .5em;
     color: $font-color-base;
+
+    &:focus {
+        $color-rgba: rgba(red($font-color-base), green($font-color-base), blue($font-color-base), .6); // box shadow custom color
+        $color-dark: darken($font-color-base, 15%);
+
+        border-color: $color-dark;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+                    0 0 $input-focus-spread $color-rgba;
+    }
 }
