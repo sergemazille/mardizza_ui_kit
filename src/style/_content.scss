@@ -1,6 +1,55 @@
+/////////////////////////////////////////////////////////////
+// Mixins
+
+@mixin notification($color, $icon) {
+    $color-dark: darken($color, 20%);
+
+    color: $color-dark;
+    border: 1px solid $color-dark;
+    border-radius: $radius;
+    background-color: transparentize($color, .85);
+    padding: 1em;
+    line-height: 1.5;
+    position: relative;
+
+    &:before {
+        content: $icon;
+        font-family: $font-family-icon;
+        font-size: 1.7em;
+        line-height: .5;
+        vertical-align: -40%; // compensate bigger font-size
+        margin-right: .35em;
+    }
+
+    &:after {
+        content: $icon-cross;
+        font-family: $font-family-icon;
+        font-size: 1em;
+        font-weight: 400;
+        position: absolute;
+        top: .5em;
+        right: .5em;
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-color: darken($color-dark, 15%);
+    }
+
+    &:hover:after { font-weight: 700; }
+}
+
+/////////////////////////////////////////////////////////////
+// Classes
+
 .block {
     border: 1px solid $grey;
     border-radius: $radius;
     background-color: $primary-faded;
     padding: 1em;
 }
+
+.notification-success { @include notification($success, $icon-success); }
+.notification-info { @include notification($info, $icon-info); }
+.notification-warning { @include notification($warning, $icon-warning); }
+.notification-error { @include notification($error, $icon-alert); }

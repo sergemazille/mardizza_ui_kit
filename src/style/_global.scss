@@ -6,6 +6,33 @@ body {
     background-color: $bg;
 }
 
+// Typography
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1.5;
+    margin-bottom: .75em;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: .6em;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: .4em;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: .1em;
+}
+
 a {
     color: $secondary;
     text-decoration: none;
@@ -33,3 +60,21 @@ textarea {
                     0 0 $input-focus-spread $color-rgba;
     }
 }
+
+// Icons
+.icon-alert:before { content: $icon-alert; }
+.icon-arrow-down:before { content: $icon-arrow-down; }
+.icon-calendar:before { content: $icon-calendar; }
+.icon-checkbox:before { content: $icon-checkbox; }
+.icon-checkbox-checked:before { content: $icon-checkbox-checked; }
+.icon-chevron-left:before { content: $icon-chevron-left; }
+.icon-chevron-right:before { content: $icon-chevron-right; }
+.icon-cross:before { content: $icon-cross; }
+.icon-info:before { content: $icon-info; }
+.icon-not-allowed:before { content: $icon-not-allowed; }
+.icon-radio:before { content: $icon-radio; }
+.icon-radio-checked:before { content: $icon-radio-checked; }
+.icon-sheriff:before { content: $icon-sheriff; }
+.icon-success:before { content: $icon-success; }
+.icon-warning:before { content: $icon-warning; }
+.icon-zoom:before { content: $icon-zoom; }

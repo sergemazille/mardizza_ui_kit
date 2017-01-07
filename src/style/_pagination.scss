@@ -7,8 +7,10 @@
     &:after {
         font-family: icomoon;
         content: $icon;
+        font-size: 1.5em;
         position: absolute;
-        left: 30%;
+        top: 14%;
+        left: 20%;
         pointer-events: none;
         z-index: 1;
     }

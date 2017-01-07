@@ -12,7 +12,7 @@
         padding-right: $input-feedback-padding; // avoid icon to step onto input text
 
         // add feedback icon
-        background-image: url('../icons/#{$icon}.svg');
+        background-image: url('../graphics/icons/#{$icon}.svg');
         background-repeat: no-repeat;
         background-position: 99.5% center;
         background-size: $input-feedback-padding;
@@ -82,7 +82,7 @@
 // inputs with icons
 @mixin icon-input($icon) {
     // add feedback icon
-    background-image: url('../icons/#{$icon}.svg');
+    background-image: url('../graphics/icons/#{$icon}.svg');
     background-repeat: no-repeat;
     background-position: .5% center;
     background-size: $input-feedback-padding;
@@ -131,7 +131,7 @@
         cursor: not-allowed;
 
         // add disabled state icon
-        background-image: url('../icons/not-allowed.svg');
+        background-image: url('../graphics/icons/not-allowed.svg');
         background-repeat: no-repeat;
         background-position: 99.5% center;
         background-size: $input-feedback-padding;
