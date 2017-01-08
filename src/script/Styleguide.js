@@ -115,7 +115,7 @@ export class Styleguide {
         let standardNotificationButtons = document.querySelectorAll('.standard-notifications button');
 
         [...standardNotificationButtons].forEach(function(button) {
-            let notificationText = button.textContent;
+            let notificationText = button.dataset.text;
             let notificationType = button.className.slice(4);
 
             button.addEventListener("click", function(e) {
@@ -126,13 +126,16 @@ export class Styleguide {
         });
 
         // sticky notification button
-        let stickyButton = document.querySelector('.notifications-test .btn-primary');
-        stickyButton.addEventListener("click", function(e) {
-            e.preventDefault();
+        let stickyButtons = document.querySelectorAll('.notifications-test .sticky');
 
-            let notificationText = stickyButton.textContent;
-            let isSticky = true;
-            Notification.create(notificationText, "info", isSticky);
+        [...stickyButtons].forEach(function(button) {
+            button.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                let notificationText = button.dataset.text;
+                let isSticky = true;
+                Notification.create(notificationText, "info", isSticky);
+            });
         });
     }
 }

@@ -31,7 +31,7 @@ export class Notification {
         let notification = document.createElement('div');
         notification.classList.add(`notification-${type}`);
         if(isSticky) { notification.classList.add('stick'); } // sticky notifications might be used for long messages
-        notification.textContent = message;
+        notification.innerHTML = message;
         container.appendChild(notification);
 
         // animate in
