@@ -7,7 +7,7 @@
     color: $color-dark;
     border: 1px solid $color-dark;
     border-radius: $radius;
-    background-color: mix(transparentize($color, .07), $grey-light, 50%);
+    background-color: mix(transparentize($color, .05), $grey-faded, 20%);
     padding: 1em 3em 1em 1em;
     line-height: 1.5;
     position: relative;

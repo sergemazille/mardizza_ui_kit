@@ -11,9 +11,11 @@
 
 <body>
 <div class="content">
+    <h1>Mardizza UI Kit</h1>
+
     <div class="group">
-        <h1>Colors</h1>
-        <div class="colors">
+        <h2>Colors</h2>
+        <div class="colors inset">
             <div class="grey-color">
                 <div class="color grey-faded"></div>
                 <div class="color grey-light"></div>
@@ -37,345 +39,427 @@
         </div>
     </div>
 
-    <div class="group">
-        <h1>Buttons</h1>
-        <div class="buttons">
-            <h2>Normal buttons</h2>
-            <div class="normal-states">
-                <button class="btn-grey">Grey</button>
-                <button class="btn-primary">Primary</button>
-                <button class="btn-secondary">Secondary</button>
-                <button class="btn-info">Info</button>
-                <button class="btn-success">Success</button>
-                <button class="btn-warning">Warning</button>
-                <button class="btn-danger">Danger</button>
-            </div>
+    <hr>
 
-            <h2>Disabled buttons</h2>
-            <div class="disabled-states">
-                <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
-                <button disabled class="btn-primary">Primary disabled</button>
-                <button disabled class="btn-secondary">Secondary disabled</button>
-                <button disabled class="btn-info">Info disabled</button>
-                <button disabled class="btn-success">Success disabled</button>
-                <button disabled class="btn-warning">Warning disabled</button>
-                <button disabled class="btn-danger">Danger disabled</button>
+    <div class="group">
+        <h2>Form</h2>
+        <div class="group">
+            <h3>Buttons</h3>
+            <div class="buttons">
+                <div class="group">
+                    <h4>Normal buttons</h4>
+                    <div class="normal-states inset">
+                        <button class="btn-grey">Grey</button>
+                        <button class="btn-primary">Primary</button>
+                        <button class="btn-secondary">Secondary</button>
+                        <button class="btn-info">Info</button>
+                        <button class="btn-success">Success</button>
+                        <button class="btn-warning">Warning</button>
+                        <button class="btn-danger">Danger</button>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <h4>Disabled buttons</h4>
+                    <div class="disabled-states inset">
+                        <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
+                        <button disabled class="btn-primary">Primary disabled</button>
+                        <button disabled class="btn-secondary">Secondary disabled</button>
+                        <button disabled class="btn-info">Info disabled</button>
+                        <button disabled class="btn-success">Success disabled</button>
+                        <button disabled class="btn-warning">Warning disabled</button>
+                        <button disabled class="btn-danger">Danger disabled</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Input fields</h3>
+            <div class="input">
+                <form action="#">
+                    <div class="group">
+                        <h4>Standard inputs</h4>
+                        <div class="inset">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="normal">Text input</label>
+                                    <input id="normal" type="text" class="form-control" placeholder="Placeholder">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="search">Search input</label>
+                                    <input id="search" type="search" class="form-control" placeholder="Recherche">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="date">Date input</label>
+                                    <input id="date" type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <h4>Inputs with feedback</h4>
+                        <div class="inset">
+                            <div class="form-group">
+                                <div class="input-group success-feedback">
+                                    <label for="success-input">Success input</label>
+                                    <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <span class="feedback">You won!</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group warning-feedback">
+                                    <label for="warning-input">Warning input</label>
+                                    <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <span class="feedback">Something is happening...</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group error-feedback">
+                                    <label for="error-input">Error input</label>
+                                    <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <span class="feedback">There's definitely something wrong.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="disabled-input">Disabled input</label>
+                                    <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input states test -->
+                    <div class="group">
+                        <h4>Feedback input - testing area:</h4>
+                        <div class="inset">
+                            <div class="form-group block states-input-test clearfix">
+                                <div class="input-group">
+                                    <label for="states-input">Test input</label>
+                                    <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <!-- No feedback span here, it will be automatically generated -->
+
+                                    <div class="states-input-buttons">
+                                        <div class="test-buttons">
+                                            <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback input</button>
+                                            <button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback input</button>
+                                            <button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback input</button>
+                                            <button data-action="disabled" class="btn-grey">Disable input</button>
+                                        </div>
+                                        <button data-action="reset" class="btn-primary">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <h3>Textarea</h3>
+                        <div class="inset">
+                            <textarea name="styleguide-name" id="styleguide-id" placeholder="Placeholder"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <h3>Dropdown</h3>
+                        <div class="inset">
+                            <div class="form-group">
+                                <div class="dropdown">
+                                    <button class="btn-primary dropdown-trigger" type="button" id="pizza-dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Orientale
+                                    </button>
+                                    <ul class="dropdown-list" aria-labelledby="pizza-dropdown">
+                                        <li><a href="#" data-value="gorgonzola">Gorgonzola</a></li>
+                                        <li><a href="#" data-value="fattrice">Fattrice</a></li>
+                                        <li><a href="#" data-value="margherita">Margherita</a></li>
+                                        <li><a href="#" data-value="napolitaine">Napolitaine</a></li>
+                                        <li class="active"><a href="#" data-value="orientale">Orientale</a></li>
+                                        <li><a href="#" data-value="quattro-stagione">Quattro Stagione</a></li>
+                                        <li><a href="#" data-value="sucree-salee">Sucrée Salée</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#" data-value="pizza-mois">Pizza du mois</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="check-buttons">
+                        <div class="check-radio">
+                            <h3>Radio buttons</h3>
+                                <div class="inset">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="choice">
+                                            <span class="label">Radio</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="choice">
+                                            <span class="label">Radio</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="choice">
+                                            <span class="label">Radio disabled</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="check-toggle">
+                            <h3>Toggle buttons</h3>
+                            <div class="inset">
+                                <div class="form-group">
+                                    <div class="toggle">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="toggle-button"></span>
+                                            <span class="label">Toggle</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="toggle disabled">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="toggle-button"></span>
+                                            <span class="label">Disabled toggle</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="check-checkbox">
+                            <h3>Checkboxes</h3>
+                            <div class="inset">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="label">Checkbox</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox disabled">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="label">Disabled checkbox</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
+    <hr>
+
     <div class="group">
-        <h1>Form</h1>
-        <h2>Input fields</h2>
-        <div class="input">
-            <form action="#">
-                <h3>Standard inputs</h3>
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="normal">Text input</label>
-                        <input id="normal" type="text" class="form-control" placeholder="Placeholder">
-                    </div>
-                </div>
+        <h2>Navigation</h2>
+        <div class="group">
+            <h3>Pagination</h3>
+            <div class="inset">
+                <nav class="pagination">
+                    <ul>
+                        <li class="prev"><a href="#"></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">11</a></li>
+                        <li><a href="#">12</a></li>
+                        <li><a href="#">13</a></li>
+                        <li><a href="#">14</a></li>
+                        <li class="next"><a href="#"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="search">Search input</label>
-                        <input id="search" type="search" class="form-control" placeholder="Recherche">
-                    </div>
-                </div>
+        <div class="group">
+            <h3>Nav tabs</h3>
+            <div class="inset">
+                <nav class="tabs">
+                    <ul class="tabs-menu">
+                        <li><a href="#users-content">Users</a></li>
+                        <li class="active"><a href="#groups-content">Groups</a></li>
+                        <li><a href="#orders-content">Orders</a></li>
+                    </ul>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="date">Date input</label>
-                        <input id="date" type="date" class="form-control" placeholder="dd/mm/yyyy">
-                    </div>
-                </div>
-
-                <h3>Inputs with feedback</h3>
-                <div class="form-group">
-                    <div class="input-group success-feedback">
-                        <label for="success-input">Success input</label>
-                        <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">You won!</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group warning-feedback">
-                        <label for="warning-input">Warning input</label>
-                        <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Something is happening...</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group error-feedback">
-                        <label for="error-input">Error input</label>
-                        <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">There's definitely something wrong.</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="disabled-input">Disabled input</label>
-                        <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
-                    </div>
-                </div>
-
-                <!-- Input states test -->
-                <h3>Feedback input - testing area:</h3>
-                <div class="form-group block states-input-test clearfix">
-                    <div class="input-group">
-                        <label for="states-input">Test input</label>
-                        <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
-                        <!-- No feedback span here, it will be automatically generated -->
-
-                        <div class="states-input-buttons">
-                            <div class="test-buttons">
-                                <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback input</button>
-                                <button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback input</button>
-                                <button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback input</button>
-                                <button data-action="disabled" class="btn-grey">Disable input</button>
-                            </div>
-                            <button data-action="reset" class="btn-primary">Reset</button>
-                        </div>
-                    </div>
-                </div>
-
-                <h2>Textarea</h2>
-                <textarea name="styleguide-name" id="styleguide-id" placeholder="Placeholder"></textarea>
-
-                <h2>Dropdown</h2>
-                <div class="form-group">
-                    <div class="dropdown">
-                        <button class="btn-primary dropdown-trigger" type="button" id="pizza-dropdown" aria-haspopup="true" aria-expanded="true">
-                            Orientale
-                        </button>
-                        <ul class="dropdown-list" aria-labelledby="pizza-dropdown">
-                            <li><a href="#" data-value="gorgonzola">Gorgonzola</a></li>
-                            <li><a href="#" data-value="fattrice">Fattrice</a></li>
-                            <li><a href="#" data-value="margherita">Margherita</a></li>
-                            <li><a href="#" data-value="napolitaine">Napolitaine</a></li>
-                            <li class="active"><a href="#" data-value="orientale">Orientale</a></li>
-                            <li><a href="#" data-value="quattro-stagione">Quattro Stagione</a></li>
-                            <li><a href="#" data-value="sucree-salee">Sucrée Salée</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#" data-value="pizza-mois">Pizza du mois</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="check-buttons">
-                    <div class="check-radio">
-                        <h2>Radio buttons</h2>
-                        <div class="form-group">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="choice">
-                                    <span class="label">Radio</span>
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="choice">
-                                    <span class="label">Radio</span>
-                                </label>
-                            </div>
-                            <div class="radio disabled">
-                                <label>
-                                    <input type="radio" name="choice">
-                                    <span class="label">Radio disabled</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="check-toggle">
-                        <h2>Toggle buttons</h2>
-                        <div class="form-group">
+                    <div class="tabs-content">
+                        <div id="users-content">
+                            <h4>Users</h4>
                             <div class="toggle">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" checked>
                                     <span class="toggle-button"></span>
-                                    <span class="label">Toggle</span>
+                                    <span class="label">Activated</span>
                                 </label>
                             </div>
-
-                            <div class="toggle disabled">
-                                <label>
-                                    <input type="checkbox">
-                                    <span class="toggle-button"></span>
-                                    <span class="label">Disabled toggle</span>
-                                </label>
-                            </div>
+                            <p>Black viennese beans, body decaffeinated frappuccino, cup latte robust saucer seasonal extra.</p>
+                        </div>
+                        <div id="groups-content">
+                            <h4>Groups</h4>
+                            <p>Foam robusta skinny french press at black turkish as breve. Et lungo ristretto bar aroma cultivar brewed. Single shot cup redeye pumpkin spice froth instant fair trade cappuccino. Wings, so cream in, qui galão java, acerbic milk mazagran decaffeinated espresso. Kopi-luwak, aftertaste, black strong dripper spoon caramelization.</p>
+                        </div>
+                        <div id="orders-content">
+                            <h4>Orders</h4>
+                            <div class="block">Siphon, ut cream sit single shot roast cup latte caramelization turkish. In, coffee spoon cappuccino americano black coffee. Trifecta, froth caramelization plunger pot macchiato bar robust. Con panna froth single shot half and half, crema coffee, a affogato cultivar extraction kopi-luwak. Rich organic, cream qui trifecta lungo eu coffee.</div>
                         </div>
                     </div>
-
-                    <div class="check-checkbox">
-                        <h2>Checkboxes</h2>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">
-                                    <span class="label">Checkbox</span>
-                                </label>
-                            </div>
-                            <div class="checkbox disabled">
-                                <label>
-                                    <input type="checkbox">
-                                    <span class="label">Disabled checkbox</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </nav>
+            </div>
         </div>
     </div>
 
-    <div class="group">
-        <h1>Navigation</h1>
-        <h2>Pagination</h2>
-        <nav class="pagination">
-            <ul>
-                <li class="prev"><a href="#"></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li class="active"><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">11</a></li>
-                <li><a href="#">12</a></li>
-                <li><a href="#">13</a></li>
-                <li><a href="#">14</a></li>
-                <li class="next"><a href="#"></a></li>
-            </ul>
-        </nav>
+    <hr>
 
-        <h2>Nav tabs</h2>
-        <nav class="tabs">
-            <ul class="tabs-menu">
-                <li><a href="#users-content">Users</a></li>
-                <li class="active"><a href="#groups-content">Groups</a></li>
-                <li><a href="#orders-content">Orders</a></li>
-            </ul>
-
-            <div class="tabs-content">
-                <div id="users-content">
-                    <h3>Users</h3>
-                    <div class="toggle">
-                        <label>
-                            <input type="checkbox" checked>
-                            <span class="toggle-button"></span>
-                            <span class="label">Activated</span>
-                        </label>
-                    </div>
-                    <p>Black viennese beans, body decaffeinated frappuccino, cup latte robust saucer seasonal extra.</p>
-                </div>
-                <div id="groups-content">
-                    <h3>Groups</h3>
-                    <p>Foam robusta skinny french press at black turkish as breve. Et lungo ristretto bar aroma cultivar brewed. Single shot cup redeye pumpkin spice froth instant fair trade cappuccino. Wings, so cream in, qui galão java, acerbic milk mazagran decaffeinated espresso. Kopi-luwak, aftertaste, black strong dripper spoon caramelization.</p>
-                </div>
-                <div id="orders-content">
-                    <h3>Orders</h3>
-                    <div class="block">Siphon, ut cream sit single shot roast cup latte caramelization turkish. In, coffee spoon cappuccino americano black coffee. Trifecta, froth caramelization plunger pot macchiato bar robust. Con panna froth single shot half and half, crema coffee, a affogato cultivar extraction kopi-luwak. Rich organic, cream qui trifecta lungo eu coffee.</div>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <h1>Content</h1>
     <div class="group">
         <h2>Typography</h2>
-        <div class="block">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <p>Paragraph</p>
-            <a href="#">anchor tag</a>
-        </div>
-    </div>
-
-    <div class="group">
-        <h2>Block</h2>
-        <div class="block">
-            <p>
-                Milk kopi-luwak saucer decaffeinated in french press milk. Siphon, aroma blue mountain, filter, latte, milk rich acerbic galão java. Roast beans, ristretto cappuccino et irish doppio, spoon breve to go percolator carajillo.
-                Mocha americano plunger pot sugar steamed dark wings. Irish caffeine shop, spoon, that irish, milk cappuccino barista decaffeinated plunger pot spoon. Single shot cream coffee, id arabica so lungo spoon grinder.
-                In trifecta white crema aftertaste saucer steamed. Percolator iced instant breve grinder coffee rich roast breve americano. Crema, and, qui, beans extraction milk a extraction.
-            </p>
-        </div>
-    </div>
-
-    <div class="group">
-        <h2>Icons & images</h2>
-        <div class="icons">
-            <div class="icon-fonts group">
-                <i class="icon-alert"></i>
-                <i class="icon-arrow-down"></i>
-                <i class="icon-calendar"></i>
-                <i class="icon-checkbox"></i>
-                <i class="icon-checkbox-checked"></i>
-                <i class="icon-chevron-left"></i>
-                <i class="icon-chevron-right"></i>
-                <i class="icon-cross"></i>
-                <i class="icon-heart"></i>
-                <i class="icon-heart-o"></i>
-                <i class="icon-info"></i>
-                <i class="icon-not-allowed"></i>
-                <i class="icon-radio"></i>
-                <i class="icon-radio-checked"></i>
-                <i class="icon-sheriff"></i>
-                <i class="icon-star"></i>
-                <i class="icon-star-o"></i>
-                <i class="icon-success"></i>
-                <i class="icon-thumb"></i>
-                <i class="icon-user"></i>
-                <i class="icon-warning"></i>
-                <i class="icon-zoom"></i>
-            </div>
-
-            <div class="icon-images group">
-                <img src="./dist/graphics/icons/add.svg" alt="">
-                <img src="./dist/graphics/icons/alert.svg" alt="">
-                <img src="./dist/graphics/icons/calendar.svg" alt="">
-                <img src="./dist/graphics/icons/info.svg" alt="">
-                <img src="./dist/graphics/icons/not-allowed.svg" alt="">
-                <img src="./dist/graphics/icons/remove.svg" alt="">
-                <img src="./dist/graphics/icons/success.svg" alt="">
-                <img src="./dist/graphics/icons/warning.svg" alt="">
-                <img src="./dist/graphics/icons/zoom.svg" alt="">
+        <h3>Text</h3>
+        <div class="inset">
+            <div class="block">
+                <span class="h1">Heading 1</span>
+                <span class="h2">Heading 2</span>
+                <span class="h3">Heading 3</span>
+                <span class="h4">Heading 4</span>
+                <p>Paragraph:</p>
+                <p>Milk kopi-luwak saucer decaffeinated in <a href="#" title="anchor tag demo">french press milk</a>. Siphon, aroma blue mountain, filter, latte, milk rich acerbic galão java. Roast beans, ristretto cappuccino et irish doppio, spoon breve <em>to go percolator carajillo</em>. Mocha americano plunger pot sugar steamed dark wings. Irish caffeine shop, spoon, that irish, <abbr title="Milk Cappuccino Barista">MCB</abbr> decaffeinated plunger pot spoon. Single shot cream coffee, <a href="#" title="anchor tag demo">id arabica so lungo</a> spoon grinder. In trifecta white crema aftertaste saucer steamed. Percolator iced instant <strong> breve grinder</strong> coffee rich roast breve americano. Crema, and, qui, beans extraction milk a extraction.</p>
             </div>
         </div>
     </div>
 
     <div class="group">
-        <h2>Notifications</h2>
-        <div class="notifications-block">
-            <div class="notifications-demo">
-                <div class="demo-success">Success notification</div>
-                <div class="demo-info">Info notification</div>
-                <div class="demo-warning">Warning notification</div>
-                <div class="demo-error">Error notification</div>
+        <h3>Icons</h3>
+        <div class="inset">
+            <div class="icons">
+                <div class="icon-fonts group">
+                    <i class="icon-alert"></i>
+                    <i class="icon-arrow-down"></i>
+                    <i class="icon-calendar"></i>
+                    <i class="icon-checkbox"></i>
+                    <i class="icon-checkbox-checked"></i>
+                    <i class="icon-chevron-left"></i>
+                    <i class="icon-chevron-right"></i>
+                    <i class="icon-cross"></i>
+                    <i class="icon-heart"></i>
+                    <i class="icon-heart-o"></i>
+                    <i class="icon-info"></i>
+                    <i class="icon-not-allowed"></i>
+                    <i class="icon-radio"></i>
+                    <i class="icon-radio-checked"></i>
+                    <i class="icon-sheriff"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star-o"></i>
+                    <i class="icon-success"></i>
+                    <i class="icon-thumb"></i>
+                    <i class="icon-user"></i>
+                    <i class="icon-warning"></i>
+                    <i class="icon-zoom"></i>
+                </div>
+
+                <div class="icon-images group">
+                    <img src="./dist/graphics/icons/add.svg" alt="">
+                    <img src="./dist/graphics/icons/alert.svg" alt="">
+                    <img src="./dist/graphics/icons/calendar.svg" alt="">
+                    <img src="./dist/graphics/icons/info.svg" alt="">
+                    <img src="./dist/graphics/icons/not-allowed.svg" alt="">
+                    <img src="./dist/graphics/icons/remove.svg" alt="">
+                    <img src="./dist/graphics/icons/success.svg" alt="">
+                    <img src="./dist/graphics/icons/warning.svg" alt="">
+                    <img src="./dist/graphics/icons/zoom.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Feedback</h2>
+        <div class="group">
+            <h3>Notifications</h3>
+            <div class="inset">
+                <div class="notifications-block">
+                    <div class="notifications-demo">
+                        <div class="demo-success">Success notification</div>
+                        <div class="demo-info">Info notification</div>
+                        <div class="demo-warning">Warning notification</div>
+                        <div class="demo-error">Error notification</div>
+                    </div>
+                </div>
             </div>
 
             <div class="group">
-                <h3>Test notifications:</h3>
-                <div class="notifications-test block">
-                    <div class="standard-notifications">
-                        <button class="btn-success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button>
-                        <button class="btn-info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button>
-                        <button class="btn-warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button>
-                        <button class="btn-error" data-text="This message will self destruct in four seconds..." >Error notification</button>
+                <h4>Test notifications:</h4>
+                <div class="inset">
+                    <div class="notifications-test block">
+                        <div class="standard-notifications">
+                            <button class="btn-success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button>
+                            <button class="btn-info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button>
+                            <button class="btn-warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button>
+                            <button class="btn-error" data-text="This message will self destruct in four seconds..." >Error notification</button>
+                        </div>
+                        <div class="special-notifications">
+                            <button class="btn-primary sticky" data-text="I only disappear if you click on me">Sticky notification</button>
+                            <button class="btn-secondary sticky" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button>
+                            <button class="btn-grey sticky" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button>
+                        </div>
                     </div>
-                    <div class="special-notifications">
-                        <button class="btn-primary sticky" data-text="I only disappear if you click on me">Sticky notification</button>
-                        <button class="btn-secondary sticky" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button>
-                        <button class="btn-grey sticky" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Dialogs</h3>
+            <div class="inset">
+                <p>To do:</p>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <span class="label">Modals style</span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <span class="label">Modals behaviour</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Miscellaneous</h2>
+        <div class="group">
+            <h3>Block</h3>
+            <div class="inset">
+                <div class="block">
+                    <p>Barista saucer steamed body and steamed cultivar fair trade. Robusta, mazagran rich aroma percolator cortado french press. Java siphon galão, so, fair trade mazagran barista cream so half and half lungo. Siphon, white variety dripper siphon qui, macchiato organic espresso turkish carajillo flavour.</p>
                 </div>
             </div>
         </div>

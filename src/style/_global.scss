@@ -7,30 +7,37 @@ body {
 }
 
 // Typography
-h1 {
+h1, .h1 {
     text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 2.25em;
+    line-height: 1.65;
+    margin-bottom: .9em;
+}
+
+h2, .h2 {
     font-weight: $font-weight-bold;
     font-size: 2em;
     line-height: 1.5;
     margin-bottom: .75em;
 }
 
-h2 {
-    font-weight: $font-weight-bold;
-    font-size: 1.5em;
+h3, .h3 {
+    font-weight: $font-weight-semi-bold;
+    font-size: 1.6em;
     margin-bottom: .6em;
 }
 
-h3 {
+h4, .h4 {
     font-weight: $font-weight-semi-bold;
-    font-size: 1.2em;
+    font-size: 1.15em;
     margin-bottom: .4em;
 }
 
 p {
     font-weight: 400;
     font-size: 1em;
-    margin-bottom: .1em;
+    margin-bottom: .25em;
 }
 
 a {
@@ -45,6 +52,15 @@ a {
 
 li {
     list-style: none;
+}
+
+abbr {
+    text-decoration-style: dotted !important;
+    cursor: help;
+}
+
+hr {
+    border-bottom: 1px solid $primary-light;
 }
 
 textarea {
