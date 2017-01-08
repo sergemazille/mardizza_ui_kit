@@ -9,7 +9,13 @@ export class Styleguide {
     }
 
     static inputFeedback() {
-        let testButtons = document.querySelectorAll('.states-input-buttons button');
+        let inputGroup = document.querySelector('.states-input-test .input-group');
+        let testButtonsGroup = document.querySelector('.states-input-buttons');
+        let testButtons = testButtonsGroup.querySelectorAll('button');
+
+        // insert an empty span as height placeholder
+        createPlaceholder();
+
         [...testButtons].forEach(function(button) { // spread operator so IE accepts to loop through querySelectorAll result
 
             button.addEventListener('click', function(e) {
@@ -17,7 +23,6 @@ export class Styleguide {
 
                 let feedbackText = this.dataset.text;
                 let action = this.dataset.action;
-                let inputGroup = document.querySelector('.states-input-test .input-group');
 
                 switch(action) {
                     case "disabled":
@@ -56,6 +61,9 @@ export class Styleguide {
 
                     // remove feedback state if exists
                     inputGroup.querySelector('.feedback') ? inputGroup.querySelector('.feedback').remove() : null;
+
+                    // recreate a placeholder
+                    createPlaceholder();
                 }
 
                 // change input state feedback
@@ -76,8 +84,16 @@ export class Styleguide {
                     feedbackSpan.textContent = feedbackText;
                     inputGroup.insertBefore(feedbackSpan, inputGroup.querySelector('.states-input-buttons'));
                 }
+
             });
         });
+
+        function createPlaceholder() {
+            let placeholder = document.createElement('span');
+            placeholder.className = "feedback";
+            placeholder.innerHTML = "&nbsp;";
+            inputGroup.insertBefore(placeholder, testButtonsGroup);
+        }
     }
 
     static pagination() {
