@@ -1,0 +1,35 @@
+.tabs {
+    .tabs-menu {
+        height: $tab-height;
+        display: flex;
+        font-size: 1.5em;
+        font-weight: $font-weight-semi-bold;
+        cursor: pointer;
+        user-select: none;
+        border-bottom: 1px solid $grey-light;
+
+        li {
+            margin-right: 1.5em;
+            height: $tab-height;
+            flex: 0 0 auto;
+            text-align: center;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &.active, &:active, &:hover{
+                border-bottom: 1px solid $secondary;
+            }
+
+            &.active, &:active {
+                color: $secondary;
+            }
+        }
+    }
+
+    .tabs-content {
+        padding: 1em;
+    }
+}
