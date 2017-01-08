@@ -1,6 +1,6 @@
 .tabs {
     .tabs-menu {
-        height: $tab-height;
+        height: $tab-height; // for border-down navigation consistency
         display: flex;
         font-size: 1.35em;
         font-weight: $font-weight-semi-bold;
@@ -10,11 +10,12 @@
 
         li {
             margin-right: 1.5em;
-            height: $tab-height;
-            flex: 0 0 auto;
             text-align: center;
+            height: $tab-height; // for border-down navigation consistency
 
             a {
+                display: flex;
+                height: $tab-height; // for border-down navigation consistency
                 color: inherit;
                 text-decoration: none;
             }
