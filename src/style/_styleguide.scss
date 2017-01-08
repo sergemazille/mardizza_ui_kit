@@ -75,8 +75,18 @@
     .icon-images { img { width: 2.25em; } }
 }
 
-.notifications {
-    [class*="notification-"] {
-        margin-bottom: 1em;
-    }
+.notifications-block {
+    [class*="demo-"] { margin-bottom: .5em; }
+    .demo-success { @extend .notification-success };
+    .demo-info { @extend .notification-info };
+    .demo-warning { @extend .notification-warning };
+    .demo-error { @extend .notification-error };
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+
+    [class*="btn-"] { margin-left: auto; }
+    .btn-primary { margin-top: 6px}
 }

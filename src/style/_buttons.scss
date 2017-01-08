@@ -69,3 +69,7 @@
 .btn-warning { @include button-variant($color: #fff, $background: $warning); }
 
 .btn-danger { @include button-variant($color: #fff, $background: $danger); }
+
+// for contextual use
+.btn-alert { @extend .btn-danger; }
+.btn-error { @extend .btn-danger; }

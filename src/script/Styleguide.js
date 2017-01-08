@@ -1,9 +1,11 @@
 import { Pagination } from './Pagination';
+import { Notification } from './Notification';
 
 export class Styleguide {
     static init() {
         Styleguide.inputFeedback();
         Styleguide.pagination();
+        Styleguide.notification();
     }
 
     static inputFeedback() {
@@ -15,7 +17,7 @@ export class Styleguide {
 
                 let feedbackText = this.dataset.text;
                 let action = this.dataset.action;
-                let inputGroup = this.parentElement.parentElement;
+                let inputGroup = document.querySelector('.states-input-test .input-group');
 
                 switch(action) {
                     case "disabled":
@@ -35,9 +37,9 @@ export class Styleguide {
 
                     input.disabled = !input.disabled;
                     if(input.disabled) {
-                        button.innerHTML = "Enable me";
+                        button.innerHTML = "Enable input";
                     } else {
-                        button.innerHTML = "Disable me";
+                        button.innerHTML = "Disable input";
                     }
                 }
 
@@ -47,7 +49,7 @@ export class Styleguide {
 
                     // cleanup potentially disabled state
                     inputGroup.querySelector('input').disabled = false;
-                    disableButton.innerHTML = "Disable me";
+                    disableButton.innerHTML = "Disable input";
 
                     // remove states classes
                     inputGroup.className = "input-group";
@@ -104,6 +106,33 @@ export class Styleguide {
                 // relaunch function for demo purpose
                 Pagination.pagination();
             });
+        });
+    }
+
+    static notification() {
+
+        // standard buttons (non-sticky notifications)
+        let standardNotificationButtons = document.querySelectorAll('.standard-notifications button');
+
+        [...standardNotificationButtons].forEach(function(button) {
+            let notificationText = button.textContent;
+            let notificationType = button.className.slice(4);
+
+            button.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                Notification.create(notificationText, notificationType);
+            });
+        });
+
+        // sticky notification button
+        let stickyButton = document.querySelector('.notifications-test .btn-primary');
+        stickyButton.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            let notificationText = stickyButton.textContent;
+            let isSticky = true;
+            Notification.create(notificationText, "info", isSticky);
         });
     }
 }

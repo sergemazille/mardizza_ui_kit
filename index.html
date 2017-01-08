@@ -87,7 +87,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <label for="date">Date input</label>
-                        <input id="date" type="date" class="form-control" placeholder="jj/mm/aaaa">
+                        <input id="date" type="date" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
                 </div>
 
@@ -96,21 +96,21 @@
                     <div class="input-group success-feedback">
                         <label for="success-input">Success input</label>
                         <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Vous avez réussi !!</span>
+                        <span class="feedback">You won!</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group warning-feedback">
                         <label for="warning-input">Warning input</label>
                         <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Quelque chose requiert votre attention.</span>
+                        <span class="feedback">Something is happening...</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group error-feedback">
                         <label for="error-input">Error input</label>
                         <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
-                        <span class="feedback">Une erreur s'est produite.</span>
+                        <span class="feedback">There's definitely something wrong.</span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -121,7 +121,7 @@
                 </div>
 
                 <!-- Input states test -->
-                <h3>Test d'un input avec feedback :</h3>
+                <h3>Feedback input - testing area:</h3>
                 <div class="form-group block states-input-test clearfix">
                     <div class="input-group">
                         <label for="states-input">Test input</label>
@@ -129,10 +129,12 @@
                         <!-- No feedback span here, it will be automatically generated -->
 
                         <div class="states-input-buttons">
-                            <button data-action="success-feedback" data-text="C'est un succès !!" class="btn-success">Get a success</button>
-                            <button data-action="warning-feedback" data-text="Attention, ceci est un avertissement !" class="btn-warning">Display a warning</button>
-                            <button data-action="error-feedback" data-text="Allo Houston, nous avons un problème..." class="btn-danger">Trigger an error</button>
-                            <button data-action="disabled" class="btn-grey">Disable me</button>
+                            <div class="test-buttons">
+                                <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback input</button>
+                                <button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback input</button>
+                                <button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback input</button>
+                                <button data-action="disabled" class="btn-grey">Disable input</button>
+                            </div>
                             <button data-action="reset" class="btn-primary">Reset</button>
                         </div>
                     </div>
@@ -310,11 +312,24 @@
 
     <div class="group">
         <h2>Notifications</h2>
-        <div class="notifications">
-            <div class="notification-success">Message de succès</div>
-            <div class="notification-info">Message d'information</div>
-            <div class="notification-warning">Message d'avertissement</div>
-            <div class="notification-error">Message d'erreur</div>
+        <div class="notifications-block">
+            <div class="notifications-demo">
+                <div class="demo-success">Success notification</div>
+                <div class="demo-info">Info notification</div>
+                <div class="demo-warning">Warning notification</div>
+                <div class="demo-error">Error notification</div>
+            </div>
+
+            <h3>Test notifications:</h3>
+            <div class="notifications-test block">
+                <div class="standard-notifications">
+                    <button class="btn-success">Success notification</button>
+                    <button class="btn-info">Info notification</button>
+                    <button class="btn-warning">Warning notification</button>
+                    <button class="btn-error">Error notification</button>
+                </div>
+                <button class="btn-primary">Sticky notification</button>
+            </div>
         </div>
     </div>
 
