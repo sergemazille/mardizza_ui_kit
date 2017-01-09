@@ -1,0 +1,82 @@
+/////////////////////////////////////////////////////////////
+// Mixins
+
+@mixin dialog() {
+    .dialog-header {
+        background-color: pink;
+    }
+
+    .dialog-content {
+        background-color: blue;
+    }
+
+    .dialog-footer {
+        background-color: yellow;
+    }
+}
+
+@mixin dialog-variant($color, $icon) {
+    $color-dark: darken($color, 20%);
+
+    color: $color-dark;
+    border: 1px solid $color-dark;
+    border-radius: $radius;
+    background-color: mix(transparentize($color, .05), $grey-faded, 20%);
+    padding: 1em 3em 1em 1em;
+    line-height: 1.5;
+    position: relative;
+    box-shadow: 3px 3px 6px rgba(0,0,0,.25);
+
+    &:before {
+        content: $icon;
+        font-family: $font-family-icon;
+        font-size: 1.7em;
+        line-height: .5;
+        vertical-align: -40%; // compensate bigger font-size
+        margin-right: .35em;
+    }
+
+    &:after {
+        content: $icon-cross;
+        font-family: $font-family-icon;
+        font-size: 1em;
+        font-weight: 400;
+        position: absolute;
+        top: .5em;
+        right: .5em;
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-color: darken($color-dark, 15%);
+    }
+
+    &:hover:after { font-weight: 700; }
+}
+
+/////////////////////////////////////////////////////////////
+// Classes
+
+.dialog-default {
+    @include dialog;
+}
+
+.dialog-success {
+    @include dialog;
+    //@include dialog-variant($success, $icon-success);
+}
+
+.dialog-info {
+    @include dialog;
+    //@include dialog-variant($info, $icon-info);
+}
+
+.dialog-warning {
+    @include dialog;
+    //@include dialog-variant($warning, $icon-warning);
+}
+
+.dialog-error {
+    @include dialog;
+    //@include dialog-variant($error, $icon-alert);
+}
