@@ -182,7 +182,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 2;
+        z-index: $dropdown-z;
         display: none;
         float: left;
         text-align: left;

@@ -9,13 +9,14 @@
     }
 }
 
-.backdrop {
+.backdrop-hidden {
     background-color: transparent;
     position: fixed;
+    z-index: $backdrop-hidden-z;
     top: 0;
     left: 0;
-    height: 10000px;
-    width: 10000px;
+    height: 100vh;
+    width: 100vw;
 }
 
 .hidden {

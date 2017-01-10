@@ -21,7 +21,7 @@ export class Form {
                 // create a clickable `div` to close the dropdown when user clicks outside of the dropdown element
                 if(dropdownActive) {
                     let $clickable = document.createElement('div');
-                    $clickable.className = "backdrop";
+                    $clickable.className = "backdrop-hidden";
 
                     let $body = document.querySelector('body');
                     $body.appendChild($clickable);
@@ -53,9 +53,9 @@ export class Form {
                     // close the dropdown-list
                     $dropdownList.style.display = "";
 
-                    // cleanup : remove opened backdrop
-                    let $backdrop = document.querySelector('.backdrop');
-                    $backdrop.remove();
+                    // cleanup : remove opened backdrop-hidden
+                    let backdrop = document.querySelector('.backdrop-hidden');
+                    backdrop.remove();
                 });
             });
         });

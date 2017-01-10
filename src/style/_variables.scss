@@ -73,14 +73,6 @@ $btn-padding-vertical: .4em;
 $btn-font-weight: $font-weight-semi-bold;
 
 /////////////////////////////////////////////////////////////
-// Measures
-
-$radius: 3px;
-$padding-base-horizontal: .75em;
-$padding-base-vertical: .5em;
-$tab-height: 2.25em;
-
-/////////////////////////////////////////////////////////////
 // Forms
 
 // inputs
@@ -100,4 +92,20 @@ $input-font-size: 1em;
 $input-feedback-padding: 2em;
 
 /////////////////////////////////////////////////////////////
+// z-index
+
+$pagination-icon-z: 1;
+$dropdown-z: 2;
+$notification-z: 3;
+$backdrop-hidden-z: 4;
+$backdrop-z: 5;
+$dialog-z: 6;
+
+
+/////////////////////////////////////////////////////////////
 // Misc.
+
+$radius: 3px;
+$padding-base-horizontal: .75em;
+$padding-base-vertical: .5em;
+$tab-height: 2.25em;
