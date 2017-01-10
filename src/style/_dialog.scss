@@ -2,16 +2,14 @@
 // Mixins
 
 @mixin dialog() {
-    position: fixed;
-    top: 20em;
-
+    margin: auto;
     z-index: $dialog-z;
 
     .dialog-header {
         background-color: pink;
     }
 
-    .dialog-content {
+    .dialog-body {
         background-color: blue;
     }
 
@@ -87,6 +85,7 @@
 }
 
 .backdrop {
+    display: flex;
     position: fixed;
     top: 0;
     height: 100vh;
