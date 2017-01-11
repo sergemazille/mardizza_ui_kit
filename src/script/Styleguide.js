@@ -1,13 +1,11 @@
 import { Pagination } from './Pagination';
 import { Notification } from './Notification';
-import { Dialog } from './Dialog';
 
 export class Styleguide {
     static init() {
         Styleguide.inputFeedback();
         Styleguide.pagination();
         Styleguide.notification();
-        Styleguide.dialog();
     }
 
     static inputFeedback() {
@@ -154,13 +152,6 @@ export class Styleguide {
                 let isSticky = true;
                 Notification.create(notificationText, "info", isSticky);
             });
-        });
-    }
-
-    static dialog() {
-        let dialogTestButton = document.querySelector('.test-dialog-btn');
-        dialogTestButton.addEventListener("click", function() {
-            let dialog = new Dialog();
         });
     }
 }

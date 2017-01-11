@@ -1,7 +1,3 @@
-export function hasClass(element, className) {
-    return element.classList.contains(className);
-}
-
 export function closest(element, className) {
     let parent;
 

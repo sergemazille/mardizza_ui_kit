@@ -2,59 +2,87 @@
 // Mixins
 
 @mixin dialog() {
-    margin: auto;
+    background-color: $primary-faded;
+    padding: 1em;
+    border-radius: $radius;
+    position: relative;
+
+    flex: 0 1 65%;
+    min-width: 260px;
+    margin: 0 auto;
     z-index: $dialog-z;
+    display: none; // won't display on page load
+    opacity: 0;
+    transition: margin .4s ease-in-out, opacity .4s ease-in-out;
+
+    &.in {
+        opacity: 1;
+        margin: 5em auto 0 auto;
+    }
+
+    .dismiss {
+        &:hover:after {
+            cursor: pointer;
+            font-weight: $font-weight-semi-bold;
+        }
+
+        // add default cross icon to dismiss dialog window
+        &:after {
+            content: $icon-cross;
+            font-family: $font-family-icon;
+            font-size: 1em;
+            font-weight: 400;
+            position: absolute;
+            top: .5em;
+            right: .5em;
+        }
+    }
 
     .dialog-header {
-        background-color: pink;
+        position: relative;
+        text-align: center;
+        font-weight: $font-weight-semi-bold;
+        padding-bottom: 1em;
+        border-bottom: 1px solid transparentize($primary-dark, .9);
     }
 
     .dialog-body {
-        background-color: blue;
+        padding: 1em;
     }
 
     .dialog-footer {
-        background-color: yellow;
+        padding-top: 1em;
+        border-top: 1px solid transparentize($primary-dark, .9);
+
+        display: flex;
+        justify-content: flex-end;
+
+        [class*="btn-"] {
+            flex: 0 1 auto;
+            flex-wrap: wrap;
+            margin-left: .5em;
+        }
+    }
+
+    // button icon optical adjustment
+    [class*="btn-"] [class*="icon-"]{
+        vertical-align: -6%;
     }
 }
 
 @mixin dialog-variant($color, $icon) {
-    $color-dark: darken($color, 20%);
+    color: darken($color, 20%);
 
-    color: $color-dark;
-    border: 1px solid $color-dark;
-    border-radius: $radius;
-    background-color: mix(transparentize($color, .05), $grey-faded, 20%);
-    padding: 1em 3em 1em 1em;
-    line-height: 1.5;
-    position: relative;
-    box-shadow: 3px 3px 6px rgba(0,0,0,.25);
-
-    &:before {
-        content: $icon;
-        font-family: $font-family-icon;
-        font-size: 1.7em;
-        line-height: .5;
-        vertical-align: -40%; // compensate bigger font-size
-        margin-right: .35em;
+    .dialog-header {
+        &:before {
+            content: $icon;
+            font-family: $font-family-icon;
+            font-size: 1.7em;
+            line-height: .5;
+            vertical-align: -40%; // compensate bigger font-size
+            margin-right: .35em;
+        }
     }
-
-    &:after {
-        content: $icon-cross;
-        font-family: $font-family-icon;
-        font-size: 1em;
-        font-weight: 400;
-        position: absolute;
-        top: .5em;
-        right: .5em;
-    }
-
-    &:hover {
-        cursor: pointer;
-        border-color: darken($color-dark, 15%);
-    }
-
-    &:hover:after { font-weight: 700; }
 }
 
 /////////////////////////////////////////////////////////////
@@ -66,22 +94,22 @@
 
 .dialog-success {
     @include dialog;
-    //@include dialog-variant($success, $icon-success);
+    @include dialog-variant($success, $icon-success);
 }
 
 .dialog-info {
     @include dialog;
-    //@include dialog-variant($info, $icon-info);
+    @include dialog-variant($info, $icon-info);
 }
 
 .dialog-warning {
     @include dialog;
-    //@include dialog-variant($warning, $icon-warning);
+    @include dialog-variant($warning, $icon-warning);
 }
 
 .dialog-error {
     @include dialog;
-    //@include dialog-variant($error, $icon-alert);
+    @include dialog-variant($error, $icon-alert);
 }
 
 .backdrop {
@@ -92,5 +120,21 @@
     width: 100vw;
     z-index: $backdrop-z;
     background-color: black;
-    opacity: .8;
+    opacity: 0;
+    transition: opacity .2s ease-in-out .2s;
+
+    &.in {
+        opacity: .8;
+        transition: opacity .2s ease-in-out;
+    }
+}
+
+.dialog-container {
+    display: flex;
+    align-items: flex-start; // the dialog window doesn't stretch on whole screen height
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: $dialog-z;
 }

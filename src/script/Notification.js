@@ -1,5 +1,3 @@
-import * as Utils from './Utils';
-
 const FADEOUT_DURATION = 4 * 1000;
 
 export class Notification {
@@ -70,7 +68,11 @@ export class Notification {
         // notifications are removed when clicked on
         document.body.addEventListener("click", function(e) {
             let element = e.target;
-            if(Utils.hasClass(element, 'in')) { Notification.clean(element, 0) }
+
+            let notificationTypes = ['notification-success', 'notification-info', 'notification-warning', 'notification-error'];
+            for(let notification of notificationTypes) {
+                if(element.classList.contains(notification)) { Notification.clean(element, 0) }
+            }
         });
     }
 
