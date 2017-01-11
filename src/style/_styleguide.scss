@@ -116,28 +116,3 @@
         flex: 0 0 auto;
     }
 }
-
-.dialog-test {
-    @include dialog;
-    display: flex;
-    flex-direction: column;
-    flex: 0 1 auto;
-    opacity: 1;
-    z-index: 0;
-
-        .dialog-footer {
-            display: flex;
-            flex-flow: row wrap;
-
-                [class*="btn-"] {
-                    flex: 0 0 auto;
-
-                    @media screen and (max-width: 768px) {
-                        flex: 1 0 auto;
-                        &:nth-of-type(n+1) {
-                            margin-top: .5em;
-                        }
-                    }
-                }
-        }
-}

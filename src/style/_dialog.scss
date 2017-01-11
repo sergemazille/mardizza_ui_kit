@@ -7,15 +7,20 @@
     border-radius: $radius;
     position: relative;
 
-    flex: 0 1 50%;
+    flex: 0 1 60%;
+    min-width: 50%;
     margin: 0 auto;
     z-index: $dialog-z;
     display: none; // won't display on page load
     opacity: 0;
     transition: margin .4s ease-in-out, opacity .4s ease-in-out;
 
-    @media screen and (max-width: $xs) {
+    @media screen and($sm-max) {
+        min-width: 75%;
+    }
 
+    @media screen and($xs-max) {
+        min-width: 90%;
     }
 
     &.in {
@@ -33,7 +38,7 @@
         &:after {
             content: $icon-cross;
             font-family: $font-family-icon;
-            font-size: 1em;
+            font-size: .85em;
             font-weight: 400;
             position: absolute;
             top: .5em;
@@ -57,11 +62,11 @@
         border-top: 1px solid transparentize($primary-dark, .9);
 
         display: flex;
+        flex-flow: row wrap;
         justify-content: flex-end;
-        flex-wrap: wrap;
 
         [class*="btn-"] {
-            flex: 1 0 auto;
+            flex: 0 0 auto;
             margin-left: .5em;
         }
     }

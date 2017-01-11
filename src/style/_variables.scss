@@ -104,14 +104,29 @@ $dialog-z: 6;
 /////////////////////////////////////////////////////////////
 // Grid
 
-$xxs: 20em; //320px
-$xs: 30em; // 480px
-$sm: 40em; // 640px
-$md: 50em; // 800px
+$xxs: 320px;
+$xs: 480px;
+$sm: 640px;
+$md: 800px;
+$lg: 1280px;
+$xl: 1920px;
+$xxl: 2400px;
 
-$lg: 80em; // 1280px
-$xl: 120em; // 1920px
-$xxl: 150em; // 2400px
+$xxs-min: "min-width: 0";
+$xs-min: "min-width: #{$xxs + 1}";
+$sm-min: "min-width: #{$xs + 1}";
+$md-min: "min-width: #{$sm + 1}";
+$lg-min: "min-width: #{$md + 1}";
+$xl-min: "min-width: #{$lg + 1}";
+$xxl-min: "min-width: #{$xl + 1}";
+
+$xxs-max: "max-width: #{$xxs}";
+$xs-max: "max-width: #{$xs}";
+$sm-max: "max-width: #{$sm}";
+$md-max: "max-width: #{$md}";
+$lg-max: "max-width: #{$lg}";
+$xl-max: "max-width: #{$xl}";
+$xxl-max: "max-width: #{$xxl}";
 
 /////////////////////////////////////////////////////////////
 // Misc.
