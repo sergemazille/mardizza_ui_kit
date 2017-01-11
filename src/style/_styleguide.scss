@@ -122,37 +122,22 @@
     display: flex;
     flex-direction: column;
     flex: 0 1 auto;
-    //max-width: 6em;
     opacity: 1;
     z-index: 0;
 
-        //@media screen and (max-width: 1370px) {
-        //    [class*="btn-"] {
-        //        display: block;
-        //        width: 500px;
-        //
-        //        //&:first-of-type {
-        //        //    margin-bottom: .5em;
-        //        //}
-        //    }
-        //}
-}
+        .dialog-footer {
+            display: flex;
+            flex-flow: row wrap;
 
-//.dialog-test, .dialog-default, .dialog-success, .dialog-info, .dialog-warning, .dialog-error {
-//    flex: 0 1 45%;
-//
-//    .dialog-footer {
-//        @media screen and (max-width: 1200px) {
-//            flex-direction: column;
-//
-//            [class*="btn-"] {
-//                margin-left: 0;
-//                flex: 0 0 auto;
-//
-//                &:first-of-type {
-//                    margin-bottom: .5em;
-//                }
-//            }
-//        }
-//    }
-//}
+                [class*="btn-"] {
+                    flex: 0 0 auto;
+
+                    @media screen and (max-width: 768px) {
+                        flex: 1 0 auto;
+                        &:nth-of-type(n+1) {
+                            margin-top: .5em;
+                        }
+                    }
+                }
+        }
+}

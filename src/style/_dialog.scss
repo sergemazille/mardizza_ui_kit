@@ -7,13 +7,16 @@
     border-radius: $radius;
     position: relative;
 
-    flex: 0 1 auto;
-    min-width: 600px;
+    flex: 0 1 50%;
     margin: 0 auto;
     z-index: $dialog-z;
     display: none; // won't display on page load
     opacity: 0;
     transition: margin .4s ease-in-out, opacity .4s ease-in-out;
+
+    @media screen and (max-width: $xs) {
+
+    }
 
     &.in {
         opacity: 1;
@@ -41,7 +44,6 @@
     .dialog-header {
         position: relative;
         text-align: center;
-        font-weight: $font-weight-semi-bold;
         padding-bottom: 1em;
         border-bottom: 1px solid transparentize($primary-dark, .9);
     }
@@ -56,10 +58,10 @@
 
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
 
         [class*="btn-"] {
-            flex: 0 1 auto;
-            flex-wrap: wrap;
+            flex: 1 0 auto;
             margin-left: .5em;
         }
     }

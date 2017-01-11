@@ -60,7 +60,7 @@ abbr {
 }
 
 hr {
-    border-bottom: 1px solid $primary-light;
+    border-bottom: 1px solid transparentize($primary-dark, .9);
 }
 
 textarea {
