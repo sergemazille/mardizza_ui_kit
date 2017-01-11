@@ -65,9 +65,14 @@
         flex-flow: row wrap;
         justify-content: flex-end;
 
+        @media screen and ($sm-max) {
+            flex: 1 0 100%;
+            max-width: 100%;
+        }
+
         [class*="btn-"] {
-            flex: 0 0 auto;
-            margin-left: .5em;
+            flex: 1 0 auto;
+            margin: .25em .5em;
         }
     }
 
