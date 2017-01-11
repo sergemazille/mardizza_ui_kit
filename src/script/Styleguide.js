@@ -128,29 +128,17 @@ export class Styleguide {
     static notification() {
 
         // standard buttons (non-sticky notifications)
-        let standardNotificationButtons = document.querySelectorAll('.standard-notifications button');
+        let standardNotificationButtons = document.querySelectorAll('.notifications-test-buttons button');
 
         [...standardNotificationButtons].forEach(function(button) {
             let notificationText = button.dataset.text;
-            let notificationType = button.className.slice(4);
+            let notificationType = button.dataset.type;
+            let isSticky = button.classList.contains('sticky')
 
             button.addEventListener("click", function(e) {
                 e.preventDefault();
 
-                Notification.create(notificationText, notificationType);
-            });
-        });
-
-        // sticky notification button
-        let stickyButtons = document.querySelectorAll('.notifications-test .sticky');
-
-        [...stickyButtons].forEach(function(button) {
-            button.addEventListener("click", function(e) {
-                e.preventDefault();
-
-                let notificationText = button.dataset.text;
-                let isSticky = true;
-                Notification.create(notificationText, "info", isSticky);
+                Notification.create(notificationText, notificationType, isSticky);
             });
         });
     }

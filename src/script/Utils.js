@@ -3,13 +3,9 @@ export function closest(element, className) {
 
     while(element) {
         parent = element.parentElement;
-
-        if(hasClass(parent, className)) {
-            return parent;
-        }
-
+        if(parent.classList.contains(className)) { return parent; }
         element = parent;
-    };
+    }
 
     return null;
 }
