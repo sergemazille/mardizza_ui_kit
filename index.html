@@ -62,13 +62,13 @@
                 <div class="group">
                     <h4>Disabled buttons</h4>
                     <div class="disabled-states inset">
-                        <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey disabled</button>
-                        <button disabled class="btn-primary">Primary disabled</button>
-                        <button disabled class="btn-secondary">Secondary disabled</button>
-                        <button disabled class="btn-info">Info disabled</button>
-                        <button disabled class="btn-success">Success disabled</button>
-                        <button disabled class="btn-warning">Warning disabled</button>
-                        <button disabled class="btn-danger">Danger disabled</button>
+                        <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey</button>
+                        <button disabled class="btn-primary">Primary</button>
+                        <button disabled class="btn-secondary">Secondary</button>
+                        <button disabled class="btn-info">Info</button>
+                        <button disabled class="btn-success">Success</button>
+                        <button disabled class="btn-warning">Warning</button>
+                        <button disabled class="btn-danger">Danger</button>
                     </div>
                 </div>
             </div>
@@ -148,12 +148,10 @@
                                     <!-- No feedback span here, it will be automatically generated -->
 
                                     <div class="states-input-buttons">
-                                        <div class="test-buttons">
-                                            <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback input</button>
-                                            <button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback input</button>
-                                            <button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback input</button>
-                                            <button data-action="disabled" class="btn-grey">Disable input</button>
-                                        </div>
+                                        <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback</button>
+                                        <button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback</button>
+                                        <button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback</button>
+                                        <button data-action="disabled" class="btn-grey">Disable</button>
                                         <button data-action="reset" class="btn-primary">Reset</button>
                                     </div>
                                 </div>
@@ -415,18 +413,14 @@
             <div class="group">
                 <h4>Test notifications:</h4>
                 <div class="inset">
-                    <div class="notifications-test block">
-                        <div class="standard-notifications">
-                            <button class="btn-success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button>
-                            <button class="btn-info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button>
-                            <button class="btn-warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button>
-                            <button class="btn-error" data-text="This message will self destruct in four seconds..." >Error notification</button>
-                        </div>
-                        <div class="special-notifications">
-                            <button class="btn-primary sticky" data-text="I only disappear if you click on me">Sticky notification</button>
-                            <button class="btn-secondary sticky" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button>
-                            <button class="btn-grey sticky" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button>
-                        </div>
+                    <div class="notifications-test-buttons block">
+                        <button class="btn-success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button>
+                        <button class="btn-info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button>
+                        <button class="btn-warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button>
+                        <button class="btn-error" data-text="This message will self destruct in four seconds..." >Error notification</button>
+                        <button class="btn-primary sticky" data-text="I only disappear if you click on me">Sticky notification</button>
+                        <button class="btn-secondary sticky" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button>
+                        <button class="btn-grey sticky" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button>
                     </div>
                 </div>
             </div>
@@ -438,7 +432,7 @@
                 <h4>Test dialog windows:</h4>
                 <div class="inset">
                     <div class="dialog-test-buttons block">
-                        <button class="btn-primary dialog-trigger" data-target="#dialog-test-standard">Trigger a standard dialog box</button>
+                        <button class="btn-primary dialog-trigger" data-target="#dialog-test-standard">Standard dialog box</button>
                         <button class="btn-success dialog-trigger" data-target="#dialog-test-success">Success dialog box</button>
                         <button class="btn-info dialog-trigger" data-target="#dialog-test-info">Info dialog box</button>
                         <button class="btn-warning dialog-trigger" data-target="#dialog-test-warning">Warning dialog box</button>

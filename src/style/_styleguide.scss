@@ -10,7 +10,11 @@
 }
 
 .colors {
+    display: flex;
+
     [class*="-color"] {
+        margin-right: .75em;
+
         .color {
             display: inline-block;
             width: 75px;
@@ -36,12 +40,17 @@
 }
 
 .buttons {
-    button {
-        margin-bottom: 4px;
-    }
+    .normal-states, .disabled-states {
+        display: flex;
+        flex-wrap: wrap;
 
-    .normal-states {
-        margin-bottom: 8px;
+        & > * {
+            flex: 1 1 auto;
+            max-width: 15%;
+            min-width: 10em;
+            margin-right: .5em;
+            margin-bottom: .5em;
+        }
     }
 }
 
@@ -50,15 +59,23 @@
         margin-top: 16px;
     }
 
-    .states-input-test {
-        .states-input-buttons {
-            margin-top: 20px;
+    .states-input-buttons {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
 
-            .btn-primary {
-                float: right;
-            }
+        & > * {
+            flex: 1 0 auto;
+            max-width: 20%;
+            min-width: 12em;
+            margin-right: .5em;
+            margin-bottom: .5em;
         }
     }
+}
+
+.dropdown .dropdown-trigger {
+    min-width: 220px;
 }
 
 .check-buttons {
@@ -84,12 +101,18 @@
     .demo-error { @extend .notification-error };
 }
 
-.block {
+.notifications-test-buttons, .dialog-test-buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
-    [class*="btn-"] { margin-left: auto; }
-    .special-notifications { margin-top: 6px; margin-left: auto;}
+    & > * {
+        flex: 1 0 auto;
+        max-width: 20%;
+        min-width: 15em;
+        margin-right: .5em;
+        margin-bottom: .5em;
+    }
 }
 
 .tabs {
@@ -98,21 +121,4 @@
 
 .inset {
     padding-left: 1.5em;
-}
-
-.backdrop-test {
-    background-color: #444444;
-    padding: 2.5em;
-    display: flex;
-}
-
-.dialog-test-buttons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-
-    [class*="btn-"] {
-        margin-left: .5em;
-        flex: 0 0 auto;
-    }
 }
