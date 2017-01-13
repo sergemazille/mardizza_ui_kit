@@ -2,7 +2,7 @@ export class Pagination {
 
     // launch class methods
     static init() {
-        Pagination.pagination();
+        this.pagination();
     }
 
     static pagination() {

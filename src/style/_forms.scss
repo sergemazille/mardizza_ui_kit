@@ -58,7 +58,7 @@
         transition: all .3s ease;
     }
 
-    &:hover .label:before { content: $checked-icon; cursor: pointer;}
+    &:hover .label:before, &:focus .label:before { content: $checked-icon; cursor: pointer;}
 
     [type="checkbox"], [type="radio"] {
         @include reset-input();
