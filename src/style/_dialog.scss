@@ -47,6 +47,7 @@
     }
 
     .dialog-header {
+        font-weight: $font-weight-semi-bold;
         position: relative;
         text-align: center;
         padding-bottom: 1em;
@@ -89,6 +90,7 @@
         &:before {
             content: $icon;
             font-family: $font-family-icon;
+            font-weight: $font-weight-normal;
             font-size: 1.7em;
             line-height: .5;
             vertical-align: -40%; // compensate bigger font-size
