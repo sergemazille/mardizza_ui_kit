@@ -1,11 +1,23 @@
 .filter {
     display: flex;
 
+    &.disabled {
+        .filter-label {
+            background-color: $grey-faded;
+            color: $primary-faded;
+            border-radius: $radius;
+            transition: background-color .1s ease-in-out;
+        }
+
+        .filter-list, .filter-clear {
+            visibility: hidden;
+        }
+    }
+
     .filter-list {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        align-content: space-between;
         border: 2px solid $primary-dark;
         min-width: 2em;
         min-height: 3em;

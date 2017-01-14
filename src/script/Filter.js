@@ -5,6 +5,7 @@ export class Filter {
     static init() {
         this.createClearOutButton(); // element creation (and then event registration)
         this.removeItemOnClick(); // register events
+        this.registerContainerChildrenCountObserver(); // register a 'child removed' event to disable container if need be
     }
 
     static createClearOutButton() {
@@ -59,5 +60,31 @@ export class Filter {
         [...filterItems].forEach(function(filter) {
             Filter.removeItemAction(filter);
         });
+    }
+
+    static registerContainerChildrenCountObserver() {
+        // observe if a child element is removed from a container
+        let observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                Filter.checkFilterContainerDisabled(mutation.target)
+            });
+        });
+
+        let config = { childList: true, attributes: false, characterData: false };
+        let filterLists = document.querySelectorAll('.filter-list');
+        [...filterLists].forEach(function(filterList) {
+            observer.observe(filterList, config);
+            Filter.checkFilterContainerDisabled(filterList); // page load first check
+        });
+    }
+
+    static checkFilterContainerDisabled(filterList) {
+        let filterContainer = filterList.parentElement;
+
+        if(filterList.childElementCount < 1) {
+            filterContainer.classList.add('disabled');
+        } else {
+            filterContainer.classList.remove('disabled');
+        }
     }
 }
