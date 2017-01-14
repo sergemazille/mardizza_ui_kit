@@ -13,3 +13,6 @@ Templates, style guides and style sheets for Mardizza project
 * cd mardizza_ui_kit
 * npm install
 * gulp deploy
+
+##Usage examples
+https://www.mardizza.com/styles
