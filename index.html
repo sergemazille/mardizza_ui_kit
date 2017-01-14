@@ -375,6 +375,7 @@
                     <i class="icon-star"></i>
                     <i class="icon-star-o"></i>
                     <i class="icon-success"></i>
+                    <i class="icon-tag"></i>
                     <i class="icon-thumb"></i>
                     <i class="icon-user"></i>
                     <i class="icon-warning"></i>
@@ -508,11 +509,7 @@
                         <button class="btn-success"><span class="icon-thumb"></span> Yeah, go for a pizza!!!</button>
                     </div>
                 </div>
-
             </div>
-
-
-
         </div>
     </div>
 
@@ -532,25 +529,26 @@
         <div class="group">
             <h3>Tooltip</h3>
             <div class="inset">
-                <p>Need help? Hover over or click on this icon: <span class="tooltip" data-tip="Yup I'm a tooltip, easy peasy"></span></p>
+                <p>Need help? Hover over this icon: <span class="tooltip" data-tip="Yup I'm a tooltip, easy peasy"></span></p>
             </div>
         </div>
 
         <div class="group">
             <h3>Filters</h3>
             <div class="inset">
-                <p>To do:</p>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">
-                        <span class="label">Container</span>
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">
-                        <span class="label">Badges</span>
-                    </label>
+                <div class="block">
+                    <ul id="filters-container" class="filters" data-label="Filters">
+                        <li class="filter" data-origin="#filter-tags-container">Tomato</li>
+                        <li class="filter" data-origin="#filter-tags-container">9.50€</li>
+                        <li class="filter" data-origin="#filter-tags-container"><span class="icon-heart"></span></li>
+                    </ul>
+
+                    <p>Available filters:</p>
+                    <ul id="filter-tags-container" class="filter-tags">
+                        <li class="filter-tag" data-target="#filters-container">Mushrooms</li>
+                        <li class="filter-tag" data-target="#filters-container">11.00€</li>
+                        <li class="filter-tag" data-target="#filters-container">fattr</li>
+                    </ul>
                 </div>
             </div>
         </div>

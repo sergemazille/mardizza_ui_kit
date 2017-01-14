@@ -1,0 +1,86 @@
+.filters {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $primary-faded;
+    border: 2px solid $primary-dark;
+    padding-right: .25em;
+    border-radius: $radius;
+
+    &:before {
+        content: attr(data-label);
+        background-color: $primary-dark;
+        color: #fff;
+        padding: .5em 1em;
+        margin-right: .25em;
+    }
+
+    .filter {
+        background-color: $secondary-dark;
+        color: #fff;
+        flex: 0 0 auto;
+        padding: .25em .25em .25em .75em;
+        margin: .25em;
+        cursor: pointer;
+        user-select: none;
+        border-radius: $radius;
+
+        &:hover:after {
+            font-weight: $font-weight-bold;
+            color: $secondary-light;
+        }
+
+        &:after {
+            font-family: $font-family-icon;
+            content: $icon-cross;
+            color: $secondary-faded;
+            padding: 0 .5em 0 1.5em;
+            font-size: .75em;
+        }
+    }
+
+    .clear-filters {
+        box-sizing: border-box;
+        background-color: $primary-dark;
+        color: $primary-faded;
+        padding: .5em 1em;
+        margin: -.5em -.25em -.5em .5em;
+        cursor: pointer;
+
+        &:hover:after {
+            font-weight: $font-weight-bold;
+            color: $secondary-light;
+        }
+
+        &:after {
+            font-family: $font-family-icon;
+            content: $icon-cross;
+        }
+    }
+}
+
+.filter-tags {
+    display: flex;
+
+    .filter-tag {
+        padding: .5em;
+        background-color: $secondary-dark;
+        color: #fff;
+        margin-right: .5em;
+        border-radius: $radius;
+        cursor: pointer;
+
+        &:hover:after {
+            font-weight: $font-weight-bold;
+            color: $secondary-light;
+        }
+
+        &:after {
+            font-family: $font-family-icon;
+            content: $icon-tag;
+            vertical-align: -10%;
+            padding-left: .75em;
+        }
+    }
+}
