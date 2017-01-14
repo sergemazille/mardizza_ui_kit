@@ -18,28 +18,26 @@
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        border: 2px solid $primary-dark;
+        border: 2px solid $primary;
         min-width: 2em;
         min-height: 3em;
 
         .filter-item {
-            background-color: $secondary-dark;
+            background-color: $secondary;
             color: #fff;
-            padding: .25em .75em;
+            padding: .25em .25em .25em .75em;
             margin: .25em;
             border-radius: $radius;
             cursor: pointer;
             user-select: none;
 
             &:hover:after {
-                font-weight: $font-weight-bold;
-                color: $secondary-light;
+                color: $secondary-dark;
             }
 
             &:after {
                 font-family: $font-family-icon;
                 content: $icon-cross;
-                color: $secondary-faded;
                 padding: 0 .5em 0 1.5em;
                 font-size: .75em;
             }
@@ -51,7 +49,7 @@
         justify-content: center;
         flex-direction: column;
 
-        background-color: $primary-dark;
+        background-color: $primary;
         color: #fff;
         padding: .5em 1em;
         user-select: none;
@@ -68,8 +66,7 @@
         cursor: pointer;
 
         &:hover:after {
-            font-weight: $font-weight-bold;
-            color: $secondary-light;
+            color: $secondary;
         }
 
         &:after {
@@ -85,7 +82,7 @@
         flex-wrap: wrap;
 
         .tag-item {
-            background-color: $secondary-dark;
+            background-color: $secondary;
             color: #fff;
             padding: .25em .75em;
             margin: .25em;
@@ -94,8 +91,7 @@
             user-select: none;
 
             &:hover:before {
-                font-weight: $font-weight-bold;
-                color: $secondary-light;
+                color: $secondary-dark;
             }
 
             &:before {

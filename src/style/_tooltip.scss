@@ -9,12 +9,11 @@
 
     &:hover {
         cursor: help;
-        text-decoration: none;
         position: relative;
     }
 
     &:hover:before, &:active:before, &:focus:before {
-        font-weight: $font-weight-semi-bold;
+        color: $secondary-dark;
     }
 
     &:hover:after {
