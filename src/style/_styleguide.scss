@@ -127,7 +127,11 @@
     flex-direction: column;
 }
 
-.filter-demo-block {
-    padding: 1em;
+.demo-block {
     background-color: $bg;
+    padding: 1em;
+}
+
+.demo-inputs {
+    margin-bottom: .75em;
 }

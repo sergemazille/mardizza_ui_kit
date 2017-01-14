@@ -82,9 +82,8 @@ export class Styleguide {
                     }
 
                     feedbackSpan.textContent = feedbackText;
-                    inputGroup.insertBefore(feedbackSpan, inputGroup.querySelector('.states-input-buttons'));
+                    inputGroup.querySelector('.demo-block').appendChild(feedbackSpan);
                 }
-
             });
         });
 

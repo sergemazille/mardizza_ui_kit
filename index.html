@@ -143,9 +143,11 @@
                         <div class="inset">
                             <div class="form-group block states-input-test clearfix">
                                 <div class="input-group">
-                                    <label for="states-input">Test input</label>
-                                    <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
-                                    <!-- No feedback span here, it will be automatically generated -->
+                                    <div class="demo-block demo-inputs">
+                                        <label for="states-input">Test input</label>
+                                        <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
+                                        <!-- No feedback span here, it will be automatically generated -->
+                                    </div>
 
                                     <div class="states-input-buttons">
                                         <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback</button>
@@ -539,7 +541,7 @@
             <div class="inset">
                 <div class="block">
                     <!-- filters block -->
-                    <div class="filter-demo-block">
+                    <div class="demo-block">
                         <div class="filter" id="filter">
                             <div class="filter-label">Filters</div>
                             <ul id="demo-filter-list" class="filter-list">
