@@ -33,12 +33,15 @@
 
             &:hover:after {
                 color: $secondary-dark;
+                background-color: $secondary-light;
             }
 
             &:after {
                 font-family: $font-family-icon;
                 content: $icon-cross;
-                padding: 0 .5em 0 1.5em;
+                border-radius: 1em;
+                padding: .45em;
+                margin-left: .5em;
                 font-size: .75em;
             }
         }
@@ -66,12 +69,15 @@
         cursor: pointer;
 
         &:hover:after {
-            color: $secondary;
+            color: $primary-dark;
+            background-color: $primary-light;
         }
 
         &:after {
             font-family: $font-family-icon;
             content: $icon-cross;
+            padding: .25em .5em;
+            border-radius: 2em;
         }
     }
 }
@@ -84,7 +90,7 @@
         .tag-item {
             background-color: $secondary;
             color: #fff;
-            padding: .25em .75em;
+            padding: .25em .75em .25em .25em;
             margin: .25em;
             border-radius: $radius;
             cursor: pointer;
@@ -92,13 +98,16 @@
 
             &:hover:before {
                 color: $secondary-dark;
+                background-color: $secondary-light;
             }
 
             &:before {
                 font-family: $font-family-icon;
                 content: $icon-tag;
                 vertical-align: -10%;
-                padding-right: .75em;
+                border-radius: 1em;
+                padding: .3em;
+                margin-right: .5em;
             }
         }
     }
