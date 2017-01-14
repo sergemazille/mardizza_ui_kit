@@ -1,51 +1,58 @@
-.filters {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: $primary-faded;
-    border: 2px solid $primary-dark;
-    padding-right: .25em;
-    border-radius: $radius;
+.filter {
+    display: flex;
 
-    &:before {
-        content: attr(data-label);
+    .filter-list {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        align-content: space-between;
+        border: 2px solid $primary-dark;
+        min-width: 2em;
+        min-height: 3em;
+
+        .filter-item {
+            background-color: $secondary-dark;
+            color: #fff;
+            padding: .25em .75em;
+            margin: .25em;
+            border-radius: $radius;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover:after {
+                font-weight: $font-weight-bold;
+                color: $secondary-light;
+            }
+
+            &:after {
+                font-family: $font-family-icon;
+                content: $icon-cross;
+                color: $secondary-faded;
+                padding: 0 .5em 0 1.5em;
+                font-size: .75em;
+            }
+        }
+    }
+
+    .filter-label, .filter-clear {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
         background-color: $primary-dark;
         color: #fff;
         padding: .5em 1em;
-        margin-right: .25em;
-    }
-
-    .filter {
-        background-color: $secondary-dark;
-        color: #fff;
-        flex: 0 0 auto;
-        padding: .25em .25em .25em .75em;
-        margin: .25em;
-        cursor: pointer;
         user-select: none;
-        border-radius: $radius;
-
-        &:hover:after {
-            font-weight: $font-weight-bold;
-            color: $secondary-light;
-        }
-
-        &:after {
-            font-family: $font-family-icon;
-            content: $icon-cross;
-            color: $secondary-faded;
-            padding: 0 .5em 0 1.5em;
-            font-size: .75em;
-        }
     }
 
-    .clear-filters {
-        box-sizing: border-box;
-        background-color: $primary-dark;
-        color: $primary-faded;
-        padding: .5em 1em;
-        margin: -.5em -.25em -.5em .5em;
+    .filter-label {
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+    }
+
+    .filter-clear {
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
         cursor: pointer;
 
         &:hover:after {
@@ -60,27 +67,31 @@
     }
 }
 
-.filter-tags {
-    display: flex;
+.tag {
+    .tag-list {
+        display: flex;
+        flex-wrap: wrap;
 
-    .filter-tag {
-        padding: .5em;
-        background-color: $secondary-dark;
-        color: #fff;
-        margin-right: .5em;
-        border-radius: $radius;
-        cursor: pointer;
+        .tag-item {
+            background-color: $secondary-dark;
+            color: #fff;
+            padding: .25em .75em;
+            margin: .25em;
+            border-radius: $radius;
+            cursor: pointer;
+            user-select: none;
 
-        &:hover:after {
-            font-weight: $font-weight-bold;
-            color: $secondary-light;
-        }
+            &:hover:before {
+                font-weight: $font-weight-bold;
+                color: $secondary-light;
+            }
 
-        &:after {
-            font-family: $font-family-icon;
-            content: $icon-tag;
-            vertical-align: -10%;
-            padding-left: .75em;
+            &:before {
+                font-family: $font-family-icon;
+                content: $icon-tag;
+                vertical-align: -10%;
+                padding-right: .75em;
+            }
         }
     }
 }

@@ -537,18 +537,26 @@
             <h3>Filters</h3>
             <div class="inset">
                 <div class="block">
-                    <ul id="filters-container" class="filters" data-label="Filters">
-                        <li class="filter" data-origin="#filter-tags-container">Tomato</li>
-                        <li class="filter" data-origin="#filter-tags-container">9.50€</li>
-                        <li class="filter" data-origin="#filter-tags-container"><span class="icon-heart"></span></li>
-                    </ul>
 
+                    <!-- filters block -->
+                    <div class="filter">
+                        <div class="filter-label">Filters</div>
+                        <ul id="demo-filter-list" class="filter-list">
+                            <li class="filter-item" data-target="#demo-tag-list">Tomato</li>
+                            <li class="filter-item" data-target="#demo-tag-list">9.50€</li>
+                            <li class="filter-item" data-target="#demo-tag-list"><span class="icon-heart"></span></li>
+                        </ul>
+                    </div>
+
+                    <!-- available filters pool -->
                     <p>Available filters:</p>
-                    <ul id="filter-tags-container" class="filter-tags">
-                        <li class="filter-tag" data-target="#filters-container">Mushrooms</li>
-                        <li class="filter-tag" data-target="#filters-container">11.00€</li>
-                        <li class="filter-tag" data-target="#filters-container">fattr</li>
-                    </ul>
+                    <div class="tag">
+                        <ul id="demo-tag-list" class="tag-list">
+                            <li class="tag-item" data-target="#demo-filter-list">Mushrooms</li>
+                            <li class="tag-item" data-target="#demo-filter-list">11.00€</li>
+                            <li class="tag-item" data-target="#demo-filter-list">fattr...</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
