@@ -135,3 +135,73 @@
 .demo-inputs {
     margin-bottom: .75em;
 }
+
+// flexgrid
+.row {
+    margin-bottom: .5em;
+}
+
+[class*="col-"]{
+    padding: .5em;
+    margin-left: .5em;
+}
+
+.col-1 {
+    color: #fff;
+    background-color: $primary;
+}
+
+.col-2 {
+    color: #fff;
+    background-color: $success;
+}
+
+.col-3 {
+    color: #fff;
+    background-color: $grey;
+}
+
+.col-4 {
+    color: #fff;
+    background-color: $primary-dark;
+}
+
+.col-5 {
+    color: #fff;
+    background-color: $primary-light;
+}
+
+.col-6 {
+    color: $primary-dark;
+    background-color: $secondary;
+}
+
+.col-7 {
+    color: #fff;
+    background-color: $secondary-light;
+}
+
+.col-8 {
+    color: #fff;
+    background-color: $secondary-dark;
+}
+
+.col-9 {
+    color: #fff;
+    background-color: $error;
+}
+
+.col-10 {
+    color: #fff;
+    background-color: $warning;
+}
+
+.col-11 {
+    color: #fff;
+    background-color: $info;
+}
+
+.col-12 {
+    color: $primary-dark;
+    background-color: $secondary-faded;
+}
