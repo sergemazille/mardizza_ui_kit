@@ -1,4 +1,11 @@
-$break-points: ("xxs", $xxs-min), ("xs", $xs-min), ("sm", $sm-min), ("md", $md-min), ("lg", $lg-min), ("xl", $xl-min), ("xxl", $xxl-min);
+$break-points:
+    ("xxs", $xxs-min),
+    ("xs", $xs-min),
+    ("sm", $sm-min),
+    ("md", $md-min),
+    ("lg", $lg-min),
+    ("xl", $xl-min),
+    ("xxl", $xxl-min);
 
 .row {
     display: flex;

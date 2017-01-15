@@ -1,8 +1,6 @@
 // Used to style examples
 
-.content {
-    padding: 32px;
-}
+.content { padding: 32px; }
 
 .group {
     margin-top: 16px;
@@ -10,8 +8,6 @@
 }
 
 .colors {
-    display: flex;
-
     [class*="-color"] {
         margin-right: .75em;
 
@@ -142,67 +138,6 @@
 
     [class*="col-"]{
         padding: .5em;
-        //margin-left: .5em;
-    }
-
-    [class*="-1"] {
-        color: #fff;
-        background-color: $primary;
-    }
-
-    [class*="-2"] {
-        color: #fff;
-        background-color: $success;
-    }
-
-    [class*="-3"] {
-        color: #fff;
-        background-color: $warning;
-    }
-
-    [class*="-4"] {
-        color: #fff;
-        background-color: $primary-dark;
-    }
-
-    [class*="-5"] {
-        color: #fff;
-        background-color: $primary-light;
-    }
-
-    [class*="-6"] {
-        color: $primary-dark;
-        background-color: $secondary;
-    }
-
-    [class*="-7"] {
-        color: #fff;
-        background-color: $secondary-light;
-    }
-
-    [class*="-8"] {
-        color: #fff;
-        background-color: $secondary-dark;
-    }
-
-    [class*="-9"] {
-        color: #fff;
-        background-color: $success;
-    }
-
-    [class*="-10"] {
-        color: #fff;
-        background-color: $info;
-    }
-
-    [class*="-11"] {
-        color: #fff;
-        background-color: $error;
-    }
-
-    [class*="-12"] {
-        color: #fff;
-        background-color: $primary-light;
     }
 }
 

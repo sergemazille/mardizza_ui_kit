@@ -4,9 +4,7 @@
         content: " ";
         display: table;
     }
-    &:after {
-        clear: both;
-    }
+    &:after { clear: both; }
 }
 
 .backdrop-hidden {
@@ -19,14 +17,33 @@
     width: 100vw;
 }
 
-.hidden {
-    display: none !important;
+.hidden { display: none !important; }
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+
+// background and colors
+@mixin bg-class($class, $bg, $color) {
+    .bg-#{$class} {
+        background-color: $bg;
+        color: $color;
+    }
 }
 
-.pull-left {
-    float: left;
-}
+$bg-classes:
+    ("primary", $primary, #fff),
+    ("primary-faded", $primary-faded, $primary-dark),
+    ("primary-light", $primary-light, #fff),
+    ("primary-dark", $primary-dark, #fff),
+    ("secondary", $secondary, #fff),
+    ("secondary-faded", $secondary-faded, $primary-dark),
+    ("secondary-light", $secondary-light, $primary-dark),
+    ("secondary-dark", $secondary-dark, #fff),
+    ("success", $success, #fff),
+    ("info", $info, #fff),
+    ("warning", $warning, #fff),
+    ("error", $error, #fff);
 
-.pull-right {
-    float: right;
+@each $class, $bg, $color in $bg-classes {
+    @include bg-class($class, $bg, $color);
 }
