@@ -35,53 +35,14 @@
     }
 }
 
-.buttons {
-    .normal-states, .disabled-states {
-        display: flex;
-        flex-wrap: wrap;
-
-        & > * {
-            flex: 1 1 auto;
-            max-width: 15%;
-            min-width: 10em;
-            margin-right: .5em;
-            margin-bottom: .5em;
-        }
-    }
-}
-
 .input {
     h3 {
         margin-top: 16px;
-    }
-
-    .states-input-buttons {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
-        & > * {
-            flex: 1 0 auto;
-            max-width: 20%;
-            min-width: 12em;
-            margin-right: .5em;
-            margin-bottom: .5em;
-        }
     }
 }
 
 .dropdown .dropdown-trigger {
     min-width: 220px;
-}
-
-.check-buttons {
-    display: flex;
-    @media screen and (max-width: 900px) { display: inherit; }
-
-    [class*="check-"]:not(:first-of-type) {
-        margin-left: 6em;
-        @media screen and (max-width: 900px) { margin-left: 0; }
-    }
 }
 
 .icons {
@@ -95,19 +56,6 @@
     .demo-info { @extend .notification-info };
     .demo-warning { @extend .notification-warning };
     .demo-error { @extend .notification-error };
-}
-
-.notifications-test-buttons, .dialog-test-buttons {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-
-    & > * {
-        flex: 1 0 auto;
-        max-width: 20%;
-        min-width: 15em;
-        margin: .25em .5em .25em 0;
-    }
 }
 
 .tabs {
@@ -132,18 +80,15 @@
     margin-bottom: .75em;
 }
 
-// flexgrid
-.row {
-    margin-bottom: .5em;
-
-    [class*="col-"]{
+.demo-flexgrid {
+    [class*="col-"] {
         padding: .5em;
     }
-}
 
-.demo-responsive-columns {
-    .row > * {
-        display: flex;
-        flex-direction: column;
+    .demo-responsive-columns {
+        .row > * {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

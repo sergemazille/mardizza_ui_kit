@@ -13,24 +13,14 @@ $break-points:
 
     // default behaviour
     & > * {
-        flex: 1 1 100%;
-        margin-left: .5em;
+        flex: 1 0 100%;
     }
 
     @each $bp, $min-width in $break-points {
         @for $i from 1 through 12 {
             @media screen and (min-width: $min-width) {
-                @if $i == 12 {
-                    .col-#{$bp}-#{$i} {
-                        //flex: 1 0 0;
-                        width: $min-width;
-                    }
-                }
-
-                @else {
-                    .col-#{$bp}-#{$i} {
-                        flex: $i $i 0;
-                    }
+                .col-#{$bp}-#{$i} {
+                    flex: $i 0 percentage($i/12);
                 }
             }
         }
