@@ -139,69 +139,76 @@
 // flexgrid
 .row {
     margin-bottom: .5em;
+
+    [class*="col-"]{
+        padding: .5em;
+        //margin-left: .5em;
+    }
+
+    [class*="-1"] {
+        color: #fff;
+        background-color: $primary;
+    }
+
+    [class*="-2"] {
+        color: #fff;
+        background-color: $success;
+    }
+
+    [class*="-3"] {
+        color: #fff;
+        background-color: $warning;
+    }
+
+    [class*="-4"] {
+        color: #fff;
+        background-color: $primary-dark;
+    }
+
+    [class*="-5"] {
+        color: #fff;
+        background-color: $primary-light;
+    }
+
+    [class*="-6"] {
+        color: $primary-dark;
+        background-color: $secondary;
+    }
+
+    [class*="-7"] {
+        color: #fff;
+        background-color: $secondary-light;
+    }
+
+    [class*="-8"] {
+        color: #fff;
+        background-color: $secondary-dark;
+    }
+
+    [class*="-9"] {
+        color: #fff;
+        background-color: $success;
+    }
+
+    [class*="-10"] {
+        color: #fff;
+        background-color: $info;
+    }
+
+    [class*="-11"] {
+        color: #fff;
+        background-color: $error;
+    }
+
+    [class*="-12"] {
+        color: #fff;
+        background-color: $primary-light;
+    }
 }
 
-[class*="col-"]{
-    padding: .5em;
-    margin-left: .5em;
-}
-
-.col-1 {
-    color: #fff;
-    background-color: $primary;
-}
-
-.col-2 {
-    color: #fff;
-    background-color: $success;
-}
-
-.col-3 {
-    color: #fff;
-    background-color: $grey;
-}
-
-.col-4 {
-    color: #fff;
-    background-color: $primary-dark;
-}
-
-.col-5 {
-    color: #fff;
-    background-color: $primary-light;
-}
-
-.col-6 {
-    color: $primary-dark;
-    background-color: $secondary;
-}
-
-.col-7 {
-    color: #fff;
-    background-color: $secondary-light;
-}
-
-.col-8 {
-    color: #fff;
-    background-color: $secondary-dark;
-}
-
-.col-9 {
-    color: #fff;
-    background-color: $error;
-}
-
-.col-10 {
-    color: #fff;
-    background-color: $warning;
-}
-
-.col-11 {
-    color: #fff;
-    background-color: $info;
-}
-
-.col-12 {
-    color: $primary-dark;
-    background-color: $secondary-faded;
+.demo-responsive-columns {
+    .row > * {
+        display: flex;
+        flex-direction: column;
+    }
 }

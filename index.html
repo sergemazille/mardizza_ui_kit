@@ -521,37 +521,37 @@
         <h2>Flexgrid</h2>
         <div class="inset">
             <div class="row">
-                <div class="col-12">col-12</div>
+                <div class="col-xs-12">col-xs-12</div>
             </div>
 
             <div class="row">
-                <div class="col-1">col-1</div>
-                <div class="col-11">col-11</div>
+                <div class="col-xs-1">col-xs-1</div>
+                <div class="col-xs-11">col-xs-11</div>
             </div>
 
             <div class="row">
-                <div class="col-2">col-2</div>
-                <div class="col-10">col-10</div>
+                <div class="col-xs-2">col-xs-2</div>
+                <div class="col-xs-10">col-xs-10</div>
             </div>
 
             <div class="row">
-                <div class="col-3">col-3</div>
-                <div class="col-9">col-9</div>
+                <div class="col-xs-3">col-xs-3</div>
+                <div class="col-xs-9">col-xs-9</div>
             </div>
 
             <div class="row">
-                <div class="col-4">col-4</div>
-                <div class="col-8">col-8</div>
+                <div class="col-xs-4">col-xs-4</div>
+                <div class="col-xs-8">col-xs-8</div>
             </div>
 
             <div class="row">
-                <div class="col-5">col-5</div>
-                <div class="col-7">col-7</div>
+                <div class="col-xs-5">col-xs-5</div>
+                <div class="col-xs-7">col-xs-7</div>
             </div>
 
             <div class="row">
-                <div class="col-6">col-6</div>
-                <div class="col-6">col-6</div>
+                <div class="col-xs-6">col-xs-6</div>
+                <div class="col-xs-6">col-xs-6</div>
             </div>
         </div>
 
@@ -559,17 +559,41 @@
             <h3>Nestable columns</h3>
             <div class="inset">
                 <div class="row">
-                    <div class="col-1">col-1</div>
-                    <div class="col-11">
-                        <div class="row">col-11
-                            <div class="col-4">col-4</div>
-                            <div class="col-8">col-8
+                    <div class="col-xs-1">col-xs-1</div>
+                    <div class="col-xs-11">
+                        <div class="row">col-xs-11
+                            <div class="col-xs-4">col-xs-4</div>
+                            <div class="col-xs-8">col-xs-8
                                 <div class="row">
-                                    <div class="col-3">col-3</div>
-                                    <div class="col-9">col-9</div>
+                                    <div class="col-xs-3">col-xs-3</div>
+                                    <div class="col-xs-9">col-xs-9</div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Responsive columns</h3>
+            <div class="inset">
+                <div class="demo-responsive-columns">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-7"><span>col-xs-12 (320+)</span><span>col-lg-7 (800+)</span></div>
+                        <div class="col-xs-12 col-lg-5"><span>col-xs-12 (320+)</span><span>col-lg-5 (800+)</span></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xl-10"><span>col-md-3 (640+)</span><span>col-xl-11 (1280+)</span></div>
+                        <div class="col-md-3 col-xl-1"><span>col-md-3 (640+)</span><span>col-xl-1 (1280+)</span></div>
+                        <div class="col-md-6 col-xl-1"><span>col-md-6 (640+)</span><span>col-xl-1 (1280+)</span></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xxs-4 col-sm-2 col-lg-5 col-xl-1"><span>col-xxs-4 (0+)</span><span>col-sm-2 (480+)</span><span>col-lg-5 (800+)</span><span>col-xl-1 (1280+)</span></div>
+                        <div class="col-xxs-4 col-sm-8 col-lg-3 col-xl-1"><span>col-xxs-4 (0+)</span><span>col-sm-8 (480+)</span><span>col-lg-3 (800+)</span><span>col-xl-1 (1280+)</span></div>
+                        <div class="col-xxs-4 col-sm-2 col-lg-4 col-xl-10"><span>col-xxs-4 (0+)</span><span>col-sm-2 (480+)</span><span>col-lg-4 (800+)</span><span>col-xl-10 (1280+)</span></div>
                     </div>
                 </div>
             </div>
