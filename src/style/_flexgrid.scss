@@ -10,11 +10,12 @@ $break-points:
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
-    // default behaviour
-    & > * {
-        flex: 0 0 100%;
-        box-sizing: border-box;
+    // default behaviour 100%
+    [class*="col-"] {
+        display: block;
+        width: 100%;
     }
 
     @each $bp, $min-width in $break-points {
@@ -22,8 +23,16 @@ $break-points:
             @media screen and (min-width: $min-width) {
                 .col-#{$bp}-#{$i} {
                     box-sizing: border-box;
-                    flex-basis: percentage($i/12);
-                    width: percentage($i/12);
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: percentage($i/12) - .5%;
+                    width: percentage($i/12) - .5%;
+
+                    // avoid margin-right on single line column
+                    @if 12 == $i {
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
                 }
             }
         }
