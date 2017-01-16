@@ -13,7 +13,7 @@ $break-points:
 
     // default behaviour
     & > * {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
         box-sizing: border-box;
     }
 
@@ -21,7 +21,9 @@ $break-points:
         @for $i from 1 through 12 {
             @media screen and (min-width: $min-width) {
                 .col-#{$bp}-#{$i} {
-                    flex: $i $i 0;
+                    box-sizing: border-box;
+                    flex-basis: percentage($i/12);
+                    width: percentage($i/12);
                 }
             }
         }
