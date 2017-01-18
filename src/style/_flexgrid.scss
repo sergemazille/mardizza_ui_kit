@@ -25,8 +25,8 @@ $break-points:
                     box-sizing: border-box;
                     flex-grow: 0;
                     flex-shrink: 0;
-                    flex-basis: percentage($i/12) - .5%;
-                    width: percentage($i/12) - .5%;
+                    flex-basis: percentage($i/12) - .3%;
+                    width: percentage($i/12) - .3%;
 
                     // avoid margin-right on single line column
                     @if 12 == $i {
