@@ -82,8 +82,9 @@
 
 .demo-flexgrid {
     [class*="col-"] {
-        padding: .5em;
-        margin: .25em 0;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        margin-bottom: .5em;
     }
 
     .demo-responsive-columns {

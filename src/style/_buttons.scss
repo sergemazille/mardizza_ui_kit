@@ -20,6 +20,10 @@
     background-color: $background;
     outline: 0;
 
+    @media screen and (max-width: $xs-max) {
+        padding: .2em .4em;
+    }
+
     &:hover, &:focus, &.focus {
         text-decoration: none;
         border: 1px solid transparent; // override bootstrap default hover border

@@ -14,14 +14,14 @@ export class Pagination {
 
         // set / reset items
         [...items].forEach(function(item, i) {
-            if(item.classList.contains('ellipsis')) { item.firstElementChild.textContent = i; }
+            if(item.classList.contains('ellipsis')) { item.firstElementChild.textContent = `${i}`; }
             item.classList.remove('hidden', 'show', 'ellipsis', 'disabled');
             item.dataset.page = i;
         });
 
         let activeItemIndex = parseInt(activeItem.dataset.page);
 
-        /* add appropriate classes : */
+        /* add appropriate classes: */
 
         // disable 'prev' button if active page is the first one
         if(activeItemIndex == 1) {

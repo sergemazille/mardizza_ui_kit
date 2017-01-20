@@ -11,6 +11,7 @@ $break-points:
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 
     // default behaviour 100%
     [class*="col-"] {
@@ -31,7 +32,7 @@ $break-points:
                     // avoid margin-right on single line column
                     @if 12 == $i {
                         flex-basis: 100%;
-                        width: 100%;
+                        max-width: 100%;
                     }
                 }
             }
