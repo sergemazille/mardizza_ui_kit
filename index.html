@@ -16,25 +16,33 @@
     <div class="group">
         <h2>Colors</h2>
         <div class="colors inset">
-            <div class="grey-color">
-                <div class="color grey-faded"></div>
-                <div class="color grey-light"></div>
-                <div class="color grey"></div>
-                <div class="color grey-dark"></div>
-            </div>
+            <div class="row">
+                <div class="col-xxs-12 col-lg-4">
+                    <div class="grey-color">
+                        <div class="bg-grey-faded"></div>
+                        <div class="bg-grey-light"></div>
+                        <div class="bg-grey"></div>
+                        <div class="bg-grey-dark"></div>
+                    </div>
+                </div>
 
-            <div class="primary-color">
-                <div class="color primary-faded"></div>
-                <div class="color primary-light"></div>
-                <div class="color primary"></div>
-                <div class="color primary-dark"></div>
-            </div>
+                <div class="col-xxs-12 col-lg-4">
+                    <div class="primary-color">
+                        <div class="bg-primary-faded"></div>
+                        <div class="bg-primary-light"></div>
+                        <div class="bg-primary"></div>
+                        <div class="bg-primary-dark"></div>
+                    </div>
+                </div>
 
-            <div class="secondary-color">
-                <div class="color secondary-faded"></div>
-                <div class="color secondary-light"></div>
-                <div class="color secondary"></div>
-                <div class="color secondary-dark"></div>
+                <div class="col-xxs-12 col-lg-4">
+                    <div class="secondary-color">
+                        <div class="bg-secondary-faded"></div>
+                        <div class="bg-secondary-light"></div>
+                        <div class="bg-secondary"></div>
+                        <div class="bg-secondary-dark"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -49,26 +57,30 @@
                 <div class="group">
                     <h4>Normal buttons</h4>
                     <div class="normal-states inset">
-                        <button class="btn-grey">Grey</button>
-                        <button class="btn-primary">Primary</button>
-                        <button class="btn-secondary">Secondary</button>
-                        <button class="btn-info">Info</button>
-                        <button class="btn-success">Success</button>
-                        <button class="btn-warning">Warning</button>
-                        <button class="btn-danger">Danger</button>
+                        <div class="row">
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-grey">Grey</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-primary">Primary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-secondary">Secondary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-info">Info</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-success">Success</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-warning">Warning</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-danger">Danger</button></div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="group">
                     <h4>Disabled buttons</h4>
                     <div class="disabled-states inset">
-                        <button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey</button>
-                        <button disabled class="btn-primary">Primary</button>
-                        <button disabled class="btn-secondary">Secondary</button>
-                        <button disabled class="btn-info">Info</button>
-                        <button disabled class="btn-success">Success</button>
-                        <button disabled class="btn-warning">Warning</button>
-                        <button disabled class="btn-danger">Danger</button>
+                        <div class="row">
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-primary">Primary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-secondary">Secondary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-info">Info</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-success">Success</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-warning">Warning</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-danger">Danger</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,11 +162,13 @@
                                     </div>
 
                                     <div class="states-input-buttons">
-                                        <button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback</button>
-                                        <button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback</button>
-                                        <button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback</button>
-                                        <button data-action="disabled" class="btn-grey">Disable</button>
-                                        <button data-action="reset" class="btn-primary">Reset</button>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="disabled" class="btn-grey">Disable</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="reset" class="btn-primary">Reset</button></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -169,8 +183,7 @@
                     </div>
 
                     <div class="row">
-
-                        <div class="col-xs-12 col-md-6 col-xl-3">
+                        <div class="col-xs-12 col-md-6 col-lg-3">
                             <h3>Dropdown</h3>
                             <div class="inset">
                                 <div class="form-group">
@@ -192,9 +205,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- // col -->
 
-                        <div class="col-xs-12 col-md-6 col-xl-3">
+                        <div class="col-xs-12 col-md-6 col-lg-3">
                             <div class="check-radio">
                                 <h3>Radio buttons</h3>
                                 <div class="inset">
@@ -220,9 +233,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- // col -->
 
-                        <div class="col-xs-12 col-md-6 col-xl-3">
+                        <div class="col-xs-12 col-md-6 col-lg-3">
                             <div class="check-toggle">
                                 <h3>Toggle buttons</h3>
                                 <div class="inset">
@@ -245,9 +258,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- // col -->
 
-                        <div class="col-xs-12 col-md-6 col-xl-3">
+                        <div class="col-xs-12 col-md-6 col-lg-3">
                             <div class="check-checkbox">
                                 <h3>Checkboxes</h3>
                                 <div class="inset">
@@ -267,9 +280,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                    </div>
+                        </div> <!-- // col -->
+                    </div> <!-- // row -->
                 </form>
             </div>
         </div>
@@ -281,28 +293,26 @@
         <h2>Navigation</h2>
         <div class="group">
             <h3>Pagination</h3>
-            <div class="inset">
-                <nav class="pagination">
-                    <ul>
-                        <li class="prev"><a href="#"></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li class="active"><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li><a href="#">11</a></li>
-                        <li><a href="#">12</a></li>
-                        <li><a href="#">13</a></li>
-                        <li><a href="#">14</a></li>
-                        <li class="next"><a href="#"></a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="pagination">
+                <ul>
+                    <li class="prev"><a href="#"></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">11</a></li>
+                    <li><a href="#">12</a></li>
+                    <li><a href="#">13</a></li>
+                    <li><a href="#">14</a></li>
+                    <li class="next"><a href="#"></a></li>
+                </ul>
+            </nav>
         </div>
 
         <div class="group">
@@ -348,7 +358,7 @@
         <h3>Text</h3>
         <div class="inset">
             <div class="block">
-                <div class="typography">
+                <div class="typography-text">
                     <span class="h1">Heading 1</span>
                     <span class="h2">Heading 2</span>
                     <span class="h3">Heading 3</span>
@@ -427,13 +437,15 @@
                 <h4>Test notifications:</h4>
                 <div class="inset">
                     <div class="notifications-test-buttons block">
-                        <button class="btn-success" data-type="success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button>
-                        <button class="btn-info" data-type="info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button>
-                        <button class="btn-warning" data-type="warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button>
-                        <button class="btn-error" data-type="error" data-text="This message will self destruct in four seconds..." >Error notification</button>
-                        <button class="btn-primary sticky" data-type="info" data-text="I only disappear if you click on me">Sticky notification</button>
-                        <button class="btn-secondary sticky" data-type="info" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button>
-                        <button class="btn-grey sticky" data-type="info" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-success" data-type="success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-info" data-type="info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-warning" data-type="warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-error" data-type="error" data-text="This message will self destruct in four seconds..." >Error notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-primary sticky" data-type="info" data-text="I only disappear if you click on me">Sticky notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-secondary sticky" data-type="info" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-grey sticky" data-type="info" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -445,11 +457,13 @@
                 <h4>Test dialog windows:</h4>
                 <div class="inset">
                     <div class="dialog-test-buttons block">
-                        <button class="btn-primary dialog-trigger" data-target="#dialog-test-standard">Standard dialog box</button>
-                        <button class="btn-success dialog-trigger" data-target="#dialog-test-success">Success dialog box</button>
-                        <button class="btn-info dialog-trigger" data-target="#dialog-test-info">Info dialog box</button>
-                        <button class="btn-warning dialog-trigger" data-target="#dialog-test-warning">Warning dialog box</button>
-                        <button class="btn-error dialog-trigger" data-target="#dialog-test-error">Error dialog box</button>
+                        <div class="row">
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-primary dialog-trigger" data-target="#dialog-test-standard">Standard dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-success dialog-trigger" data-target="#dialog-test-success">Success dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-info dialog-trigger" data-target="#dialog-test-info">Info dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-warning dialog-trigger" data-target="#dialog-test-warning">Warning dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-error dialog-trigger" data-target="#dialog-test-error">Error dialog box</button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -462,8 +476,10 @@
                         You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup> !!
                     </div>
                     <div class="dialog-footer">
-                        <button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button>
-                        <button class="btn-success"><span class="icon-thumb"></span> Yeah, go for a pizza!!!</button>
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -475,8 +491,10 @@
                         You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup> !!
                     </div>
                     <div class="dialog-footer">
-                        <button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button>
-                        <button class="btn-success"><span class="icon-thumb"></span> Yeah, go for a pizza!!!</button>
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -488,8 +506,10 @@
                         You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup> !!
                     </div>
                     <div class="dialog-footer">
-                        <button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button>
-                        <button class="btn-success"><span class="icon-thumb"></span> Yeah, go for a pizza!!!</button>
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -501,8 +521,10 @@
                         You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup> !!
                     </div>
                     <div class="dialog-footer">
-                        <button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button>
-                        <button class="btn-success"><span class="icon-thumb"></span> Yeah, go for a pizza!!!</button>
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -514,8 +536,10 @@
                         You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup> !!
                     </div>
                     <div class="dialog-footer">
-                        <button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button>
-                        <button class="btn-success"><span class="icon-thumb"></span> Yeah, go for a pizza!!!</button>
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -529,37 +553,37 @@
             <h2>Flexgrid</h2>
             <div class="inset">
                 <div class="row">
-                    <div class="col-xs-12"><div class="bg-primary">&nbsp;</div></div>
+                    <div class="col-xxs-12"><div class="bg-primary">&nbsp;</div></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-1"><div class="bg-primary-dark">&nbsp;</div></div>
-                    <div class="col-xs-11"><div class="bg-error">&nbsp;</div></div>
+                    <div class="col-xxs-1"><div class="bg-primary-dark">&nbsp;</div></div>
+                    <div class="col-xxs-11"><div class="bg-error">&nbsp;</div></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-2"><div class="bg-success">&nbsp;</div></div>
-                    <div class="col-xs-10"><div class="bg-info">&nbsp;</div></div>
+                    <div class="col-xxs-2"><div class="bg-success">&nbsp;</div></div>
+                    <div class="col-xxs-10"><div class="bg-info">&nbsp;</div></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-3"><div class="bg-warning">&nbsp;</div></div>
-                    <div class="col-xs-9"><div class="bg-success">&nbsp;</div></div>
+                    <div class="col-xxs-3"><div class="bg-warning">&nbsp;</div></div>
+                    <div class="col-xxs-9"><div class="bg-success">&nbsp;</div></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-4"><div class="bg-primary-dark">&nbsp;</div></div>
-                    <div class="col-xs-8"><div class="bg-secondary-dark">&nbsp;</div></div>
+                    <div class="col-xxs-4"><div class="bg-primary-dark">&nbsp;</div></div>
+                    <div class="col-xxs-8"><div class="bg-secondary-dark">&nbsp;</div></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-5"><div class="bg-primary-light">&nbsp;</div></div>
-                    <div class="col-xs-7"><div class="bg-secondary-light">&nbsp;</div></div>
+                    <div class="col-xxs-5"><div class="bg-primary-light">&nbsp;</div></div>
+                    <div class="col-xxs-7"><div class="bg-secondary-light">&nbsp;</div></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-6"><div class="bg-secondary">&nbsp;</div></div>
-                    <div class="col-xs-6"><div class="bg-warning">&nbsp;</div></div>
+                    <div class="col-xxs-6"><div class="bg-secondary">&nbsp;</div></div>
+                    <div class="col-xxs-6"><div class="bg-warning">&nbsp;</div></div>
                 </div>
             </div>
 
@@ -568,23 +592,23 @@
                     <h3>Nestable columns</h3>
                     <div class="inset">
                         <div class="row">
-                            <div class="col-xs-12 ">
+                            <div class="col-xxs-12 ">
                                 <div class="bg-error">
                                     <div class="row">
 
-                                        <div class="col-xs-7">
+                                        <div class="col-xxs-7">
                                             <div class="bg-primary-dark">
                                                 &nbsp;
                                             </div>
                                         </div>
 
-                                        <div class="col-xs-5">
+                                        <div class="col-xxs-5">
                                             <div class="bg-success">
-                                                <div class="col-xs-8 ">
+                                                <div class="col-xxs-8 ">
                                                     <div class="bg-info">
                                                         <div class="row">
-                                                            <div class="col-xs-3"><div class="bg-warning">&nbsp;</div></div>
-                                                            <div class="col-xs-9"><div class="bg-secondary-light">&nbsp;</div></div>
+                                                            <div class="col-xxs-3"><div class="bg-warning">&nbsp;</div></div>
+                                                            <div class="col-xxs-9"><div class="bg-secondary-light">&nbsp;</div></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -604,20 +628,20 @@
                 <div class="inset">
                     <div class="demo-responsive-columns">
                         <div class="row">
-                            <div class="col-xs-12 col-lg-7"><div class="bg-primary"><span>col-xs-12 (320+)</span><span>col-lg-7 (801+)</span></div></div>
-                            <div class="col-xs-12 col-lg-5"><div class="bg-secondary"><span>col-xs-12 (320+)</span><span>col-lg-5 (801+)</span></div></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-5 col-lg-7"><div class="bg-primary"><span>col-xxs-12 (320+)</span><span>col-lg-7 (801+)</span></div></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-7 col-lg-5"><div class="bg-secondary"><span>col-xxs-12 (320+)</span><span>col-lg-5 (801+)</span></div></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3 col-xl-10"><div class="bg-warning"><span>col-md-3 (641+)</span><span>col-xl-11 (1281+)</span></div></div>
-                            <div class="col-md-3 col-xl-1"><div class="bg-error"><span>col-md-3 (641+)</span><span>col-xl-1 (1281+)</span></div></div>
-                            <div class="col-md-6 col-xl-1"><div class="bg-info"><span>col-md-6 (641+)</span><span>col-xl-1 (1281+)</span></div></div>
+                            <div class="col-xxs-8 col-xs-7 col-md-3 col-xl-10"><div class="bg-warning"><span>col-md-3 (641+)</span><span>col-xl-11 (1281+)</span></div></div>
+                            <div class="col-xxs-1 col-xs-2 col-md-3 col-xl-1"><div class="bg-error"><span>col-md-3 (641+)</span><span>col-xl-1 (1281+)</span></div></div>
+                            <div class="col-xxs-3 col-xs-3 col-md-6 col-xl-1"><div class="bg-info"><span>col-md-6 (641+)</span><span>col-xl-1 (1281+)</span></div></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-xxs-12 col-sm-2 col-lg-5 col-xl-1"><div class="bg-success"><span>col-xxs-12 (0)</span><span>col-sm-2 (481+)</span><span>col-lg-5 (801+)</span><span>col-xl-1 (1281+)</span></div></div>
-                            <div class="col-xxs-12 col-sm-8 col-lg-3 col-xl-1"><div class="bg-primary-light"><span>col-xxs-12 (0)</span><span>col-sm-8 (481+)</span><span>col-lg-3 (801+)</span><span>col-xl-1 (1281+)</span></div></div>
-                            <div class="col-xxs-12 col-sm-2 col-lg-4 col-xl-10"><div class="bg-secondary-dark"><span>col-xxs-12 (0)</span><span>col-sm-2 (481+)</span><span>col-lg-4 (801+)</span><span>col-xl-10 (1281+)</span></div></div>
+                            <div class="col-xxs-12 col-xs-4 col-sm-2 col-lg-5 col-xl-1"><div class="bg-success"><span>col-xxs-12 (0)</span><span>col-sm-2 (481+)</span><span>col-lg-5 (801+)</span><span>col-xl-1 (1281+)</span></div></div>
+                            <div class="col-xxs-12 col-xs-4 col-sm-8 col-lg-3 col-xl-1"><div class="bg-primary-light"><span>col-xxs-12 (0)</span><span>col-sm-8 (481+)</span><span>col-lg-3 (801+)</span><span>col-xl-1 (1281+)</span></div></div>
+                            <div class="col-xxs-12 col-xs-4 col-sm-2 col-lg-4 col-xl-10"><div class="bg-secondary-dark"><span>col-xxs-12 (0)</span><span>col-sm-2 (481+)</span><span>col-lg-4 (801+)</span><span>col-xl-10 (1281+)</span></div></div>
                         </div>
                     </div>
                 </div>

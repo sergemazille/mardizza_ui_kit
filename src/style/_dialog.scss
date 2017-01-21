@@ -61,25 +61,6 @@
     .dialog-footer {
         padding-top: 1em;
         border-top: 1px solid transparentize($primary-dark, .9);
-
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-
-        @media screen and (max-width: $sm-max) {
-            flex: 1 0 100%;
-            max-width: 100%;
-        }
-
-        [class*="btn-"] {
-            flex: 1 0 auto;
-            margin: .25em .5em;
-
-            @media screen and (max-width: $sm-max) {
-                flex: 1 0 auto;
-                max-width: 100%;
-            }
-        }
     }
 
     // button icon optical adjustment

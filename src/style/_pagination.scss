@@ -29,7 +29,7 @@
         display: inline-block;
         background-color: $primary-faded;
         border: 2px solid #fff;
-        padding: .7em .4em;
+        padding: .7em .25em;
         border-radius: $radius * 3;
         text-align: center;
         font-size: .9em;
@@ -49,7 +49,7 @@
         &:active, &.active {
             background-color: $secondary;
             border: 1px solid $secondary-dark;
-            padding: .7em calc(.4em + 1px); // keep layout from moving on click
+            padding: .7em calc(.25em + 1px); // keep layout from moving on click
 
             a {
                 color: #fff;
@@ -58,6 +58,8 @@
         }
 
         &.active { pointer-events: none; }
+
+        &.hidden { display: none; }
 
         &.disabled {
             pointer-events: none;

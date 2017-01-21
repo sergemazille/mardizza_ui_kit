@@ -9,29 +9,23 @@
 
 .colors {
     [class*="-color"] {
-        margin-right: .75em;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 1.5em;
 
-        .color {
-            display: inline-block;
-            width: 75px;
+        [class*="bg-"] {
+            width: 22%;
+            margin-right: 2%;
             height: 75px;
             border-radius: $radius;
-
-            &.grey-faded {background-color: $grey-faded;}
-            &.grey-light {background-color: $grey-light;}
-            &.grey {background-color: $grey;}
-            &.grey-dark {background-color: $grey-dark;}
-
-            &.primary-faded {background-color: $primary-faded;}
-            &.primary-light {background-color: $primary-light;}
-            &.primary {background-color: $primary;}
-            &.primary-dark {background-color: $primary-dark;}
-
-            &.secondary-faded {background-color: $secondary-faded;}
-            &.secondary-light {background-color: $secondary-light;}
-            &.secondary {background-color: $secondary;}
-            &.secondary-dark {background-color: $secondary-dark;}
         }
+    }
+}
+
+.buttons, .states-input-buttons, .notifications-test-buttons, .dialog-test-buttons {
+    [class*="btn-"] {
+        width: 100%;
+        margin-bottom: 1em;
     }
 }
 
@@ -58,17 +52,36 @@
     .demo-error { @extend .notification-error };
 }
 
-.tabs {
-    width: 50%;
+.buttons-row {
+    justify-content: flex-end;
+
+    [class*="btn-"] {
+        width: 100%;
+
+        @media screen and (max-width: $sm-max) {
+            margin: .25em 0;
+        }
+    }
 }
 
 .inset {
     padding-left: 1.5em;
 }
 
-.typography {
+.typography-text {
     display: flex;
     flex-direction: column;
+}
+
+.icons {
+    .icon-fonts {
+        display: flex;
+        flex-wrap: wrap;
+
+        [class*="icon-"] {
+            margin: .25em;
+        }
+    }
 }
 
 .demo-block {

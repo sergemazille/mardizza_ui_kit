@@ -107,7 +107,7 @@ $dialog-z: 6;
 /////////////////////////////////////////////////////////////
 // Grid
 
-// width represents max value break-point
+// width represents MIN value break-point
 $xxs: 320px;
 $xs: 480px;
 $sm: 640px;
@@ -116,21 +116,21 @@ $lg: 1280px;
 $xl: 1920px;
 $xxl: 2400px;
 
-$xxs-min: 0;
-$xs-min: $xxs;
-$sm-min: $xs + 1;
-$md-min: $sm + 1;
-$lg-min: $md + 1;
-$xl-min: $lg + 1;
-$xxl-min: $xl + 1;
+// used for flexgrid
+$xxs-min: $xxs;
+$xs-min: $xs;
+$sm-min: $sm;
+$md-min: $md;
+$lg-min: $lg;
+$xl-min: $xl;
+$xxl-min: $xxl;
 
-$xxs-max: $xxs;
-$xs-max: $xs;
-$sm-max: $sm;
-$md-max: $md;
-$lg-max: $lg;
-$xl-max: $xl;
-$xxl-max: $xxl;
+$xxs-max: $xs - 1;
+$xs-max: $sm - 1;
+$sm-max: $md - 1;
+$md-max: $lg - 1;
+$lg-max: $xl - 1;
+$xl-max: $xxl - 1;
 
 /////////////////////////////////////////////////////////////
 // Misc.
