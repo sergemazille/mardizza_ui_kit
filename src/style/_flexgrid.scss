@@ -8,14 +8,21 @@ $break-points:
     ("xxl", $xxl-min);
 
 .row {
+    box-sizing: border-box;
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
 
-    // default behaviour 100%
+    margin-right: - .5em;
+    margin-left: - .5em;
+
+    // defaults
     [class*="col-"] {
-        display: block;
+        box-sizing: border-box;
+
+        padding-right: .5em;
+        padding-left: .5em;
+
         width: 100%;
     }
 
@@ -23,17 +30,8 @@ $break-points:
         @for $i from 1 through 12 {
             @media screen and (min-width: $min-width) {
                 .col-#{$bp}-#{$i} {
-                    box-sizing: border-box;
-                    flex-grow: 0;
-                    flex-shrink: 0;
-                    flex-basis: percentage($i/12) - .3%;
-                    max-width: percentage($i/12) - .3%;
-
-                    // avoid margin-right on single line column
-                    @if 12 == $i {
-                        flex-basis: 100%;
-                        max-width: 100%;
-                    }
+                    flex-basis: percentage($i/12);
+                    max-width: percentage($i/12);
                 }
             }
         }

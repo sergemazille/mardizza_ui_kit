@@ -82,15 +82,25 @@
 
 .demo-flexgrid {
     [class*="col-"] {
-        padding-top: .5em;
-        padding-bottom: .5em;
-        margin-bottom: .5em;
+        margin-bottom: 1em;
+
+        [class*="bg-"] {
+            height: 100%;
+            padding: .5em;
+        }
     }
 
+    // remove margin-button on nestable demo flexgrid for aesthetic reasons
+    .demo-nestable-columns {
+        [class*="col-"] {
+            margin-bottom: 0;
+        }
+    }
+
+    // aesthetic
     .demo-responsive-columns {
-        .row > * {
-            display: flex;
-            flex-direction: column;
+        span {
+            display: block;
         }
     }
 }
