@@ -52,14 +52,26 @@
     .demo-error { @extend .notification-error };
 }
 
-.buttons-row {
-    justify-content: flex-end;
+[class*="dialog-"] {
+    .buttons-row {
+        justify-content: flex-end;
 
-    [class*="btn-"] {
-        width: 100%;
+        [class*="btn-"] {
+            width: 100%;
 
-        @media screen and (max-width: $sm-max) {
-            margin: .25em 0;
+            @media screen and (max-width: $sm-max) {
+                margin: .25em 0;
+            }
+        }
+    }
+}
+
+.dialog-sm {
+    .buttons-row {
+        [class*="btn-"] {
+            @media screen and (max-width: $md-max) {
+                margin: .25em 0;
+            }
         }
     }
 }

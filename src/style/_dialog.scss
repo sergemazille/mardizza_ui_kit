@@ -8,12 +8,15 @@
     position: relative;
 
     flex: 0 1 60%;
-    min-width: 50%;
     margin: 0 auto;
     z-index: $dialog-z;
     display: none; // won't display on page load
     opacity: 0;
     transition: margin .4s ease-in-out, opacity .4s ease-in-out;
+
+    &.dialog-sm {
+        flex-basis: 35%;
+    }
 
     @media screen and (max-width: $sm-max) {
         min-width: 75%;
