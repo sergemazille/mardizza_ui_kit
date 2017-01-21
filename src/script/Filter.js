@@ -12,14 +12,30 @@ export class Filter {
         // target every filter block on the page
         let filterContainers = document.querySelectorAll('.filter');
         
-        // create a 'clear filter out' button for each one
+        // create two 'clear filter out' buttons for each one (one button for mobile screen, one for larger screens)
         [...filterContainers].forEach(function(container) {
-            let clearOutButton = document.createElement('div');
-            clearOutButton.classList.add('filter-clear');
-            container.appendChild(clearOutButton);
+            
+            /* mobile screens */
+            
+            // create clear out button
+            let xsClearOutButton = document.createElement('div');
+            xsClearOutButton.classList.add('filter-clear-xs');
+            container.querySelector('.filter-label').appendChild(xsClearOutButton);
+            
+            // register mobile clear out button click event
+            xsClearOutButton.addEventListener('click', function() {
+                Filter.clearOutFilters(container);
+            });
+
+            /* larger screens (from sm breakpoint) */
+
+            // create clear out button
+            let smClearOutButton = document.createElement('div');
+            smClearOutButton.classList.add('filter-clear');
+            container.appendChild(smClearOutButton);
             
             // register clear out button click event
-            clearOutButton.addEventListener('click', function() {
+            smClearOutButton.addEventListener('click', function() {
                 Filter.clearOutFilters(container);
             });
         });

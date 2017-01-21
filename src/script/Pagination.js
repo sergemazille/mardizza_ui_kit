@@ -1,5 +1,4 @@
 import * as Constantes from './Constantes';
-
 import { ViewPort } from './ViewPort';
 
 export class Pagination {

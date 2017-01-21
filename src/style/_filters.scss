@@ -1,6 +1,11 @@
 .filter {
     display: flex;
 
+    @media screen and (max-width: $xs-max) {
+        display: block;
+        width: 100%;
+    }
+
     &.disabled {
         .filter-label {
             background-color: $grey-faded;
@@ -48,9 +53,8 @@
     }
 
     .filter-label, .filter-clear {
-        display: flex;
         justify-content: center;
-        flex-direction: column;
+        line-height: 2;
 
         background-color: $primary;
         color: #fff;
@@ -61,9 +65,16 @@
     .filter-label {
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
+
+        @media screen and (max-width: $xs-max) {
+            border-bottom-left-radius: 0; // reset
+
+            border-top-left-radius: $radius;
+            border-top-right-radius: $radius;
+        }
     }
 
-    .filter-clear {
+    .filter-clear, .filter-clear-xs {
         border-top-right-radius: $radius;
         border-bottom-right-radius: $radius;
         cursor: pointer;
@@ -78,6 +89,36 @@
             content: $icon-cross;
             padding: .25em .5em;
             border-radius: 2em;
+        }
+    }
+
+    /* small screen behaviour */
+
+    // small screen clear out button is hidden by default (visible only on small screens)
+    .filter-clear-xs {
+        display: none;
+    }
+
+    // hide default clear out button
+    @media screen and (max-width: $xs-max) {
+        .filter-clear {
+            padding: 0;
+            display: none;
+        }
+
+        .filter-label {
+            .filter-clear-xs {
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        &.disabled {
+            .filter-label {
+                .filter-clear-xs {
+                    display: none;
+                }
+            }
         }
     }
 }
