@@ -35,7 +35,7 @@ export class Dialog {
         this.dialogContainer.addEventListener("click", function(e) {
             e.preventDefault();
 
-            if((e.target).classList.contains('dialog-container') || (e.target).classList.contains('dismiss')) {
+            if((e.target).classList.contains('dialog-container') || (e.target).classList.contains('dismiss') || (e.target).classList.contains('dismiss-button')) {
                 // animate out
                 setTimeout(
                     function () {
@@ -64,7 +64,7 @@ export class Dialog {
 
         // dismiss button
         let dismissButton = document.createElement('span');
-        dismissButton.classList.add('dismiss');
+        dismissButton.classList.add('dismiss-button');
         this.dialog.appendChild(dismissButton);
 
         // create backdrop and container

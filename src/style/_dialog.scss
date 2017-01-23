@@ -31,7 +31,7 @@
         margin: 5em auto 0 auto;
     }
 
-    .dismiss {
+    .dismiss-button {
         &:hover:after {
             cursor: pointer;
             font-weight: $font-weight-semi-bold;
@@ -44,8 +44,15 @@
             font-size: .85em;
             font-weight: 400;
             position: absolute;
-            top: .5em;
-            right: .5em;
+            padding: .3em .5em;
+            border-radius: 1em;
+            top: 1em;
+            right: 1em;
+        }
+
+        &:hover:after {
+            color: $grey-dark;
+            background-color: $grey;
         }
     }
 
