@@ -19,6 +19,8 @@
     color: $color;
     background-color: $background;
     outline: 0;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.45);
+
 
     &:hover, &:focus, &.focus {
         text-decoration: none;
