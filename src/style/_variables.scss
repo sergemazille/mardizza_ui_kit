@@ -118,7 +118,8 @@ $xxs: 320px;
 $xs: 480px;
 $sm: 640px;
 $md: 800px;
-$lg: 1280px;
+$xmd: 1280px;
+$lg: 1600px;
 $xl: 1920px;
 $xxl: 2400px;
 
@@ -127,6 +128,7 @@ $xxs-min: $xxs;
 $xs-min: $xs;
 $sm-min: $sm;
 $md-min: $md;
+$xmd-min: $xmd;
 $lg-min: $lg;
 $xl-min: $xl;
 $xxl-min: $xxl;
@@ -134,7 +136,8 @@ $xxl-min: $xxl;
 $xxs-max: $xs - 1;
 $xs-max: $sm - 1;
 $sm-max: $md - 1;
-$md-max: $lg - 1;
+$md-max: $xmd - 1;
+$xmd-max: $lg - 1;
 $lg-max: $xl - 1;
 $xl-max: $xxl - 1;
 
