@@ -59,6 +59,39 @@ li {
     list-style: none;
 }
 
+.container {
+    width: 100%; // smallest screens, fromm 0 to $xs
+    margin: auto;
+
+    @media screen and (min-width: $xs-min) {
+        width: 464px;
+    }
+
+    @media screen and (min-width: $sm-min) {
+        width: 608px;
+    }
+
+    @media screen and (min-width: $md-min) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: $xmd-min) {
+        width: 1248px;
+    }
+
+    @media screen and (min-width: $lg-min) {
+        width: 1536px;
+    }
+
+    @media screen and (min-width: $xl-min) {
+        width: 1856px;
+    }
+
+    @media screen and (min-width: $xxl-min) {
+        width: 2272px;
+    }
+}
+
 abbr {
     text-decoration-style: dotted !important;
     cursor: help;
