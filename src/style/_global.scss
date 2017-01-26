@@ -64,15 +64,15 @@ li {
     margin: auto;
 
     @media screen and (min-width: $xs-min) {
-        width: 464px;
+        width: 416px;
     }
 
     @media screen and (min-width: $sm-min) {
-        width: 608px;
+        width: 512px;
     }
 
     @media screen and (min-width: $md-min) {
-        width: 768px;
+        width: 512px;
     }
 
     @media screen and (min-width: $xmd-min) {
