@@ -68,27 +68,27 @@ li {
     }
 
     @media screen and (min-width: $sm-min) {
-        width: 512px;
+        width: 576px;
     }
 
     @media screen and (min-width: $md-min) {
-        width: 512px;
+        width: 576px;
     }
 
     @media screen and (min-width: $xmd-min) {
-        width: 1248px;
+        width: 1024px;
     }
 
     @media screen and (min-width: $lg-min) {
-        width: 1536px;
+        width: 1344px;
     }
 
     @media screen and (min-width: $xl-min) {
-        width: 1408px;
+        width: 1664px;
     }
 
     @media screen and (min-width: $xxl-min) {
-        width: 2272px;
+        width: 1888px;
     }
 }
 
