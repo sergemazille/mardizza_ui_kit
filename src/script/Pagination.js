@@ -11,6 +11,10 @@ export class Pagination {
 
     static pagination() {
         let pagination = document.querySelector('.pagination');
+
+        // check if page contains a pagination element before moving forward
+        if(null === pagination) {return false};
+
         let prevItem = pagination.querySelector('.prev');
         let nextItem = pagination.querySelector('.next');
         let activeItem = pagination.querySelector('.active');
