@@ -1,5 +1,5 @@
 // mixins
-@mixin button-variant($color, $background) {
+@mixin button-variant($background) {
     font-family: $font-family-primary;
     display: inline-block;
     margin-bottom: 0; // For input.btn
@@ -16,11 +16,10 @@
     font-size: $font-size-base;
     line-height: $line-height-base;
     border-radius: $radius;
-    color: $color;
+    color: #fff;
     background-color: $background;
     outline: 0;
     box-shadow: 1px 1px 1px rgba(0,0,0,.45);
-
 
     &:hover, &:focus, &.focus {
         text-decoration: none;
@@ -33,11 +32,11 @@
         background-image: none;
         border: 1px solid transparent; // override bootstrap default hover border
         box-shadow: none; // override bootstrap default hover border
-        color: $color;
+        color: #fff;
         background-color: darken($background, 10%);
 
         &:hover, &:focus, &.focus {
-            color: $color;
+            color: #fff;
             background-color: darken($background, 15%);
             outline: 0;
         }
@@ -58,19 +57,19 @@
 }
 
 // classes
-.btn-grey { @include button-variant($color: $primary-dark, $background: $grey); }
+.btn-grey { @include button-variant($background: $grey); }
 
-.btn-primary { @include button-variant($color: #fff, $background: $primary); }
+.btn-primary { @include button-variant($background: $primary); }
 
-.btn-secondary { @include button-variant($color: #fff, $background: $secondary); }
+.btn-secondary { @include button-variant($background: $secondary); }
 
-.btn-info { @include button-variant($color: #fff, $background: $info); }
+.btn-info { @include button-variant($background: $info); }
 
-.btn-success { @include button-variant($color: #fff, $background: $success); }
+.btn-success { @include button-variant($background: $success); }
 
-.btn-warning { @include button-variant($color: #fff, $background: $warning); }
+.btn-warning { @include button-variant($background: $warning); }
 
-.btn-danger { @include button-variant($color: #fff, $background: $danger); }
+.btn-danger { @include button-variant($background: $danger); }
 
 // for contextual use
 .btn-alert { @extend .btn-danger; }
