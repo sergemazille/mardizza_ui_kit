@@ -43,3 +43,12 @@
     font-weight: 700;
     font-style: normal;
 }
+  
+// euphoria script
+@font-face {
+    font-family: 'Euphoria';
+    src: url('#{$font-path}euphoria.woff2') format('woff2'),
+    url('#{$font-path}euphoria.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
