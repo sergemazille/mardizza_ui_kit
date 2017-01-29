@@ -17,11 +17,11 @@
     width: 100vw;
 }
 
+// hidden/visible utils classes
 @mixin hidden() {
     display: none;
 }
 
-// hidden/visible utils classes
 .hidden { @include hidden(); }
 
 $break-points:
@@ -33,21 +33,24 @@ $break-points:
     ("xl", $xl-min, $xl-max),
     ("xxl", $xxl-min, 16000px);
 
-// utils elements default to hidden
-[class*="visible-"] { @include hidden(); }
-
 @each $bp, $min-width, $max-width in $break-points {
     @media screen and (min-width: $min-width) and (max-width: $max-width){
         .visible-#{$bp} {
             display: block;
         }
+
+        .hidden-#{$bp} {
+            display: none;
+        }
     }
 }
 
+// injected view-port-utils default to hidden
+[class*="visible-"] { @include hidden(); }
 
+// pull
 .pull-left { float: left; }
 .pull-right { float: right; }
-
 
 // background and colors
 @mixin bg-class($class, $bg, $color) {
