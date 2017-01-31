@@ -63,8 +63,13 @@ li {
     width: 100%; // smallest screens, fromm 0 to $xs
     margin: auto;
 
+    @media screen and (min-width: $xxs-min) {
+        padding: 0 1em;
+    }
+
     @media screen and (min-width: $xs-min) {
         width: 416px;
+        padding: 0;
     }
 
     @media screen and (min-width: $sm-min) {
@@ -135,7 +140,6 @@ textarea {
 .icon-heart-o:before { content: $icon-heart-o; }
 .icon-help:before { content: $icon-help; }
 .icon-info:before { content: $icon-info; }
-.icon-loyalty-card:before { content: $icon-loyalty-card; }
 .icon-not-allowed:before { content: $icon-not-allowed; }
 .icon-radio:before { content: $icon-radio; }
 .icon-radio-checked:before { content: $icon-radio-checked; }
