@@ -2,18 +2,10 @@
 // Mixins
 
 @mixin pagination-icon($icon) {
-    position: relative;
-
-    &:after {
-        font-family: icomoon;
-        content: $icon;
-        font-size: 1.5em;
-        position: absolute;
-        top: 14%;
-        left: 20%;
-        pointer-events: none;
-        z-index: $pagination-icon-z;
-    }
+    background-image: url('#{$icon-path}#{$icon}.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.4em;
 
     &.disabled:after { color: $grey; }
     &:active, &:focus &.active { &:after { color: #fff; } }
@@ -29,11 +21,15 @@
         display: inline-block;
         background-color: $primary-faded;
         border: 2px solid #fff;
-        padding: .7em .25em;
+        padding: .7em .13em;
         border-radius: $radius * 3;
         text-align: center;
         font-size: .9em;
         margin: 3px;
+
+        @media screen and (min-width: $sm-min) {
+            padding: .7em .3em;
+        }
 
         a {
             padding: $padding-base-vertical $padding-base-horizontal;
@@ -49,7 +45,11 @@
         &:active, &.active {
             background-color: $secondary;
             border: 1px solid $secondary-dark;
-            padding: .7em calc(.25em + 1px); // keep layout from moving on click
+            padding: .7em calc(.13em + 1px); // keep layout from moving on click
+
+            @media screen and (min-width: $sm-min) {
+                padding: .7em calc(.3em + 1px); // keep layout from moving on click
+            }
 
             a {
                 color: #fff;
@@ -77,7 +77,7 @@
             font-weight: bold;
         }
 
-        &.prev { @include pagination-icon($icon-chevron-left) }
-        &.next { @include pagination-icon($icon-chevron-right) }
+        &.prev { @include pagination-icon("chevron-left") }
+        &.next { @include pagination-icon("chevron-right") }
     }
 }

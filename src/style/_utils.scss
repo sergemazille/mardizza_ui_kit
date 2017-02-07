@@ -24,6 +24,9 @@
 
 .hidden { @include hidden(); }
 
+// injected view-port-utils default to hidden
+[class*="visible-"] { @include hidden(); }
+
 $break-points:
     ("xxs", $xxs-min, $xxs-max),
     ("xs", $xs-min, $xs-max),
@@ -44,9 +47,6 @@ $break-points:
         }
     }
 }
-
-// injected view-port-utils default to hidden
-[class*="visible-"] { @include hidden(); }
 
 // pull
 .pull-left { float: left; }
