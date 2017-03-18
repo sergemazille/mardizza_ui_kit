@@ -135,10 +135,17 @@
         background-repeat: no-repeat;
         background-position: 99.5% center;
         background-size: $input-feedback-padding;
+
+        // exceptions
+        &[type="number"] {
+            background-image: none; // we don't want a big background image on a small input form type
+        }
     }
 }
 
 .input-group {
+    margin-bottom: $font-size-base / 2;
+
     &.success-feedback { @include input-group-feedback($color: $success, $icon: "success"); }
     &.warning-feedback { @include input-group-feedback($color: $warning, $icon: "warning"); }
     &.error-feedback { @include input-group-feedback($color: $error, $icon: "alert"); }
