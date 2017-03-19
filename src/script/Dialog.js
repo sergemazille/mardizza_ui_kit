@@ -39,6 +39,7 @@ export class Dialog {
                 // animate out
                 setTimeout(
                     function () {
+                        document.body.appendChild(Dialog.dialog); // save dialog before its container is removed
                         Dialog.dialog.classList.remove('in');
                         Dialog.backdrop.classList.remove('in');
                         Dialog.clear();
@@ -59,7 +60,7 @@ export class Dialog {
     }
 
     static showDialog(dialogId) {
-        this.dialog = document.querySelector(dialogId).cloneNode(true); // doesn't mess with the original element
+        this.dialog = document.querySelector(dialogId);
         if(null == this.dialog) { return null; }
 
         // dismiss button
