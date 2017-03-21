@@ -1,24 +1,14 @@
 export class Dialog {
 
-    // button events
     static init() {
         let dialogTestButtons = document.querySelectorAll('.dialog-trigger');
         if(null == dialogTestButtons) { return false;}
 
         [...dialogTestButtons].forEach(function(button) {
             button.addEventListener("click", function() {
-                Dialog.showDialog(this.dataset.target);
+                Dialog.setup(this.dataset.target);
             });
         });
-    }
-
-    static setup() {
-        // create backdrop & container
-        this.createBackdrop();
-        this.createContainer();
-
-        // behaviour setup
-        this.containerEvents();
     }
 
     static createBackdrop() {
@@ -31,58 +21,83 @@ export class Dialog {
         this.dialogContainer.className = "dialog-container";
     }
 
+    static createDismissButton() {
+        let dismissButton = document.createElement('span');
+        dismissButton.classList.add('dismiss-button');
+        this.dialog.appendChild(dismissButton);
+    }
+
     static containerEvents() {
         this.dialogContainer.addEventListener("click", function(e) {
             e.preventDefault();
 
-            if((e.target).classList.contains('dialog-container') || (e.target).classList.contains('dismiss') || (e.target).classList.contains('dismiss-button')) {
-                // animate out
-                setTimeout(
-                    function () {
-                        document.body.appendChild(Dialog.dialog); // save dialog before its container is removed
-                        Dialog.dialog.classList.remove('in');
-                        Dialog.backdrop.classList.remove('in');
-                        Dialog.clear();
-                    }, 100
-                );
+            // animate out
+            if( (e.target).classList.contains('dialog-container') ||    // click on backdrop
+                (e.target).classList.contains('dismiss') ||             // click on dismiss button
+                (e.target).classList.contains('dismiss-button') ) {     // click on closing icon
+
+                Dialog.hide();
             }
         });
     }
 
-    static clear() {
-        // remove dialog from DOM once its fadeout animation has ended
-        setTimeout(
-            function() {
-                Dialog.backdrop.remove();
-                Dialog.dialogContainer.remove();
-            }, 500
-        );
+    static appendOnDom() {
+        document.body.appendChild(Dialog.backdrop);
+        document.body.appendChild(Dialog.dialogContainer);
+        Dialog.dialogContainer.appendChild(Dialog.dialog);
+        Dialog.dialog.style.display = "block";
     }
 
-    static showDialog(dialogId) {
-        this.dialog = document.querySelector(dialogId);
-        if(null == this.dialog) { return null; }
+    static show() {
+        Dialog.backdrop.classList.add('in');
+        Dialog.dialog.classList.add('in');
 
-        // dismiss button
-        let dismissButton = document.createElement('span');
-        dismissButton.classList.add('dismiss-button');
-        this.dialog.appendChild(dismissButton);
+        // focus on first input
+        // ====================
+        let dialogInputs = Dialog.dialog.querySelectorAll("input");
+        let focusInputIsSet = false; // flag to stop with first input
+        [...dialogInputs].forEach(function(input) {
+            if("hidden" !== input.type && false === focusInputIsSet ) {
+                input.focus();
+                focusInputIsSet = true;
+            }
+        });
+    }
 
-        // create backdrop and container
-        Dialog.setup();
+    static removeAnimationClasses() {
+        Dialog.dialog.classList.remove('in');
+        Dialog.backdrop.classList.remove('in');
+    }
 
-        // add new elements on DOM
-        document.body.appendChild(this.backdrop);
-        document.body.appendChild(this.dialogContainer);
-        this.dialogContainer.appendChild(this.dialog);
-        this.dialog.style.display = "block";
+    static hide() {
+        Dialog.removeAnimationClasses();
 
-        // animate in
-        setTimeout(
-            function() {
-                Dialog.backdrop.classList.add('in');
-                Dialog.dialog.classList.add('in');
-            }, 100
-        );
+        // wait for animation to end before clearing dialog out
+        setTimeout(Dialog.clear, 400);
+    }
+
+    static clear() {
+        document.body.appendChild(Dialog.dialog); // move dialog before its container is removed
+        Dialog.backdrop.remove();
+        Dialog.dialogContainer.remove();
+        Dialog.dialog = null;
+    }
+
+    static setup(dialogId) {
+        // start clean if an other dialog box is displayed
+        if(null != Dialog.dialog) {
+            Dialog.removeAnimationClasses();
+            Dialog.clear();
+        }
+
+        Dialog.dialog = document.querySelector(dialogId);
+        if(null == Dialog.dialog) { return; }
+
+        Dialog.createDismissButton();
+        Dialog.createBackdrop();
+        Dialog.createContainer();
+        Dialog.containerEvents();
+        Dialog.appendOnDom();
+        setTimeout(Dialog.show, 100); // give time for 'in' animation
     }
 }
