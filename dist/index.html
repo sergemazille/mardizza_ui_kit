@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mardizza UI Kit</title>
+    <link rel="stylesheet" href="./style/app.css">
+</head>
+
+<body>
+<div class="content">
+    <h1>Mardizza UI Kit</h1>
+
+    <div class="group">
+        <h2>Colors</h2>
+        <div class="colors inset">
+            <div class="row">
+                <div class="col-xxs-12 col-lg-4">
+                    <div class="grey-color">
+                        <div class="bg-grey-faded"></div>
+                        <div class="bg-grey-light"></div>
+                        <div class="bg-grey"></div>
+                        <div class="bg-grey-dark"></div>
+                    </div>
+                </div>
+
+                <div class="col-xxs-12 col-lg-4">
+                    <div class="primary-color">
+                        <div class="bg-primary-faded"></div>
+                        <div class="bg-primary-light"></div>
+                        <div class="bg-primary"></div>
+                        <div class="bg-primary-dark"></div>
+                    </div>
+                </div>
+
+                <div class="col-xxs-12 col-lg-4">
+                    <div class="secondary-color">
+                        <div class="bg-secondary-faded"></div>
+                        <div class="bg-secondary-light"></div>
+                        <div class="bg-secondary"></div>
+                        <div class="bg-secondary-dark"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Form</h2>
+        <div class="group">
+            <h3>Buttons</h3>
+            <div class="buttons">
+                <div class="group">
+                    <h4>Normal buttons</h4>
+                    <div class="normal-states inset">
+                        <div class="row">
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-grey">Grey</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-primary">Primary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-secondary">Secondary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-info">Info</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-success">Success</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-warning">Warning</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button class="btn-danger">Danger</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <h4>Disabled buttons</h4>
+                    <div class="disabled-states inset">
+                        <div class="row">
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-grey" onclick="alert('you cannot click me')">Grey</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-primary">Primary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-secondary">Secondary</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-info">Info</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-success">Success</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-warning">Warning</button></div>
+                            <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2"><button disabled class="btn-danger">Danger</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Input fields</h3>
+            <div class="input">
+                <form action="#">
+                    <div class="group">
+                        <h4>Standard inputs</h4>
+                        <div class="inset">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="normal">Text input</label>
+                                    <input id="normal" type="text" class="form-control" placeholder="Placeholder">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="search">Search input</label>
+                                    <input id="search" type="search" class="form-control" placeholder="Recherche">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="date">Date input</label>
+                                    <input id="date" type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <h4>Inputs with feedback</h4>
+                        <div class="inset">
+                            <div class="form-group">
+                                <div class="input-group success-feedback">
+                                    <label for="success-input">Success input</label>
+                                    <input id="success-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <span class="feedback">You won!</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group warning-feedback">
+                                    <label for="warning-input">Warning input</label>
+                                    <input id="warning-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <span class="feedback">Something is happening...</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group error-feedback">
+                                    <label for="error-input">Error input</label>
+                                    <input id="error-input" type="text" class="form-control" placeholder="Placeholder">
+                                    <span class="feedback">There's definitely something wrong.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="disabled-input">Disabled input</label>
+                                    <input id="disabled-input" type="text" class="form-control" placeholder="Placeholder" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input states test -->
+                    <div class="group">
+                        <h4>Feedback input - testing area:</h4>
+                        <div class="inset">
+                            <div class="form-group block states-input-test clearfix">
+                                <div class="input-group">
+                                    <div class="demo-block demo-inputs">
+                                        <label for="states-input">Test input</label>
+                                        <input id="states-input" type="text" class="form-control" placeholder="Placeholder">
+                                        <!-- No feedback span here, it will be automatically generated -->
+                                    </div>
+
+                                    <div class="states-input-buttons">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="success-feedback" data-text="You won!" class="btn-success">Success feedback</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="warning-feedback" data-text="Something is happening..." class="btn-warning">Warning feedback</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="error-feedback" data-text="There's definitely something wrong." class="btn-danger">Error feedback</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="disabled" class="btn-grey">Disable</button></div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><button data-action="reset" class="btn-primary">Reset</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <h3>Textarea</h3>
+                        <div class="inset">
+                            <textarea name="styleguide-name" id="styleguide-id" placeholder="Placeholder"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <h3>Dropdown</h3>
+                            <div class="inset">
+                                <div class="form-group">
+                                    <div class="dropdown">
+                                        <button class="btn-primary dropdown-trigger" type="button" id="pizza-dropdown" aria-haspopup="true" aria-expanded="true">
+                                            Orientale
+                                        </button>
+                                        <ul class="dropdown-list" aria-labelledby="pizza-dropdown">
+                                            <li><a href="#" data-value="gorgonzola">Gorgonzola</a></li>
+                                            <li><a href="#" data-value="fattrice">Fattrice</a></li>
+                                            <li><a href="#" data-value="margherita">Margherita</a></li>
+                                            <li><a href="#" data-value="napolitaine">Napolitaine</a></li>
+                                            <li class="active"><a href="#" data-value="orientale">Orientale</a></li>
+                                            <li><a href="#" data-value="quattro-stagione">Quattro Stagione</a></li>
+                                            <li><a href="#" data-value="sucree-salee">Sucrée Salée</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#" data-value="pizza-mois">Pizza du mois</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- // col -->
+
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <div class="check-radio">
+                                <h3>Radio buttons</h3>
+                                <div class="inset">
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="choice">
+                                                <span class="label">Radio</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="choice">
+                                                <span class="label">Radio</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio disabled">
+                                            <label>
+                                                <input type="radio" name="choice">
+                                                <span class="label">Radio disabled</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- // col -->
+
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <div class="check-toggle">
+                                <h3>Toggle buttons</h3>
+                                <div class="inset">
+                                    <div class="form-group">
+                                        <div class="toggle">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-button"></span>
+                                                <span class="label">Toggle</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="toggle disabled">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-button"></span>
+                                                <span class="label">Disabled toggle</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- // col -->
+
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <div class="check-checkbox">
+                                <h3>Checkboxes</h3>
+                                <div class="inset">
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="label">Checkbox</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox disabled">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="label">Disabled checkbox</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- // col -->
+                    </div> <!-- // row -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Navigation</h2>
+        <div class="group">
+            <h3>Pagination</h3>
+            <nav class="pagination">
+                <ul>
+                    <li class="prev"><a href="#"></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">11</a></li>
+                    <li><a href="#">12</a></li>
+                    <li><a href="#">13</a></li>
+                    <li><a href="#">14</a></li>
+                    <li class="next"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="group">
+            <h3>Nav tabs</h3>
+            <div class="inset">
+                <nav class="tabs">
+                    <ul class="tabs-menu">
+                        <li><a href="#users-content">Users</a></li>
+                        <li class="active"><a href="#groups-content">Groups</a></li>
+                        <li><a href="#orders-content">Orders</a></li>
+                    </ul>
+
+                    <div class="tabs-content">
+                        <div id="users-content">
+                            <h4>Users</h4>
+                            <div class="toggle">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-button"></span>
+                                    <span class="label">Activated</span>
+                                </label>
+                            </div>
+                            <p>Black viennese beans, body decaffeinated frappuccino, cup latte robust saucer seasonal extra.</p>
+                        </div>
+                        <div id="groups-content">
+                            <h4>Groups</h4>
+                            <p>Foam robusta skinny french press at black turkish as breve. Et lungo ristretto bar aroma cultivar brewed. Single shot cup redeye pumpkin spice froth instant fair trade cappuccino. Wings, so cream in, qui galão java, acerbic milk mazagran decaffeinated espresso. Kopi-luwak, aftertaste, black strong dripper spoon caramelization.</p>
+                        </div>
+                        <div id="orders-content">
+                            <h4>Orders</h4>
+                            <div class="block">Siphon, ut cream sit single shot roast cup latte caramelization turkish. In, coffee spoon cappuccino americano black coffee. Trifecta, froth caramelization plunger pot macchiato bar robust. Con panna froth single shot half and half, crema coffee, a affogato cultivar extraction kopi-luwak. Rich organic, cream qui trifecta lungo eu coffee.</div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Typography</h2>
+        <h3>Text</h3>
+        <div class="inset">
+            <div class="block">
+                <div class="typography-text">
+                    <span class="h1">Heading 1</span>
+                    <span class="h2">Heading 2</span>
+                    <span class="h3">Heading 3</span>
+                    <span class="h4">Heading 4</span>
+                    <p>Paragraph:</p>
+                    <p>Milk kopi-luwak saucer decaffeinated in <a href="#" title="anchor tag demo">french press milk</a>. Siphon, aroma blue mountain, filter, latte, milk rich acerbic galão java. Roast beans, ristretto cappuccino et irish doppio, spoon breve <em>to go percolator carajillo</em>. Mocha americano plunger pot sugar steamed dark wings. Irish caffeine shop, spoon, that irish, <abbr title="Milk Cappuccino Barista">MCB</abbr> decaffeinated plunger pot spoon. Single shot cream coffee, <a href="#" title="anchor tag demo">id arabica so lungo</a> spoon grinder. In trifecta white crema aftertaste saucer steamed. Percolator iced instant <strong> breve grinder</strong> coffee rich roast breve americano. Crema, and, qui, beans extraction milk a extraction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="group">
+        <h3>Icons</h3>
+        <div class="inset">
+            <div class="icons">
+                <div class="icon-fonts group">
+                    <i class="icon-alert"></i>
+                    <i class="icon-arrow-down"></i>
+                    <i class="icon-calendar"></i>
+                    <i class="icon-checkbox"></i>
+                    <i class="icon-checkbox-checked"></i>
+                    <i class="icon-chevron-left"></i>
+                    <i class="icon-chevron-right"></i>
+                    <i class="icon-comment"></i>
+                    <i class="icon-cross"></i>
+                    <i class="icon-facebook"></i>
+                    <i class="icon-group"></i>
+                    <i class="icon-heart"></i>
+                    <i class="icon-heart-o"></i>
+                    <i class="icon-help"></i>
+                    <i class="icon-info"></i>
+                    <i class="icon-loyalty-card"></i>
+                    <i class="icon-not-allowed"></i>
+                    <i class="icon-radio"></i>
+                    <i class="icon-radio-checked"></i>
+                    <i class="icon-refresh"></i>
+                    <i class="icon-sheriff"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star-o"></i>
+                    <i class="icon-stats"></i>
+                    <i class="icon-success"></i>
+                    <i class="icon-tag"></i>
+                    <i class="icon-tag-o"></i>
+                    <i class="icon-thumb"></i>
+                    <i class="icon-twitter"></i>
+                    <i class="icon-user"></i>
+                    <i class="icon-warning"></i>
+                    <i class="icon-zoom"></i>
+                </div>
+
+                <div class="icon-images group">
+                    <img src="./images/icons/add.svg" alt="">
+                    <img src="./images/icons/alert.svg" alt="">
+                    <img src="./images/icons/calendar.svg" alt="">
+                    <img src="./images/icons/info.svg" alt="">
+                    <img src="./images/icons/not-allowed.svg" alt="">
+                    <img src="./images/icons/refresh.svg" alt="">
+                    <img src="./images/icons/remove.svg" alt="">
+                    <img src="./images/icons/success.svg" alt="">
+                    <img src="./images/icons/warning.svg" alt="">
+                    <img src="./images/icons/zoom.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Feedback</h2>
+        <div class="group">
+            <h3>Notifications</h3>
+            <div class="inset">
+                <div class="notifications-block">
+                    <div class="notifications-demo">
+                        <div class="demo-success">Success notification</div>
+                        <div class="demo-info">Info notification</div>
+                        <div class="demo-warning">Warning notification</div>
+                        <div class="demo-error">Error notification</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h4>Test notifications:</h4>
+                <div class="inset">
+                    <div class="notifications-test-buttons block">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-success" data-type="success" data-text="Oh yeah! You rock!! <span class='icon-thumb'></span>">Success notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-info" data-type="info" data-text="Eating one pizza a week is not unhealthy...">Info notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-warning" data-type="warning" data-text="Eating one hundred pizzas in a week might not be a good idea...">Warning notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-error" data-type="error" data-text="This message will self destruct in four seconds..." >Error notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-primary sticky" data-type="info" data-text="I only disappear if you click on me">Sticky notification</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-secondary sticky" data-type="info" data-text="I can embed <a href='#' title='Click on me only if you want to be redirected to the top of the page...'>a link</a> as well">Sticky with a link</button></div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn-grey sticky" data-type="info" data-text="Even <button title='Clicking me is not doing much...' class='btn-success'>buttons</button> are allowed in notifications...">Sticky with a button</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Dialogs</h3>
+            <div class="group">
+                <h4>Test dialog windows:</h4>
+                <div class="inset">
+                    <div class="dialog-test-buttons block">
+                        <div class="row">
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-primary dialog-trigger" data-target="#dialog-test-standard">Standard dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-success dialog-trigger" data-target="#dialog-test-success">Success dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-info dialog-trigger" data-target="#dialog-test-info">Info dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-warning dialog-trigger" data-target="#dialog-test-warning">Warning dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-error dialog-trigger" data-target="#dialog-test-error">Error dialog box</button></div>
+                            <div class="col-xxs-12 col-sm-6 col-md-5 col-lg-3"><button class="btn-primary dialog-trigger" data-target="#dialog-test-small">Small dialog box</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal windows examples -->
+                <div id="dialog-test-standard" class="dialog-default">
+                    <div class="dialog-header">
+                        PIZZA TIME
+                    </div>
+                    <div class="dialog-body">
+                        You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup>&nbsp;!!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dialog-test-success" class="dialog-success">
+                    <div class="dialog-header">
+                        PIZZA TIME
+                    </div>
+                    <div class="dialog-body">
+                        You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup>&nbsp;!!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dialog-test-info" class="dialog-info">
+                    <div class="dialog-header">
+                        PIZZA TIME
+                    </div>
+                    <div class="dialog-body">
+                        You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup>&nbsp;!!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dialog-test-warning" class="dialog-warning">
+                    <div class="dialog-header">
+                        PIZZA TIME
+                    </div>
+                    <div class="dialog-body">
+                        You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup>&nbsp;!!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dialog-test-error" class="dialog-error">
+                    <div class="dialog-header">
+                        PIZZA TIME
+                    </div>
+                    <div class="dialog-body">
+                        You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup>&nbsp;!!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="row buttons-row">
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-grey dismiss"><span class="icon-not-allowed"></span> No... I'm on a diet</button></div>
+                            <div class="col-xxs-12 col-md-6 col-lg-4"><button class="btn-success"><span class="icon-thumb"></span> Go for a pizza!</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dialog-test-small" class="dialog-default dialog-sm">
+                    <div class="dialog-header">
+                        PIZZA TIME
+                    </div>
+                    <div class="dialog-body">
+                        You've been waiting for the whole week but now is Pizza time<sup>&#174;</sup>&nbsp;!!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="row buttons-row">
+                            <div class="col-md-12 col-lg-5"><button class="btn-grey dismiss">No thanks</button></div>
+                            <div class="col-md-12 col-lg-5"><button class="btn-success">Go for it!</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <div class="demo-flexgrid">
+            <h2>Flexgrid</h2>
+            <div class="inset">
+                <div class="row">
+                    <div class="col-xxs-12"><div class="bg-primary">&nbsp;</div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxs-1"><div class="bg-primary-dark">&nbsp;</div></div>
+                    <div class="col-xxs-11"><div class="bg-error">&nbsp;</div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxs-2"><div class="bg-success">&nbsp;</div></div>
+                    <div class="col-xxs-10"><div class="bg-info">&nbsp;</div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxs-3"><div class="bg-warning">&nbsp;</div></div>
+                    <div class="col-xxs-9"><div class="bg-success">&nbsp;</div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxs-4"><div class="bg-primary-dark">&nbsp;</div></div>
+                    <div class="col-xxs-8"><div class="bg-secondary-dark">&nbsp;</div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxs-5"><div class="bg-primary-light">&nbsp;</div></div>
+                    <div class="col-xxs-7"><div class="bg-secondary-light">&nbsp;</div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxs-6"><div class="bg-secondary">&nbsp;</div></div>
+                    <div class="col-xxs-6"><div class="bg-warning">&nbsp;</div></div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="demo-nestable-columns">
+                    <h3>Nestable columns</h3>
+                    <div class="inset">
+                        <div class="row">
+                            <div class="col-xxs-12 ">
+                                <div class="bg-error">
+                                    <div class="row">
+
+                                        <div class="col-xxs-7">
+                                            <div class="bg-primary-dark">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xxs-5">
+                                            <div class="bg-success">
+                                                <div class="col-xxs-8 ">
+                                                    <div class="bg-info">
+                                                        <div class="row">
+                                                            <div class="col-xxs-3"><div class="bg-warning">&nbsp;</div></div>
+                                                            <div class="col-xxs-9"><div class="bg-secondary-light">&nbsp;</div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <h3>Responsive columns</h3>
+                <div class="inset">
+                    <div class="demo-responsive-columns">
+                        <div class="row">
+                            <div class="col-xxs-12 col-xs-5 col-sm-5 col-xmd-4 col-lg-7"><div class="bg-primary"><span>col-xxs-12</span><span>col-xs-5</span><span>col-sm-5</span><span>col-xmd-4</span><span>col-lg-7</span></div></div>
+                            <div class="col-xxs-12 col-xs-5 col-sm-3 col-xmd-4 col-lg-3"><div class="bg-secondary"><span>col-xxs-12</span><span>col-xs-5</span><span>col-sm-3</span><span>col-xmd-4</span><span>col-lg-3</span></div></div>
+                            <div class="col-xxs-12 col-xs-2 col-sm-4 col-xmd-4 col-lg-2"><div class="bg-primary"><span>col-xxs-12</span><span>col-xs-2</span><span>col-sm-4</span><span>col-xmd-4</span><span>col-lg-2</span></div></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xxs-8 col-xs-7 col-md-3 col-xl-10"><div class="bg-warning"><span>col-xxs-8</span><span>col-xs-7</span><span>col-md-3</span><span>col-xl-10</span></div></div>
+                            <div class="col-xxs-1 col-xs-2 col-md-3 col-xl-1"><div class="bg-error"><span>col-xxs-1</span><span>col-xs-2</span><span>col-md-3</span><span>col-xl-1</span></div></div>
+                            <div class="col-xxs-3 col-xs-3 col-md-6 col-xl-1"><div class="bg-info"><span>col-xxs-3</span><span>col-xs-3</span><span>col-md-6</span><span>col-xl-1</span></div></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xxs-12 col-xs-4 col-sm-2 col-lg-5 col-xl-1"><div class="bg-success"><span>col-xxs-12</span><span>col-xs-4</span><span>col-sm-2</span><span>col-lg-5</span><span>col-xl-1</span></div></div>
+                            <div class="col-xxs-12 col-xs-4 col-sm-8 col-lg-3 col-xl-1"><div class="bg-primary-light"><span>col-xxs-12</span><span>col-xs-4</span><span>col-sm-8</span><span>col-lg-3</span><span>col-xl-1</span></div></div>
+                            <div class="col-xxs-12 col-xs-4 col-sm-2 col-lg-4 col-xl-10"><div class="bg-secondary-dark"><span>col-xxs-12</span><span>col-xs-4</span><span>col-sm-2</span><span>col-lg-4</span><span>col-xl-10</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group">
+        <h2>Miscellaneous</h2>
+        <div class="group">
+            <h3>Block</h3>
+            <div class="inset">
+                <div class="block">
+                    <p>Barista saucer steamed body and steamed cultivar fair trade. Robusta, mazagran rich aroma percolator cortado french press. Java siphon galão, so, fair trade mazagran barista cream so half and half lungo. Siphon, white variety dripper siphon qui, macchiato organic espresso turkish carajillo flavour.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Tooltip</h3>
+            <div class="inset">
+                <p>Need help? Hover over this icon: <span class="tooltip" data-tip="Yup I'm a tooltip, easy peasy"></span></p>
+            </div>
+        </div>
+
+        <div class="group">
+            <h3>Filters</h3>
+            <h4>Test filters:</h4>
+            <div class="inset">
+                <div class="block">
+                    <!-- filters block -->
+                    <div class="demo-block">
+                        <div class="filter" id="filter">
+                            <div class="filter-label">Filters</div>
+                            <ul id="demo-filter-list" class="filter-list">
+                                <li class="filter-item" data-target="#demo-tag-list">Tomato</li>
+                                <li class="filter-item" data-target="#demo-tag-list">9.50€</li>
+                                <li class="filter-item" data-target="#demo-tag-list"><span class="icon-heart"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- available filters pool -->
+                    <p>Available filters:</p>
+                    <div class="tag">
+                        <ul id="demo-tag-list" class="tag-list">
+                            <li class="tag-item" data-target="#demo-filter-list">Mushrooms</li>
+                            <li class="tag-item" data-target="#demo-filter-list">11.00€</li>
+                            <li class="tag-item" data-target="#demo-filter-list">fattr...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- content-->
+
+<script src="./script/app.js"></script>
+</body>
+</html>
