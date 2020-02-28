@@ -60,7 +60,8 @@ scalabilité, sélection automatique, pizza Margherita”, rassurez-vous mon
 
 <h3 id="la-solution--mardizza-">La solution : Mardizza !!!</h3>
 
-<p>L’idée de réaliser une application web s’est très vite imposée à nous, bande de développeur web, et c’est ainsi qu’est née <a href="https://www.mardizza.com/">mardizza.com</a>.</p>
+<p>L’idée de réaliser une application web s’est très vite imposée à nous, bande
+de développeur web, et c’est ainsi qu’est née <a href="#">mardizza.com</a>.</p>
 
 <p>Partie d’une blague, il faut quand même bien l’avouer, l’application a
  grossi de manière organique, se voyant ajouter des fonctionnalités de 
@@ -81,7 +82,10 @@ d’articles sur la refactorisation de l’application : Mardizza 2.</p>
 
 <p>Mardizza étant avant tout un projet pour rire, nous nous devons d’y 
 apporter le plus grand sérieux et la plus grande rigueur.
-Et comme une application web digne de ce nom se doit d’avoir un guide de
- style...</p>
+Et comme une application web digne de ce nom se doit d’avoir un guide de style, je m’y suis collé et suis heureux de vous présenter le <a href="https://mardizza-ui-kit.netlify.com/">nouvel aspect visuel de Mardizza</a>.</p>
+
+<p>En plus chez Wizaplace on est des gens biens, le code de l’ensemble 
+des éléments de l’application est/sera disponible sur GitHub en open 
+source, à commencer par <a href="https://github.com/sergemazille/mardizza_ui_kit">le guide de style</a>.</p>
 
 <p><img src="./images/gif_02.gif" alt=""></p>
